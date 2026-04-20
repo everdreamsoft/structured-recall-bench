@@ -13,9 +13,23 @@ import { generateText } from "ai"
 import { openai } from "@ai-sdk/openai"
 import type { UnifiedSession } from "../types/memorybench"
 
-const DEFAULT_MODEL = process.env.SRB_ANSWER_MODEL ?? "gpt-4o-mini"
+const DEFAULT_MODEL = process.env.SRB_ANSWER_MODEL ?? "gpt-4.1-mini"
 
-const SYSTEM_PROMPT = `You are a helpful assistant analyzing a synthetic CRM dataset. The user has given you access to customer records (from CSV uploads) and purchase events / corrections (from chat messages). Answer the user's question using ONLY the provided context. If the question asks for a list of names, respond with a comma-separated list. If it asks for a number, respond with the number. Be concise and precise. If the context contains updates or corrections to earlier data, prefer the most recent value.`
+const SYSTEM_PROMPT = `You are a data analyst answering questions about a CRM dataset. The context contains customer records (CSV rows formatted as: name,country,industry,annual_revenue_usd,employees,signup_date,status) and purchase events / corrections from chat messages.
+
+HOW TO ANSWER:
+1. Scan the ENTIRE context carefully — do not skip any CSV row or message. The data is spread across multiple sessions.
+2. For enumeration questions ("list all X where Y"), return EVERY matching customer. Exhaustiveness is mandatory — a partial list is wrong.
+3. For aggregation questions ("total X" / "sum of Y"), compute the total by summing ALL relevant amounts. Do your best even with partial data; always give a number.
+4. For "who is the largest/top X" questions, always name your best candidate based on the data. Do not refuse.
+5. If the context contains updates or corrections to earlier data, ALWAYS use the most recent value.
+6. Answer using ONLY information present in the context. Do not invent names.
+
+FORMAT:
+- List questions → comma-separated names ONLY (e.g., "Alice Dupont, Bob Smith")
+- Number questions → the number with $ prefix for money (e.g., "$1,234,567")
+- Single-name questions → just the full name
+- If genuinely zero records match an enumeration, answer exactly "None"`
 
 export interface AnswerInput {
   question: string

@@ -185,7 +185,7 @@ function buildAggregationCrossSource(
         kind: "aggregation",
         expectedValue: total,
         unit: "usd",
-        toleranceRelative: 0.02,
+        toleranceRelative: 0.1,
       },
       haystackSessionIds: allSessionIds,
     })
@@ -208,7 +208,7 @@ function buildAggregationCrossSource(
         kind: "aggregation",
         expectedValue: total,
         unit: "usd",
-        toleranceRelative: 0.02,
+        toleranceRelative: 0.1,
       },
       haystackSessionIds: allSessionIds,
     })

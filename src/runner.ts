@@ -87,7 +87,21 @@ async function main() {
 
   let questions: QuestionItem[] = items
   if (args.classes?.length) questions = questions.filter((q) => args.classes!.includes(q.questionClass))
-  if (args.questions) questions = questions.slice(0, args.questions)
+  if (args.questions) {
+    // Sample representatively across classes instead of taking the first N
+    // (which would concentrate in whatever class is first in items[]).
+    const byClass = new Map<string, QuestionItem[]>()
+    for (const q of questions) {
+      const arr = byClass.get(q.questionClass) ?? []
+      arr.push(q)
+      byClass.set(q.questionClass, arr)
+    }
+    const classes = [...byClass.keys()]
+    const perClass = Math.max(1, Math.floor(args.questions / classes.length))
+    const sampled: QuestionItem[] = []
+    for (const cls of classes) sampled.push(...byClass.get(cls)!.slice(0, perClass))
+    questions = sampled.slice(0, args.questions)
+  }
 
   console.log(`[runner] ${questions.length} questions across ${sessions.length} sessions`)
 

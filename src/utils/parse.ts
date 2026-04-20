@@ -37,35 +37,54 @@ export function extractMatchedNames(response: string, canonicalNames: string[]):
 }
 
 /**
- * Extract the first plausible monetary/integer value from a response. Handles:
+ * Extract the plausible aggregate answer from a response. LLMs often show
+ * their work ("$A + $B + $C = $TOTAL") and the final answer is typically
+ * the LAST monetary value with a $ prefix or M/B/k suffix. We pick that.
+ *
+ * Handles:
  *   $1,234,567       → 1234567
  *   $1.5M            → 1500000
  *   $2.3k or 2.3k    → 2300
  *   1234             → 1234
- *   45%              → 45 (plain number, context-free)
  */
 export function extractFirstNumber(response: string): number | null {
   const cleaned = response.replace(/[,_]/g, "")
 
-  // Try $ amounts with M/k suffix first
-  const mMatch = cleaned.match(/\$?\s*(\d+(?:\.\d+)?)\s*(M|million|B|billion|k|K|thousand)\b/)
-  if (mMatch) {
-    const n = parseFloat(mMatch[1])
-    const suffix = mMatch[2].toLowerCase()
-    if (suffix === "m" || suffix === "million") return Math.round(n * 1_000_000)
-    if (suffix === "b" || suffix === "billion") return Math.round(n * 1_000_000_000)
-    if (suffix === "k" || suffix === "thousand") return Math.round(n * 1000)
+  // Collect all candidates with positions so we can pick the LAST.
+  const candidates: Array<{ value: number; index: number }> = []
+
+  // $ amounts with M/k/B suffix
+  const mRegex = /\$?\s*(\d+(?:\.\d+)?)\s*(M|million|B|billion|k|K|thousand)\b/g
+  let match: RegExpExecArray | null
+  while ((match = mRegex.exec(cleaned)) !== null) {
+    const n = parseFloat(match[1])
+    const suffix = match[2].toLowerCase()
+    let value = n
+    if (suffix === "m" || suffix === "million") value = n * 1_000_000
+    else if (suffix === "b" || suffix === "billion") value = n * 1_000_000_000
+    else if (suffix === "k" || suffix === "thousand") value = n * 1000
+    candidates.push({ value: Math.round(value), index: match.index })
   }
 
-  // Any dollar amount
-  const dollarMatch = cleaned.match(/\$\s*(\d+(?:\.\d+)?)/)
-  if (dollarMatch) return Math.round(parseFloat(dollarMatch[1]))
+  // Plain dollar amounts
+  const dRegex = /\$\s*(\d+(?:\.\d+)?)/g
+  while ((match = dRegex.exec(cleaned)) !== null) {
+    candidates.push({ value: Math.round(parseFloat(match[1])), index: match.index })
+  }
 
-  // Plain integer >= 100 (avoid matching single digits used as counters)
-  const intMatch = cleaned.match(/\b(\d{3,})\b/)
-  if (intMatch) return parseInt(intMatch[1], 10)
+  // Fall back to plain integers ≥ 100 if nothing else
+  if (candidates.length === 0) {
+    const intRegex = /\b(\d{3,})\b/g
+    while ((match = intRegex.exec(cleaned)) !== null) {
+      candidates.push({ value: parseInt(match[1], 10), index: match.index })
+    }
+  }
 
-  return null
+  if (candidates.length === 0) return null
+  // Return the LAST candidate by position — that's where the final answer
+  // lives when the LLM shows its work.
+  candidates.sort((a, b) => a.index - b.index)
+  return candidates[candidates.length - 1].value
 }
 
 /**

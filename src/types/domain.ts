@@ -128,7 +128,8 @@ export interface AggregationScore {
   extracted: number | null
   expected: number
   relativeDelta: number | null
-  score: 0 | 1
+  /** Continuous score in [0, 1] = max(0, 1 - relativeDelta). */
+  score: number
   note?: string
 }
 

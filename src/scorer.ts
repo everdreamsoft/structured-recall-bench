@@ -61,8 +61,23 @@ function scoreEnumeration(
   const fp = falsePositives.length
   const fn = missed.length
 
-  const precision = tp + fp === 0 ? 0 : tp / (tp + fp)
-  const recall = tp + fn === 0 ? 1 : tp / (tp + fn) // recall=1 when expected set is empty and nothing wrong said
+  // Perfect-empty case: expected set is empty AND response mentioned no customers.
+  // This is a correct "none" answer — score 1, not 0.
+  if (tp === 0 && fp === 0 && fn === 0) {
+    return {
+      kind: "enumeration",
+      precision: 1,
+      recall: 1,
+      f1: 1,
+      score: 1,
+      matchedCorrect: [],
+      missed: [],
+      falsePositives: [],
+    }
+  }
+
+  const precision = tp + fp === 0 ? 1 : tp / (tp + fp) // no predictions → vacuously perfect precision
+  const recall = tp + fn === 0 ? 1 : tp / (tp + fn) // no expected → vacuously perfect recall
   const f1 = precision + recall === 0 ? 0 : (2 * precision * recall) / (precision + recall)
 
   return {
@@ -99,12 +114,19 @@ function scoreAggregation(response: string, gt: AggregationGroundTruth): Aggrega
     }
   }
   const delta = Math.abs(extracted - gt.expectedValue) / Math.abs(gt.expectedValue)
+  // Continuous scoring: score = max(0, 1 - delta). Captures how close the
+  // answer is rather than pass/fail. A top-K retriever that only sees 30%
+  // of the haystack will typically have delta > 0.5 → score < 0.5. A
+  // structured system sees all the data → delta near 0 → score near 1.
+  // Legacy `toleranceRelative` kept for backwards compat; a binary pass
+  // flag is derivable from score >= (1 - tolerance).
+  const score = Math.max(0, 1 - delta)
   return {
     kind: "aggregation",
     extracted,
     expected: gt.expectedValue,
     relativeDelta: delta,
-    score: delta <= gt.toleranceRelative ? 1 : 0,
+    score,
   }
 }
 

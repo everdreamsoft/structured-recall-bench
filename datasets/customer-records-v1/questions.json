@@ -1941,7 +1941,7 @@
       "kind": "aggregation",
       "expectedValue": 10391200,
       "unit": "usd",
-      "toleranceRelative": 0.02
+      "toleranceRelative": 0.1
     },
     "haystackSessionIds": [
       "session-A01-csv-v1",
@@ -1974,7 +1974,7 @@
       "kind": "aggregation",
       "expectedValue": 1422100,
       "unit": "usd",
-      "toleranceRelative": 0.02
+      "toleranceRelative": 0.1
     },
     "haystackSessionIds": [
       "session-A01-csv-v1",
@@ -2007,7 +2007,7 @@
       "kind": "aggregation",
       "expectedValue": 204900,
       "unit": "usd",
-      "toleranceRelative": 0.02
+      "toleranceRelative": 0.1
     },
     "haystackSessionIds": [
       "session-A01-csv-v1",
@@ -2040,7 +2040,7 @@
       "kind": "aggregation",
       "expectedValue": 721300,
       "unit": "usd",
-      "toleranceRelative": 0.02
+      "toleranceRelative": 0.1
     },
     "haystackSessionIds": [
       "session-A01-csv-v1",
@@ -2073,7 +2073,7 @@
       "kind": "aggregation",
       "expectedValue": 1000100,
       "unit": "usd",
-      "toleranceRelative": 0.02
+      "toleranceRelative": 0.1
     },
     "haystackSessionIds": [
       "session-A01-csv-v1",
@@ -2106,7 +2106,7 @@
       "kind": "aggregation",
       "expectedValue": 849300,
       "unit": "usd",
-      "toleranceRelative": 0.02
+      "toleranceRelative": 0.1
     },
     "haystackSessionIds": [
       "session-A01-csv-v1",
@@ -2139,7 +2139,7 @@
       "kind": "aggregation",
       "expectedValue": 1070800,
       "unit": "usd",
-      "toleranceRelative": 0.02
+      "toleranceRelative": 0.1
     },
     "haystackSessionIds": [
       "session-A01-csv-v1",
@@ -2172,7 +2172,7 @@
       "kind": "aggregation",
       "expectedValue": 8622400,
       "unit": "usd",
-      "toleranceRelative": 0.02
+      "toleranceRelative": 0.1
     },
     "haystackSessionIds": [
       "session-A01-csv-v1",
@@ -2205,7 +2205,7 @@
       "kind": "aggregation",
       "expectedValue": 6697300,
       "unit": "usd",
-      "toleranceRelative": 0.02
+      "toleranceRelative": 0.1
     },
     "haystackSessionIds": [
       "session-A01-csv-v1",
@@ -2238,7 +2238,7 @@
       "kind": "aggregation",
       "expectedValue": 503000,
       "unit": "usd",
-      "toleranceRelative": 0.02
+      "toleranceRelative": 0.1
     },
     "haystackSessionIds": [
       "session-A01-csv-v1",
@@ -2271,7 +2271,7 @@
       "kind": "aggregation",
       "expectedValue": 4221700,
       "unit": "usd",
-      "toleranceRelative": 0.02
+      "toleranceRelative": 0.1
     },
     "haystackSessionIds": [
       "session-A01-csv-v1",
@@ -2304,7 +2304,7 @@
       "kind": "aggregation",
       "expectedValue": 1560900,
       "unit": "usd",
-      "toleranceRelative": 0.02
+      "toleranceRelative": 0.1
     },
     "haystackSessionIds": [
       "session-A01-csv-v1",
@@ -2337,7 +2337,7 @@
       "kind": "aggregation",
       "expectedValue": 1755200,
       "unit": "usd",
-      "toleranceRelative": 0.02
+      "toleranceRelative": 0.1
     },
     "haystackSessionIds": [
       "session-A01-csv-v1",
@@ -2370,7 +2370,7 @@
       "kind": "aggregation",
       "expectedValue": 6666400,
       "unit": "usd",
-      "toleranceRelative": 0.02
+      "toleranceRelative": 0.1
     },
     "haystackSessionIds": [
       "session-A01-csv-v1",
@@ -2403,7 +2403,7 @@
       "kind": "aggregation",
       "expectedValue": 1200500,
       "unit": "usd",
-      "toleranceRelative": 0.02
+      "toleranceRelative": 0.1
     },
     "haystackSessionIds": [
       "session-A01-csv-v1",
@@ -2436,7 +2436,7 @@
       "kind": "aggregation",
       "expectedValue": 5786800,
       "unit": "usd",
-      "toleranceRelative": 0.02
+      "toleranceRelative": 0.1
     },
     "haystackSessionIds": [
       "session-A01-csv-v1",
@@ -2469,7 +2469,7 @@
       "kind": "aggregation",
       "expectedValue": 13051600,
       "unit": "usd",
-      "toleranceRelative": 0.02
+      "toleranceRelative": 0.1
     },
     "haystackSessionIds": [
       "session-A01-csv-v1",
@@ -2502,7 +2502,7 @@
       "kind": "aggregation",
       "expectedValue": 1303700,
       "unit": "usd",
-      "toleranceRelative": 0.02
+      "toleranceRelative": 0.1
     },
     "haystackSessionIds": [
       "session-A01-csv-v1",
@@ -2535,7 +2535,7 @@
       "kind": "aggregation",
       "expectedValue": 17084600,
       "unit": "usd",
-      "toleranceRelative": 0.02
+      "toleranceRelative": 0.1
     },
     "haystackSessionIds": [
       "session-A01-csv-v1",
@@ -2568,7 +2568,7 @@
       "kind": "aggregation",
       "expectedValue": 4371300,
       "unit": "usd",
-      "toleranceRelative": 0.02
+      "toleranceRelative": 0.1
     },
     "haystackSessionIds": [
       "session-A01-csv-v1",

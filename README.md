@@ -80,7 +80,7 @@ Deterministic, **no LLM-judge**:
 | ----------------------------- | ------------------------------------------------------------------- |
 | `enumeration_csv`             | F1 on names (accent- and case-insensitive fuzzy match)              |
 | `enumeration_chat`            | F1 on names                                                         |
-| `aggregation_cross_source`    | Tolerance ±2% on extracted number                                   |
+| `aggregation_cross_source`    | Continuous: `max(0, 1 - relative_delta)`                             |
 | `reconciliation_update`       | Exact match post-update; response = v1 value scored 0 as `stale-v1` |
 | `mixed_conditional`           | Name fuzzy match + first-mention heuristic                          |
 
@@ -103,10 +103,10 @@ cd memorybench && bun install
 
 ## Methodology notes
 
-- **Default LLM**: `gpt-4o-mini`. Override via `SRB_ANSWER_MODEL`.
+- **Default LLM**: `gpt-4.1-mini`. Override via `SRB_ANSWER_MODEL`.
 - **Answer prompt**: "Answer using ONLY the provided context. Prefer the most recent value if there are updates." Kept deliberately narrow — no chain-of-thought, no tool use — to match how most agent-memory products are wired today.
 - **Same LLM, same temperature** across all providers. Any score difference is attributable to retrieval, not to answer generation.
-- **Token budget**: the haystack is ~50-70k tokens — comfortably inside `gpt-4o-mini`'s 128k context for the full-context baseline.
+- **Token budget**: the haystack is ~50-70k tokens — comfortably inside `gpt-4.1-mini`'s 128k context for the full-context baseline.
 
 ## License
 
