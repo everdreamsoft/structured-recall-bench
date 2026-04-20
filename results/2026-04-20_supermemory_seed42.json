@@ -6,7 +6,7 @@
   "model": "gpt-4o-mini",
   "timestamp": "2026-04-20T13:21:47.376Z",
   "summary": {
-    "composite": 0.3586877222292185,
+    "composite": 0.3686877222292185,
     "perClass": {
       "enumeration_csv": {
         "count": 20,
@@ -22,7 +22,7 @@
       },
       "reconciliation_update": {
         "count": 20,
-        "mean": 0.8
+        "mean": 0.85
       },
       "mixed_conditional": {
         "count": 20,
@@ -30,10 +30,10 @@
       }
     },
     "reconciliationBreakdown": {
-      "correct": 16,
+      "correct": 17,
       "stale-v1": 3,
       "wrong": 0,
-      "no-answer": 1
+      "no-answer": 0
     }
   },
   "results": [
@@ -2051,11 +2051,11 @@
       "response": "86",
       "score": {
         "kind": "reconciliation",
-        "extracted": null,
+        "extracted": "86",
         "expected": "86",
         "staleV1": "60",
-        "score": 0,
-        "category": "no-answer"
+        "score": 1,
+        "category": "correct"
       },
       "searchMs": 2089,
       "answerMs": 17686

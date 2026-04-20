@@ -31,9 +31,9 @@
     },
     "reconciliationBreakdown": {
       "correct": 9,
-      "stale-v1": 10,
+      "stale-v1": 11,
       "wrong": 0,
-      "no-answer": 1
+      "no-answer": 0
     }
   },
   "results": [
@@ -2010,11 +2010,11 @@
       "response": "60",
       "score": {
         "kind": "reconciliation",
-        "extracted": null,
+        "extracted": "60",
         "expected": "86",
         "staleV1": "60",
         "score": 0,
-        "category": "no-answer"
+        "category": "stale-v1"
       },
       "searchMs": 301,
       "answerMs": 922
