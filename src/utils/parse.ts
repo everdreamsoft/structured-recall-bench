@@ -72,9 +72,13 @@ export function extractFirstNumber(response: string): number | null {
     candidates.push({ value: Math.round(parseFloat(match[1])), index: match.index })
   }
 
-  // Fall back to plain integers ≥ 100 if nothing else
+  // Fall back to plain integers if nothing else. We relax to \d+ (any length)
+  // because reconciliation questions on small fields like employee counts can
+  // legitimately produce 1-2 digit answers (e.g. "86"). Aggregation picks the
+  // LAST candidate anyway, so noise from page numbers or counters won't leak
+  // into the final answer.
   if (candidates.length === 0) {
-    const intRegex = /\b(\d{3,})\b/g
+    const intRegex = /\b(\d+)\b/g
     while ((match = intRegex.exec(cleaned)) !== null) {
       candidates.push({ value: parseInt(match[1], 10), index: match.index })
     }
