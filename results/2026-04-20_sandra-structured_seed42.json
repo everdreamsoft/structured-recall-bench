@@ -4,9 +4,9 @@
   "seed": 42,
   "provider": "sandra-structured",
   "model": "gpt-4o-mini",
-  "timestamp": "2026-04-20T12:39:17.179Z",
+  "timestamp": "2026-04-20T13:39:51.949Z",
   "summary": {
-    "composite": 0.6804851541047553,
+    "composite": 0.8556814167361472,
     "perClass": {
       "enumeration_csv": {
         "count": 1,
@@ -14,11 +14,11 @@
       },
       "enumeration_chat": {
         "count": 1,
-        "mean": 0.6
+        "mean": 0.7659574468085107
       },
       "aggregation_cross_source": {
         "count": 1,
-        "mean": 0.13575910385710988
+        "mean": 0.8457829702055586
       },
       "reconciliation_update": {
         "count": 1,
@@ -56,26 +56,32 @@
         ]
       },
       "searchMs": 1,
-      "answerMs": 1923
+      "answerMs": 2659
     },
     {
       "questionId": "echat-product-paper",
       "questionClass": "enumeration_chat",
-      "response": "Shaun Langosh, Mittie Keeling, Lindsay Gleichner, Garland Schulist, Consuelo Tremblay, Corbin Upton, Delores Zemlak, Jordane Lowe, Cristan Jacobs, Reanna Wisoky, Priscilla Langworth, Madie Bogisich, Stacey Nader, Madisyn Rutherford, Louie Lang, Cecile White, Kiana Rowe, Dayton Braun, Charlie Smitham",
+      "response": "Jeramy Nader, Michale Becker, Melissa Bode, Shaun Langosh, Cristian Jacobs, Dawn Kuhn, Consuelo Tremblay, Garland Schulist, Corbin Upton, Jordane Lowe, Adan King, Delores Zemlak, Tremaine Kshlerin, Mittie Keeling, Stan Dicki, Priscilla Langworth, Edna Wisozk, Cale Kerluke, Jarrod Huels, Madie Bogisich, Rosalyn Hoeger, Cristian Jacobs, Reanna Wisoky, Madisyn Rutherford, Charlie Smitham, Dayton Braun",
       "score": {
         "kind": "enumeration",
-        "precision": 0.6666666666666666,
-        "recall": 0.5454545454545454,
-        "f1": 0.6,
-        "score": 0.6,
+        "precision": 0.72,
+        "recall": 0.8181818181818182,
+        "f1": 0.7659574468085107,
+        "score": 0.7659574468085107,
         "matchedCorrect": [
+          "Michale Becker",
           "Charlie Smitham",
-          "Kiana Rowe",
+          "Adan King",
+          "Edna Wisozk",
+          "Dawn Kuhn",
           "Shaun Langosh",
+          "Cristian Jacobs",
           "Dayton Braun",
           "Priscilla Langworth",
           "Mittie Keeling",
+          "Tremaine Kshlerin",
           "Madisyn Rutherford",
+          "Stan Dicki",
           "Reanna Wisoky",
           "Consuelo Tremblay",
           "Delores Zemlak",
@@ -83,42 +89,37 @@
           "Garland Schulist"
         ],
         "missed": [
-          "Adan King",
           "Alfonzo Feest-Becker",
           "Chet Davis",
-          "Cristian Jacobs",
-          "Dawn Kuhn",
-          "Edna Wisozk",
-          "Leonor Spencer",
-          "Michale Becker",
-          "Stan Dicki",
-          "Tremaine Kshlerin"
+          "Kiana Rowe",
+          "Leonor Spencer"
         ],
         "falsePositives": [
+          "Jeramy Nader",
+          "Melissa Bode",
+          "Rosalyn Hoeger",
           "Jordane Lowe",
-          "Louie Lang",
-          "Stacey Nader",
-          "Lindsay Gleichner",
-          "Madie Bogisich",
-          "Cecile White"
+          "Jarrod Huels",
+          "Cale Kerluke",
+          "Madie Bogisich"
         ]
       },
       "searchMs": 0,
-      "answerMs": 3256
+      "answerMs": 4200
     },
     {
       "questionId": "agg-country-switzerland",
       "questionClass": "aggregation_cross_source",
-      "response": "The customers based in Switzerland are:\n- Abel Robel\n- Sydney Mohr\n- Josianne Collier-Padberg\n- Beulah Turcotte\n- Harley Sanford\n- Jeanie Franey\n- Lavada Ward\n- Fredy Cormier\n- Jamel Berge\n- Keagan Orn\n- Pink Heller-Runolfsson\n- Steve Shanahan\n- Cleta Von\n- Daphne Morissette-Lynch (not in list, ignore)\n- Davonte Rowe\n- Odell Lang-Greenholt\n- Dahlia Morissette (not in list, ignore)\n- Lavada Ward\n- Keagan Orn\n- Jamel Berge\n- Harley Sanford\n- Pink Heller-Runolfsson\n- Steve Shanahan\n- Cleta Von\n- Davonte Rowe\n- Odell Lang-Greenholt\n- Dahlia Morissette (not in list, ignore)\n- Lavada Ward\n- Keagan Orn\n- Jamel Berge\n- Harley Sanford\n- Pink Heller-Runolfsson\n- Steve Shanahan\n- Cleta Von\n- Davonte Rowe\n- Odell Lang-Greenholt\n\nFrom the purchase events for these customers in 2025:\n\n- Steve Shanahan: software licenses, 2400\n- Murl Beer (not Switzerland)\n- Lacey Parisian (not Switzerland)\n- Lora Leuschke (not Switzerland)\n- Malcolm Sporer (not Switzerland)\n- Walter Krajcik (not Switzerland)\n- Martina Kuhic (not Switzerland)\n- Hazle Treutel (not Switzerland)\n- April Schneider (not Switzerland)\n- Orin Haley (not Switzerland)\n- Ben Nolan (not Switzerland)\n- Melany Bins (not Switzerland)\n- Harley Sanford: raw materials, 367400; hardware, 236600\n- Shaun Langosh (not Switzerland)\n- Quinton Jacobs (not Switzerland)\n- Susie Kreiger (not Switzerland)\n- Enrique Mertz (not Switzerland)\n- Annetta Carroll (not Switzerland)\n- Kraig Mohr (not Switzerland)\n- Johan Mann (not Switzerland)\n- Kenyatta Rice (not Switzerland)\n- Helene Schaden (not Switzerland)\n- Brody Hilll (not Switzerland)\n- Aditya Huel (not Switzerland)\n- Marjory Stark (not Switzerland)\n- Julia Goldner (not Switzerland)\n- Lindsay Gleichner (not Switzerland)\n- Grace Howell (not Switzerland)\n- Luz Frami (not Switzerland)\n- Mittie Keeling (not Switzerland)\n- Linnea McGlynn (not Switzerland)\n- Coleman Boyer (not Switzerland)\n- Edward Kunze (not Switzerland)\n- Trycia Ryan (not Switzerland)\n- Bell Kuhlman (not Switzerland)\n- Chet Davis (not Switzerland)\n- Arno Haag (not Switzerland)\n- Vincenza Rau (not Switzerland)\n- Jamel Berge: hardware, 719700\n- Adan King (not Switzerland)\n- Karlee Cummings (not Switzerland)\n- Lela Ledner (not Switzerland)\n- Mallory Upton (not Switzerland)\n- Geovany Oberbrunner (not Switzerland)\n- Reanna Wisoky (not Switzerland)\n- Fermin Harvey (not Switzerland)\n- Lora Leuschke (not Switzerland)\n- Michale Becker (not Switzerland)\n- Anastasia Wyman (not Switzerland)\n- Audie Lubowitz (not Switzerland)\n- Odie Homenick (not Switzerland)\n- Richie Anderson (not Switzerland)\n- Trycia Ryan (not Switzerland)\n- Beulah Turcotte (not Switzerland)\n- Vito Olson (not Switzerland)\n- Gia Jacobi (not Switzerland)\n- Leonor Spencer (not Switzerland)\n- Jailyn Rempel (not Switzerland)\n- Kiana Rowe (not Switzerland)\n- Eugene Botsford (not Switzerland)\n- Garnet Keeling (not Switzerland)\n- Gordon Kling (not Switzerland)\n- Kaya Ebert (not Switzerland)\n- Luz Frami (not Switzerland)\n- Velma Hilpert (not Switzerland)\n- Garland Schulist (not Switzerland)\n- Consuelo Tremblay (not Switzerland)\n- Connie Erdman (not Switzerland)\n- Zander Lynch (not Switzerland)\n- Leonor Spencer (not Switzerland)\n- Corbin Upton (not Switzerland)\n- Ophelia Tremblay (not Switzerland)\n- Jordane Lowe (not Switzerland)\n- Jefferey Lowe (not Switzerland)\n- Arjun Upton (not Switzerland)\n- Mckayla Boyer (not Switzerland)\n- Bridgette Heller (not Switzerland)\n- Torey Bayer (not Switzerland)\n- Reva Blick (not Switzerland)\n- Helga Ferry (not Switzerland)\n- Melissa Bode (not Switzerland)\n- Annette Kohler (not Switzerland)\n- Jeramy Nader (not Switzerland)\n- Marjory Stark (not Switzerland)\n- Quinton Jacobs (not Switzerland)\n- Trinity McGlynn (not Switzerland)\n- Aurelia Ortiz (not Switzerland)\n- Hosea Kerluke (not Switzerland)\n- Michale Becker (not Switzerland)\n- Shanelle Pagac (not Switzerland)\n- Erick Bogisich (not Switzerland)\n- Dawn Kuhn (not Switzerland)\n- Enrique Mertz (not Switzerland)\n- Dorothy Koelpin (not Switzerland)\n- Valerie Hermiston (not Switzerland)\n- Makenzie Johns (not Switzerland)\n- Jannie Heller (not Switzerland)\n- Taurean Hoppe (not Switzerland)\n- Donnell Olson (not Switzerland)\n- Waino Effertz (not Switzerland)\n- Shanel Feeney (not Switzerland)\n- Delores Zemlak (not Switzerland)\n- Priscilla Langworth (not Switzerland)\n- Jarret Hoppe (not Switzerland)\n- Audie Thiel (not Switzerland)\n- Shania Marks (not Switzerland)\n- Tremaine Kshlerin (not Switzerland)\n- Kenyon Wehner (not Switzerland)\n- Charley Kilback-Lemke (not Switzerland)\n- Cecile White (not Switzerland)\n- Kirk Kassulke (not Switzerland)\n- Katrina Terry (not Switzerland)\n- Anastasia Wyman (not Switzerland)\n- Nina O'Kon (not Switzerland)\n- Caden Welch (not Switzerland)\n- Margaretta Halvorson (not Switzerland)\n- Dalton Hauck (not Switzerland)\n- Aditya Huel (not Switzerland)\n- Cristian Jacobs (not Switzerland)\n- Joannie Keebler (not Switzerland)\n- Ryder Kessler (not Switzerland)\n- Jailyn Rempel (not Switzerland)\n- Zora Jacobi (not Switzerland)\n- Mason O'Conner (not Switzerland)\n- Helga Ferry (not Switzerland)\n- Laurianne Kohler (not Switzerland)\n- Bradly Strosin (not Switzerland)\n- Lou Moore (not Switzerland)\n- Grace Howell (not Switzerland)\n- Naomie Kub (not Switzerland)\n- Corbin Upton (not Switzerland)\n- Grant Little-Gorczany (not Switzerland)\n- Stan Dicki (not Switzerland)\n- Reanna Wisoky (not Switzerland)\n- Cloyd Schultz (not Switzerland)\n- Remington Von (not Switzerland)\n- Alf Predovic (not Switzerland)\n- Priscilla Langworth (not Switzerland)\n- Edna Wisozk (not Switzerland)\n- Cale Kerluke (not Switzerland)\n- Arlo Jenkins (not Switzerland)\n- Kendall Bernhard (not Switzerland)\n- Rickie Rice (not Switzerland)\n- Esther Nicolas (not Switzerland)\n- Vern Rempel (not Switzerland)\n- Jarrod Huels (not Switzerland)\n- Priscilla Langworth (not Switzerland)\n- Mittie Keeling (not Switzerland)\n- Darian Ernser (not Switzerland)\n- Jed Turcotte (not Switzerland)\n- Madie Bogisich (not Switzerland)\n- Dimitri Pagac (not Switzerland)\n- Eugene Botsford (not Switzerland)\n- Tillman Runolfsdottir (not Switzerland)\n- Stacey Nader (not Switzerland)\n- Rosalyn Hoeger (not Switzerland)\n- Rachel Baumbach (not Switzerland)\n- Lilian Hoeger (not Switzerland)\n- Cristian Jacobs (not Switzerland)\n- Rickie Rice (not Switzerland)\n- Helga Ferry (not Switzerland)\n- Jake Powlowski (not Switzerland)\n- Adan King (not Switzerland)\n- Reanna Wisoky (not Switzerland)\n- Valerie Hermiston (not Switzerland)\n- Vivien Greenholt (not Switzerland)\n- Izaiah Leffler (not Switzerland)\n- Helga Ferry (not Switzerland)\n- Cecile White (not Switzerland)\n- Louie Lang (not Switzerland)\n- Madisyn Rutherford (not Switzerland)\n- Freeman Bechtelar (not Switzerland)\n- Vern Rempel (not Switzerland)\n- Priscilla Collins (not Switzerland)\n- Charlie Smitham (not Switzerland)\n- Otis Koch (not Switzerland)\n- Kiana Rowe (not Switzerland)\n- Aurelia Ortiz (not Switzerland)\n- Mckenna Cummerata (not Switzerland)\n- Doris Bogan (not Switzerland)\n- Simeon Vandervort (not Switzerland)\n- Nikolas Buckridge (not Switzerland)\n- Eliza Schneider (not Switzerland)\n- Leda Wyman (not Switzerland)\n- Pierce Volkman (not Switzerland)\n- Alfonzo Feest-Becker (not Switzerland)\n- Richie Anderson (not Switzerland)\n- Donato Streich (not Switzerland)\n- Susie Kreiger (not Switzerland)\n- Aditya Huel (not Switzerland)\n- Alivia Huel (not Switzerland)\n- Dayton Braun (not Switzerland)\n- Charlie Smitham (not Switzerland)\n- Shaun Howell (not Switzerland)\n- Hanna Pacocha (not Switzerland)\n- Helene Schaden (not Switzerland)\n- Billy Rath (not Switzerland)\n- Joelle Kunde (not Switzerland)\n- Harley Sanford: hardware, 236600 (already counted)\n  \nSumming only the purchases from Switzerland customers:\n\n- Steve Shanahan: 2400\n- Harley Sanford: 367400 + 236600 = 604000\n- Jamel Berge: 719700\n- Annette Kohler: 84600\n- Fredy Cormier: no purchases listed\n- Pink Heller-Runolfsson: no purchases listed\n- Davonte Rowe: no purchases listed\n- Lavada Ward: no purchases listed\n- Keagan Orn: no purchases listed\n- Keagan Orn: no purchases listed\n- Odell Lang-Greenholt: no purchases listed\n- Dahlia Morissette: not in data\n- Cleta Von: no purchases listed\n- Jamel Berge: 719700 (already counted)\n- Harley Sanford: 604000 (already counted)\n- Pink Heller-Runolfsson: no purchases listed\n- Steve Shanahan: 2400 (already counted)\n- Davonte Rowe: no purchases listed\n- Odell Lang-Greenholt: no purchases listed\n- Dahlia Morissette: not in data\n- Lavada Ward: no purchases listed\n- Keagan Orn: no purchases listed\n- Jamel Berge: 719700 (already counted)\n- Harley Sanford: 604000 (already counted)\n- Pink Heller-Runolfsson: no purchases listed\n- Steve Shanahan: 2400 (already counted)\n- Cleta Von: no purchases listed\n- Davonte Rowe: no purchases listed\n- Odell Lang-Greenholt: no purchases listed\n\nTotal = 2400 + 604000 + 719700 + 84600 = 1,410,700 USD\n\nAnswer: $1,410,700",
+      "response": "$11,993,700",
       "score": {
         "kind": "aggregation",
-        "extracted": 1410700,
+        "extracted": 11993700,
         "expected": 10391200,
-        "relativeDelta": 0.8642408961428901,
-        "score": 0.13575910385710988
+        "relativeDelta": 0.15421702979444146,
+        "score": 0.8457829702055586
       },
-      "searchMs": 0,
-      "answerMs": 34413
+      "searchMs": 1,
+      "answerMs": 4324
     },
     {
       "questionId": "recon-priscilla-collins-annual_revenue_usd",
@@ -133,7 +134,7 @@
         "category": "correct"
       },
       "searchMs": 1,
-      "answerMs": 2839
+      "answerMs": 1398
     },
     {
       "questionId": "mixed-country-top-france",
@@ -145,8 +146,8 @@
         "expected": "Ben Nolan",
         "score": 1
       },
-      "searchMs": 0,
-      "answerMs": 1863
+      "searchMs": 1,
+      "answerMs": 2945
     }
   ]
 }

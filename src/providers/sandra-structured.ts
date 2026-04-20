@@ -213,25 +213,51 @@ export class SandraStructuredProvider implements Provider {
   }
 
   async search(_query: string, options: SearchOptions): Promise<unknown[]> {
-    // Return the full structured state for this container. The answer LLM
-    // then has a clean tabular view to filter/aggregate over.
+    // 1A — Denormalized dump: each customer record is followed immediately
+    // by its purchase events, so the answer LLM doesn't need to do a JOIN
+    // across two lists. A flat events section is also included for queries
+    // that filter on product alone (where scanning 200 events is faster than
+    // scanning 510 customer sections).
     const state = this.stateByContainer.get(options.containerTag)
     if (!state) return []
 
-    const customersBlock = [
-      "# Customers (name,country,industry,annual_revenue_usd,employees,signup_date,status)",
-      ...state.customers.map(
-        (c) =>
-          `${c.name},${c.country},${c.industry},${c.annual_revenue_usd},${c.employees},${c.signup_date},${c.status}`
-      ),
-    ].join("\n")
+    // Index events by customer for O(1) lookup during denormalization
+    const eventsByCustomer = new Map<string, ParsedEvent[]>()
+    for (const e of state.events) {
+      const arr = eventsByCustomer.get(e.customer_name) ?? []
+      arr.push(e)
+      eventsByCustomer.set(e.customer_name, arr)
+    }
 
-    const eventsBlock = [
-      "# Purchase events (customer_name,product,amount_usd,date)",
+    // Denormalized view — JOIN done server-side
+    const denormLines: string[] = [
+      "# Customers WITH their purchase events (denormalized)",
+      "# Customer row: name,country,industry,annual_revenue_usd,employees,signup_date,status",
+      "# Event rows (indented): - product, $amount, date",
+      "",
+    ]
+    for (const c of state.customers) {
+      denormLines.push(
+        `${c.name},${c.country},${c.industry},${c.annual_revenue_usd},${c.employees},${c.signup_date},${c.status}`
+      )
+      const evs = eventsByCustomer.get(c.name) ?? []
+      if (evs.length === 0) {
+        denormLines.push("  (no 2025 purchases on record)")
+      } else {
+        for (const e of evs) {
+          denormLines.push(`  - ${e.product}, $${e.amount_usd}, ${e.date}`)
+        }
+      }
+    }
+
+    // Flat events view — faster for product-scoped questions
+    const flatEventsLines: string[] = [
+      "# All purchase events (flat view, for product-filtered queries)",
+      "# Format: customer_name,product,amount_usd,date",
       ...state.events.map((e) => `${e.customer_name},${e.product},${e.amount_usd},${e.date}`),
-    ].join("\n")
+    ]
 
-    return [customersBlock, eventsBlock]
+    return [denormLines.join("\n"), flatEventsLines.join("\n")]
   }
 
   async clear(containerTag: string): Promise<void> {

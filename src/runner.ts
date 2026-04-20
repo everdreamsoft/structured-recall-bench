@@ -149,14 +149,37 @@ async function main() {
     answerMs: number
   }> = []
 
+  async function withRetry<T>(fn: () => Promise<T>, label: string, fallback: T): Promise<T> {
+    let lastErr: unknown
+    for (let attempt = 0; attempt < 3; attempt++) {
+      try {
+        return await fn()
+      } catch (err) {
+        lastErr = err
+        await new Promise((r) => setTimeout(r, 2000 * (attempt + 1)))
+      }
+    }
+    const msg = (lastErr as Error)?.message ?? String(lastErr)
+    console.warn(`  ${label} failed after retries: ${msg}`)
+    return fallback
+  }
+
   for (let i = 0; i < questions.length; i++) {
     const q = questions[i]
     const searchStart = Date.now()
-    const retrieved = await provider.search(q.question, { containerTag, limit: 50 })
+    const retrieved = await withRetry(
+      () => provider.search(q.question, { containerTag, limit: 50 }),
+      `[${i + 1}/${questions.length}] search`,
+      [] as unknown[]
+    )
     const searchMs = Date.now() - searchStart
 
     const answerStart = Date.now()
-    const response = await generateAnswer({ question: q.question, retrieved })
+    const response = await withRetry(
+      () => generateAnswer({ question: q.question, retrieved }),
+      `[${i + 1}/${questions.length}] answer`,
+      ""
+    )
     const answerMs = Date.now() - answerStart
 
     const score = scoreResponse(response, q.groundTruth, canonicalNames)
