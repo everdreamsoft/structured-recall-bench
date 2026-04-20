@@ -295,6 +295,9 @@ export function composeSummary(
     "aggregation_cross_source",
     "reconciliation_update",
     "mixed_conditional",
+    "multi_condition_enum",
+    "multi_condition_agg",
+    "bootstrap_multihop",
   ] as QuestionClass[]) {
     const scores = byClass[cls] ?? []
     perClass[cls] = {

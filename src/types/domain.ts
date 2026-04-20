@@ -70,6 +70,9 @@ export type QuestionClass =
   | "aggregation_cross_source"
   | "reconciliation_update"
   | "mixed_conditional"
+  | "multi_condition_enum"
+  | "multi_condition_agg"
+  | "bootstrap_multihop"
 
 export interface EnumerationGroundTruth {
   kind: "enumeration"

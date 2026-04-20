@@ -22,6 +22,7 @@ import { generateUpdates } from "./updates"
 import { buildUnifiedTruth } from "./unified-truth"
 import { synthesizeSessions } from "./sessions"
 import { buildQuestions } from "./questions"
+import { buildHardQuestions } from "./hard-questions"
 import { assertSelfConsistent } from "./self-consistency"
 
 const SEED = 42
@@ -60,7 +61,7 @@ function main() {
   console.log(`[generate] sessions: ${sessions.length}`)
 
   const allSessionIds = sessions.map((s) => s.sessionId)
-  const questions = buildQuestions({
+  const baseQuestions = buildQuestions({
     truth,
     v1Customers,
     events,
@@ -68,7 +69,16 @@ function main() {
     allSessionIds,
     seed: SEED,
   })
-  console.log(`[generate] questions: ${questions.length}`)
+  const hardQuestions = buildHardQuestions({
+    truth,
+    events,
+    allSessionIds,
+    seed: SEED,
+  })
+  const questions = [...baseQuestions, ...hardQuestions]
+  console.log(
+    `[generate] questions: ${questions.length} (base=${baseQuestions.length}, hard=${hardQuestions.length})`
+  )
 
   // Self-consistency
   const report = assertSelfConsistent({ v1Customers, events, updates, sessions, questions })

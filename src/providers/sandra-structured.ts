@@ -245,12 +245,30 @@ export class SandraStructuredProvider implements Provider {
     plan: QueryPlan,
     state: { customers: ParsedCustomer[]; events: ParsedEvent[] }
   ): string | null {
+    // Pre-index events by customer for bought_product filter
+    const eventsByCustomer = new Map<string, ParsedEvent[]>()
+    for (const e of state.events) {
+      const arr = eventsByCustomer.get(e.customer_name) ?? []
+      arr.push(e)
+      eventsByCustomer.set(e.customer_name, arr)
+    }
+
     const matchesCustomer = (c: ParsedCustomer): boolean => {
       const f = plan.filters
       if (f.country && c.country !== f.country) return false
       if (f.industry && c.industry !== f.industry) return false
       if (f.status && c.status !== f.status) return false
       if (f.customer_name && c.name !== f.customer_name) return false
+      if (f.revenue_min !== undefined && Number(c.annual_revenue_usd) < f.revenue_min) return false
+      if (f.revenue_max !== undefined && Number(c.annual_revenue_usd) > f.revenue_max) return false
+      if (f.employees_min !== undefined && Number(c.employees) < f.employees_min) return false
+      if (f.employees_max !== undefined && Number(c.employees) > f.employees_max) return false
+      if (f.signup_before && c.signup_date >= f.signup_before) return false
+      if (f.signup_on_or_after && c.signup_date < f.signup_on_or_after) return false
+      if (f.bought_product) {
+        const evs = eventsByCustomer.get(c.name) ?? []
+        if (!evs.some((e) => e.product === f.bought_product)) return false
+      }
       return true
     }
     const matchesEvent = (e: ParsedEvent): boolean => {

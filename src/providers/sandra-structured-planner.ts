@@ -35,6 +35,15 @@ export interface QueryPlan {
     month?: string // "2025-03"
     customer_name?: string
     field?: "annual_revenue_usd" | "employees" | "industry" | "status" | "country"
+    // ─── stacked-condition filters (tier 2) ────────────────────────────
+    revenue_min?: number
+    revenue_max?: number
+    employees_min?: number
+    employees_max?: number
+    signup_before?: string // ISO yyyy-mm-dd, exclusive
+    signup_on_or_after?: string // ISO yyyy-mm-dd, inclusive
+    /** Customer must have AT LEAST ONE purchase event for this product. */
+    bought_product?: string
   }
   rationale?: string
 }
@@ -45,8 +54,15 @@ The CRM has customer records (name, country, industry, annual_revenue_usd, emplo
 
 Output a single JSON object with fields:
 - scope: one of the values below
-- filters: object with any combination of {country, industry, status, product, month, customer_name, field}
+- filters: object with any combination of {country, industry, status, product, month, customer_name, field, revenue_min, revenue_max, employees_min, employees_max, signup_before, signup_on_or_after, bought_product}
 - rationale: one sentence
+
+Extra-filter semantics:
+  revenue_min / revenue_max          — inclusive USD bounds on annual_revenue_usd
+  employees_min / employees_max      — inclusive bounds on employees count
+  signup_before                      — ISO yyyy-mm-dd, strictly before
+  signup_on_or_after                 — ISO yyyy-mm-dd, inclusive
+  bought_product                     — customer must have ≥1 purchase event of this product
 
 Scope values:
   "list_customers"                      — "list all X customers from Y" / status-based enumeration
