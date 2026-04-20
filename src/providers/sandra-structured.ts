@@ -29,6 +29,7 @@ import type {
   SearchOptions,
   UnifiedSession,
 } from "../types/memorybench"
+import { planQuery, type QueryPlan } from "./sandra-structured-planner"
 
 const MCP_URL = process.env.SANDRA_URL || "http://localhost:8091/mcp"
 const MCP_TOKEN = process.env.SANDRA_TOKEN || ""
@@ -212,14 +213,113 @@ export class SandraStructuredProvider implements Provider {
     // Sandra's entity creation is synchronous from the caller's perspective.
   }
 
-  async search(_query: string, options: SearchOptions): Promise<unknown[]> {
-    // 1A — Denormalized dump: each customer record is followed immediately
-    // by its purchase events, so the answer LLM doesn't need to do a JOIN
-    // across two lists. A flat events section is also included for queries
-    // that filter on product alone (where scanning 200 events is faster than
-    // scanning 510 customer sections).
+  async search(query: string, options: SearchOptions): Promise<unknown[]> {
+    // 1B — Plan-and-execute: LLM converts the question into a structured
+    // query plan, the executor runs it against the typed state (cached
+    // from Sandra's graph at ingest time), and returns a compact answer.
+    // On plan failure we fall back to the 1A denormalized dump so the
+    // answer LLM can still try.
     const state = this.stateByContainer.get(options.containerTag)
     if (!state) return []
+
+    const plan = await planQuery(query)
+    if (plan.scope !== "fallback") {
+      const precomputed = this.executePlan(plan, state)
+      if (precomputed !== null) {
+        // Compact response: just the precomputed answer. No dump fallback —
+        // the planner is authoritative. This minimises context and prevents
+        // the answer LLM from re-doing the work on the raw data.
+        return [
+          `# Query-specific precomputed answer (structured query on typed graph)`,
+          `# Plan: scope=${plan.scope}, filters=${JSON.stringify(plan.filters)}`,
+          precomputed,
+        ]
+      }
+    }
+
+    // Pure fallback (no precomputed result): just the 1A dump.
+    return this.buildDenormalizedDumpPair(state)
+  }
+
+  private executePlan(
+    plan: QueryPlan,
+    state: { customers: ParsedCustomer[]; events: ParsedEvent[] }
+  ): string | null {
+    const matchesCustomer = (c: ParsedCustomer): boolean => {
+      const f = plan.filters
+      if (f.country && c.country !== f.country) return false
+      if (f.industry && c.industry !== f.industry) return false
+      if (f.status && c.status !== f.status) return false
+      if (f.customer_name && c.name !== f.customer_name) return false
+      return true
+    }
+    const matchesEvent = (e: ParsedEvent): boolean => {
+      const f = plan.filters
+      if (f.product && e.product !== f.product) return false
+      if (f.month && !e.date.startsWith(f.month)) return false
+      if (f.customer_name && e.customer_name !== f.customer_name) return false
+      return true
+    }
+
+    switch (plan.scope) {
+      case "list_customers": {
+        const matched = state.customers.filter(matchesCustomer).map((c) => c.name).sort()
+        if (matched.length === 0) return "None"
+        return `Matching customers (${matched.length}): ${matched.join(", ")}`
+      }
+
+      case "list_events_customers": {
+        const hits = state.events.filter(matchesEvent)
+        const names = [...new Set(hits.map((e) => e.customer_name))].sort()
+        if (names.length === 0) return "None"
+        return `Customers with matching events (${names.length}): ${names.join(", ")}`
+      }
+
+      case "sum_events_by_customer_filter": {
+        const matchedCustomerNames = new Set(
+          state.customers.filter(matchesCustomer).map((c) => c.name)
+        )
+        if (matchedCustomerNames.size === 0) return "Total: $0 (no matching customers)"
+        const total = state.events
+          .filter((e) => matchedCustomerNames.has(e.customer_name) && matchesEvent(e))
+          .reduce((s, e) => s + Number(e.amount_usd), 0)
+        return `Total: $${total.toLocaleString("en-US")} (${matchedCustomerNames.size} matching customers)`
+      }
+
+      case "reconcile_customer_field": {
+        const { customer_name, field } = plan.filters
+        if (!customer_name || !field) return null
+        const c = state.customers.find((c) => c.name === customer_name)
+        if (!c) return `No customer named "${customer_name}"`
+        const value = (c as unknown as Record<string, string>)[field]
+        return `${customer_name}'s current ${field}: ${value}`
+      }
+
+      case "top_spending_customer_by_filter": {
+        const matchedNames = new Set(state.customers.filter(matchesCustomer).map((c) => c.name))
+        if (matchedNames.size === 0) return "No matching customers"
+        const spendBy = new Map<string, number>()
+        for (const e of state.events) {
+          if (!matchedNames.has(e.customer_name)) continue
+          spendBy.set(e.customer_name, (spendBy.get(e.customer_name) ?? 0) + Number(e.amount_usd))
+        }
+        const ranked = [...spendBy.entries()].sort((a, b) =>
+          b[1] - a[1] || a[0].localeCompare(b[0])
+        )
+        if (ranked.length === 0) return "No matching events"
+        const [name, spend] = ranked[0]
+        return `Top-spending customer: ${name} ($${spend.toLocaleString("en-US")})`
+      }
+
+      default:
+        return null
+    }
+  }
+
+  private buildDenormalizedDumpPair(state: {
+    customers: ParsedCustomer[]
+    events: ParsedEvent[]
+  }): string[] {
 
     // Index events by customer for O(1) lookup during denormalization
     const eventsByCustomer = new Map<string, ParsedEvent[]>()

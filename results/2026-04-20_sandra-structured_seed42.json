@@ -4,21 +4,21 @@
   "seed": 42,
   "provider": "sandra-structured",
   "model": "gpt-4o-mini",
-  "timestamp": "2026-04-20T13:39:51.949Z",
+  "timestamp": "2026-04-20T13:47:43.920Z",
   "summary": {
-    "composite": 0.8556814167361472,
+    "composite": 0.9999826776503195,
     "perClass": {
       "enumeration_csv": {
         "count": 1,
-        "mean": 0.6666666666666666
+        "mean": 1
       },
       "enumeration_chat": {
         "count": 1,
-        "mean": 0.7659574468085107
+        "mean": 1
       },
       "aggregation_cross_source": {
         "count": 1,
-        "mean": 0.8457829702055586
+        "mean": 0.9999133882515975
       },
       "reconciliation_update": {
         "count": 1,
@@ -40,39 +40,39 @@
     {
       "questionId": "ecsv-country-switzerland-churned",
       "questionClass": "enumeration_csv",
-      "response": "Josianne Collier-Padberg, Fredy Cormier",
+      "response": "Fredy Cormier",
       "score": {
         "kind": "enumeration",
-        "precision": 0.5,
+        "precision": 1,
         "recall": 1,
-        "f1": 0.6666666666666666,
-        "score": 0.6666666666666666,
+        "f1": 1,
+        "score": 1,
         "matchedCorrect": [
           "Fredy Cormier"
         ],
         "missed": [],
-        "falsePositives": [
-          "Josianne Collier-Padberg"
-        ]
+        "falsePositives": []
       },
-      "searchMs": 1,
-      "answerMs": 2659
+      "searchMs": 2070,
+      "answerMs": 1398
     },
     {
       "questionId": "echat-product-paper",
       "questionClass": "enumeration_chat",
-      "response": "Jeramy Nader, Michale Becker, Melissa Bode, Shaun Langosh, Cristian Jacobs, Dawn Kuhn, Consuelo Tremblay, Garland Schulist, Corbin Upton, Jordane Lowe, Adan King, Delores Zemlak, Tremaine Kshlerin, Mittie Keeling, Stan Dicki, Priscilla Langworth, Edna Wisozk, Cale Kerluke, Jarrod Huels, Madie Bogisich, Rosalyn Hoeger, Cristian Jacobs, Reanna Wisoky, Madisyn Rutherford, Charlie Smitham, Dayton Braun",
+      "response": "Adan King, Alfonzo Feest-Becker, Charlie Smitham, Chet Davis, Consuelo Tremblay, Corbin Upton, Cristian Jacobs, Dawn Kuhn, Dayton Braun, Delores Zemlak, Edna Wisozk, Garland Schulist, Kiana Rowe, Leonor Spencer, Madisyn Rutherford, Michale Becker, Mittie Keeling, Priscilla Langworth, Reanna Wisoky, Shaun Langosh, Stan Dicki, Tremaine Kshlerin",
       "score": {
         "kind": "enumeration",
-        "precision": 0.72,
-        "recall": 0.8181818181818182,
-        "f1": 0.7659574468085107,
-        "score": 0.7659574468085107,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1,
+        "score": 1,
         "matchedCorrect": [
           "Michale Becker",
           "Charlie Smitham",
           "Adan King",
+          "Chet Davis",
           "Edna Wisozk",
+          "Kiana Rowe",
           "Dawn Kuhn",
           "Shaun Langosh",
           "Cristian Jacobs",
@@ -81,45 +81,34 @@
           "Mittie Keeling",
           "Tremaine Kshlerin",
           "Madisyn Rutherford",
+          "Alfonzo Feest-Becker",
           "Stan Dicki",
           "Reanna Wisoky",
           "Consuelo Tremblay",
           "Delores Zemlak",
           "Corbin Upton",
-          "Garland Schulist"
-        ],
-        "missed": [
-          "Alfonzo Feest-Becker",
-          "Chet Davis",
-          "Kiana Rowe",
+          "Garland Schulist",
           "Leonor Spencer"
         ],
-        "falsePositives": [
-          "Jeramy Nader",
-          "Melissa Bode",
-          "Rosalyn Hoeger",
-          "Jordane Lowe",
-          "Jarrod Huels",
-          "Cale Kerluke",
-          "Madie Bogisich"
-        ]
+        "missed": [],
+        "falsePositives": []
       },
-      "searchMs": 0,
-      "answerMs": 4200
+      "searchMs": 12120,
+      "answerMs": 2518
     },
     {
       "questionId": "agg-country-switzerland",
       "questionClass": "aggregation_cross_source",
-      "response": "$11,993,700",
+      "response": "$10,390,300",
       "score": {
         "kind": "aggregation",
-        "extracted": 11993700,
+        "extracted": 10390300,
         "expected": 10391200,
-        "relativeDelta": 0.15421702979444146,
-        "score": 0.8457829702055586
+        "relativeDelta": 0.00008661174840249442,
+        "score": 0.9999133882515975
       },
-      "searchMs": 1,
-      "answerMs": 4324
+      "searchMs": 3987,
+      "answerMs": 12783
     },
     {
       "questionId": "recon-priscilla-collins-annual_revenue_usd",
@@ -133,8 +122,8 @@
         "score": 1,
         "category": "correct"
       },
-      "searchMs": 1,
-      "answerMs": 1398
+      "searchMs": 1533,
+      "answerMs": 1218
     },
     {
       "questionId": "mixed-country-top-france",
@@ -146,8 +135,8 @@
         "expected": "Ben Nolan",
         "score": 1
       },
-      "searchMs": 1,
-      "answerMs": 2945
+      "searchMs": 2395,
+      "answerMs": 1170
     }
   ]
 }
