@@ -1,0 +1,29 @@
+{
+  "name": "structured-recall-bench",
+  "version": "0.1.0",
+  "description": "A benchmark exposing exhaustive-recall gaps in agent memory systems (enumeration, cross-source aggregation, knowledge-update reconciliation).",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "generate": "bun run src/generate/index.ts",
+    "validate": "bun run scripts/regenerate-truth.ts",
+    "run": "bun run src/runner.ts",
+    "format": "prettier --write \"src/**/*.ts\" \"scripts/**/*.ts\"",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@ai-sdk/openai": "^2.0.88",
+    "@faker-js/faker": "^9.4.0",
+    "ai": "^5.0.115",
+    "zod": "^3.24.4"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.2.14",
+    "@types/node": "^25.0.0",
+    "prettier": "^3.7.4",
+    "typescript": "^5.9.3"
+  },
+  "engines": {
+    "bun": ">=1.3.0"
+  }
+}

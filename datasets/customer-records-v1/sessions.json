@@ -1,0 +1,642 @@
+[
+  {
+    "sessionId": "session-A01-csv-v1",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Here's batch 1 of the customer export from Salesforce. Please ingest these records.\n\nname,country,industry,annual_revenue_usd,employees,signup_date,status\nCordia Carroll,South Korea,Food & Beverage,17625000,6449,2023-12-14,active\nJohanna Streich,France,Media,1979000,3868,2024-12-08,prospect\nMallory Herzog,Singapore,Food & Beverage,9904000,3019,2022-04-25,active\nEddie Schmitt,United States,Food & Beverage,14891000,2184,2022-01-25,active\nKristin McClure,United States,Media,771000,7154,2024-09-25,churned\nBrandi Wilderman,Italy,Retail,1030000,5160,2021-02-23,active\nMalika Schultz,Brazil,SaaS,689000,2003,2022-07-29,active\nTheresa Moen,Japan,SaaS,857000,1175,2021-11-02,active\nJeramy Nader,Spain,Fintech,343000,1219,2020-09-10,active\nMarcel D'Amore,France,Media,14594000,6706,2024-01-06,churned\nShania Marks,Mexico,Manufacturing,175000,3807,2022-09-19,active\nElse Paucek,Italy,Logistics,19096000,5807,2023-01-25,active\nKaley Hills,Singapore,Energy,10178000,5044,2021-03-29,prospect\nCarolina Sipes,United States,Fintech,1272000,7850,2023-02-28,active\nMadelynn Terry,United States,Manufacturing,171000,1027,2023-10-30,active\nGlenda Cronin,Brazil,SaaS,1056000,6373,2023-09-13,active\nAlysson Jaskolski-Strosin,Japan,Retail,17813000,3236,2021-08-20,active\nAbel Robel,Switzerland,SaaS,614000,6743,2021-07-26,prospect\nAnnetta Carroll,Mexico,Logistics,3382000,2840,2022-10-03,active\nPriscilla Collins,Ireland,Food & Beverage,15533000,6497,2024-09-23,active\nMargaret Bode,Ireland,SaaS,195910000,6352,2023-04-19,active\nJazmyne Schiller,Poland,SaaS,17886000,3733,2020-05-18,active\nRyann Purdy,Australia,Energy,1759000,1355,2020-04-07,prospect\nMichale Becker,Poland,Energy,8716000,7534,2020-11-01,active\nMelissa Bode,Poland,Healthcare,1897000,6801,2023-05-07,active\nEnrique Mertz,Mexico,Energy,915000,2211,2023-11-05,active\nRhiannon Ankunding,Australia,Education,4571000,6029,2023-11-05,active\nAnastasia Wyman,Spain,SaaS,676000,812,2023-06-18,active\nLizzie Conn,Japan,Energy,1798000,6310,2020-10-04,active\nGuido Purdy,Denmark,Food & Beverage,602000,1646,2022-06-01,active\nNat Turner,Singapore,Energy,1795000,1486,2020-05-24,active\nMckayla Boyer,Spain,Fintech,672000,4789,2021-06-27,active\nAlia Hessel,United Kingdom,Retail,5885000,4985,2020-06-04,active\nBell Kuhlman,Brazil,Logistics,15385000,4053,2023-03-04,active\nSydney Mohr,Switzerland,Education,167816000,17,2023-03-08,active\nEra Bernhard,Italy,Education,1690000,2238,2023-03-20,active\nAlivia Huel,France,Retail,1596000,2455,2020-03-14,active\nLaura Jerde,Brazil,Fintech,8399000,6355,2020-06-18,active\nCharley Kilback-Lemke,Singapore,Logistics,1644000,2619,2021-07-12,active\nEthyl Keeling,Spain,Energy,5007000,1345,2020-03-07,prospect\nCarley Bogisich,Sweden,Healthcare,621000,7646,2024-10-08,active\nHanna Pacocha,South Korea,Energy,9146000,1254,2023-09-10,active\nKeon Hilll,Netherlands,Manufacturing,90758000,7137,2023-02-27,prospect\nCamren Friesen,Singapore,Retail,318000,6882,2023-08-13,active\nMohammad Jaskolski,Singapore,Fintech,142249000,5053,2021-05-09,active\nRosalyn Mayer,Germany,Fintech,78795000,5987,2024-01-13,churned\nMurl Beer,Canada,Retail,12386000,2767,2024-01-07,active\nCaden Welch,Brazil,Food & Beverage,1327000,4087,2020-08-07,active\nRosalyn Hoeger,India,Manufacturing,10712000,4115,2021-07-17,active\nMallory Upton,Brazil,Retail,949000,3686,2024-04-28,active\nGrant Little-Gorczany,Australia,Manufacturing,87450000,4401,2020-04-02,active\nKarlee Cummings,Japan,Retail,27636000,2126,2023-01-04,active\nKarl Morissette,Australia,Media,230000,2972,2024-08-09,active\nTerrill Lakin,Spain,Fintech,433000,6935,2021-05-31,churned\nHettie O'Hara,India,Fintech,7263000,3554,2020-02-10,active\nReva Blick,Germany,Food & Beverage,14738000,6310,2022-08-03,active\nLeonor DuBuque,United States,Fintech,516000,298,2020-07-16,active\nLuz Frami,India,Fintech,83292000,815,2022-06-06,active\nJosianne Collier-Padberg,Sweden,SaaS,1904000,7038,2024-07-15,churned\nMckenna Cummerata,Australia,Energy,156987000,7607,2023-07-07,active\nEstell Lind,India,Food & Beverage,1501000,3620,2021-02-14,active\nEthelyn Berge,Ireland,Food & Beverage,6584000,5454,2023-10-20,active\nEli Hammes,Italy,Media,1306000,995,2020-05-08,churned",
+        "timestamp": "2025-01-03"
+      },
+      {
+        "role": "assistant",
+        "content": "Ingested 63 customers. The top countries in this batch are Singapore, Brazil, United States. Let me know when you have the next batch.",
+        "timestamp": "2025-01-03"
+      }
+    ],
+    "metadata": {
+      "date": "2025-01-03",
+      "type": "A",
+      "pattern": "bulk_csv_v1"
+    }
+  },
+  {
+    "sessionId": "session-A02-csv-v1",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Here's batch 2 of the customer export from Salesforce. Please ingest these records.\n\nname,country,industry,annual_revenue_usd,employees,signup_date,status\nLora Leuschke,Germany,Education,454000,331,2022-12-15,active\nBlanche Davis,Mexico,Manufacturing,1138000,3340,2020-10-19,active\nKirk Kassulke,Australia,Logistics,101151000,910,2024-12-04,prospect\nTalon Kuvalis,Germany,Fintech,933000,6715,2020-10-20,active\nArmando Daniel,Brazil,Food & Beverage,135375000,6581,2020-08-30,churned\nMozelle Rau,India,SaaS,1946000,1452,2024-04-09,active\nVena Kreiger,Mexico,Retail,742000,1019,2021-12-16,active\nAntonetta Mann,Singapore,Retail,28765000,788,2020-03-21,active\nCierra Price,Sweden,Healthcare,593000,274,2024-05-25,active\nCharlie Smitham,India,Energy,1274000,6952,2022-11-08,active\nOmer Trantow,Denmark,Energy,12651000,5623,2021-03-09,active\nHans Little,Germany,Retail,10266000,420,2023-12-07,active\nAlf Predovic,Italy,Energy,1784000,7166,2021-06-27,active\nKraig Mohr,Japan,Education,19199000,150,2020-12-23,active\nSheldon Rippin,Netherlands,Education,25405000,7180,2023-02-11,churned\nMelvin Ratke,South Korea,Food & Beverage,3442000,7159,2022-09-27,prospect\nHeber Kreiger,Poland,Manufacturing,454000,2656,2024-04-11,active\nErick Bogisich,Sweden,Fintech,854000,1066,2022-11-02,active\nRosalia Schimmel-Stehr,Spain,Logistics,1908000,7959,2023-07-24,churned\nBrenna Nolan,Sweden,Fintech,1815000,3069,2021-01-30,active\nAdan King,United Kingdom,Logistics,560000,4007,2023-05-26,active\nLavinia Williamson,United States,Energy,1289000,4575,2020-12-03,active\nDestiny Collins,United States,Manufacturing,558000,7808,2024-01-04,churned\nCloyd Schultz,Australia,Media,3333000,2871,2020-07-30,churned\nXzavier Hoppe,Brazil,Manufacturing,161542000,719,2022-02-01,churned\nMelany Bins,Denmark,Manufacturing,634000,6429,2024-08-24,active\nRiley Fahey,Spain,Education,37165000,3603,2021-09-08,churned\nApril Schneider,Denmark,Logistics,710000,1765,2021-10-02,active\nAlberta Mohr,United States,Manufacturing,1230000,3977,2024-12-09,active\nCordell Ortiz,Poland,Healthcare,1228000,4607,2020-10-21,active\nShanel Feeney,Singapore,Manufacturing,362000,6874,2022-07-02,active\nEliza Schneider,United Kingdom,Retail,374000,4994,2021-05-14,active\nAnnabell Marvin,South Korea,SaaS,5629000,1313,2020-10-27,prospect\nChet Davis,United States,Media,1178000,2056,2024-10-25,active\nRemington Von,Denmark,Food & Beverage,805000,4811,2023-07-13,active\nHettie Anderson,Canada,Retail,18025000,639,2023-08-29,active\nLaurianne Wisoky,Denmark,Retail,995000,5297,2023-10-04,prospect\nEdna Wisozk,Mexico,Fintech,1908000,2382,2020-06-17,active\nKaycee Hyatt,Denmark,Energy,1847000,3978,2024-12-17,churned\nSammie Koss,Mexico,Healthcare,728000,4516,2024-04-02,active\nMason O'Conner,Netherlands,SaaS,12787000,1439,2023-07-12,active\nFurman Mosciski,Sweden,Healthcare,2660000,2023,2023-07-27,churned\nLibbie Cronin,Singapore,Education,1669000,1035,2021-09-04,prospect\nSibyl Kirlin,Canada,Energy,1397000,1939,2023-07-28,prospect\nCaroline Schowalter,Mexico,Education,5358000,7141,2022-09-12,prospect\nKiana Rowe,Italy,SaaS,786000,3271,2023-05-26,active\nMargot Hegmann,India,Manufacturing,1791000,5663,2020-04-23,active\nDestinee Harris,Japan,Retail,1768000,7038,2024-05-09,active\nOdie Homenick,Spain,SaaS,15943000,5153,2022-08-26,active\nConnie Erdman,France,Logistics,15361000,1346,2020-08-07,active\nGladyce Cassin,Japan,Manufacturing,12184000,7434,2021-12-08,active\nRyan Lindgren,Australia,Food & Beverage,1661000,3677,2021-10-15,active\nSimeon Vandervort,Sweden,Logistics,1405000,3953,2021-12-09,active\nVivien Greenholt,Ireland,Energy,1521000,6495,2023-04-14,active\nMargaretta Halvorson,United Kingdom,Energy,1199000,5549,2023-07-04,prospect\nChristop Boyle,Brazil,Media,140000,662,2024-11-03,active\nCharley Cartwright,Poland,Manufacturing,1056000,5525,2020-03-12,prospect\nDemetrius Gutkowski,Netherlands,Fintech,11048000,416,2021-05-24,churned\nDawn Kuhn,Ireland,Manufacturing,15709000,1905,2023-08-23,active\nLizeth Corwin,Poland,Food & Beverage,1024000,7367,2020-03-14,active\nJohnson Weber,India,Education,5586000,2277,2021-06-11,active\nFrancesco Balistreri,France,Education,1084000,2393,2024-09-14,active\nCandido Koch,Canada,Energy,18771000,7976,2023-08-08,active",
+        "timestamp": "2025-01-05"
+      },
+      {
+        "role": "assistant",
+        "content": "Ingested 63 customers. The top countries in this batch are Denmark, Mexico, Sweden. Let me know when you have the next batch.",
+        "timestamp": "2025-01-05"
+      }
+    ],
+    "metadata": {
+      "date": "2025-01-05",
+      "type": "A",
+      "pattern": "bulk_csv_v1"
+    }
+  },
+  {
+    "sessionId": "session-A03-csv-v1",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Here's batch 3 of the customer export from Salesforce. Please ingest these records.\n\nname,country,industry,annual_revenue_usd,employees,signup_date,status\nJohan Mann,Brazil,Education,15700000,1284,2022-04-23,active\nAbigayle Rutherford,United States,Fintech,12507000,6257,2023-10-05,prospect\nJordane Lowe,Sweden,Energy,557000,764,2021-07-29,active\nStefanie Olson,Ireland,Retail,29406000,3353,2021-04-20,prospect\nMaverick Thiel,Australia,Education,437000,6006,2024-01-14,churned\nDeshawn Langworth,Switzerland,Retail,98347000,7366,2021-09-22,active\nCasimir Reinger,South Korea,Manufacturing,1697000,5864,2022-09-17,active\nIvah Rutherford-Balistreri,Germany,Healthcare,116966000,3985,2020-07-11,active\nShanon Labadie,Ireland,Healthcare,140226000,5079,2020-10-30,churned\nDelfina Zemlak,Germany,Healthcare,5673000,4443,2023-09-01,active\nQueenie Lebsack,United Kingdom,Media,1044000,2278,2020-09-01,active\nNathen Windler,Sweden,Manufacturing,6025000,7706,2020-01-23,churned\nCarol Roob,Poland,Manufacturing,40905000,7648,2021-07-27,churned\nShaun Langosh,Mexico,Logistics,1006000,5504,2023-08-13,active\nCristian Jacobs,South Korea,Fintech,14040000,6391,2024-08-31,active\nMathias Fahey,Australia,Manufacturing,1518000,5199,2024-03-31,active\nEveline Botsford,South Korea,Logistics,3862000,3219,2023-08-24,prospect\nAbelardo Nitzsche,Denmark,Healthcare,146000,2686,2020-11-19,active\nDayna Bode,United Kingdom,Manufacturing,1831000,53,2022-06-03,active\nBlaze Predovic,Switzerland,Media,699000,4318,2023-12-15,active\nArt Tromp,Mexico,Fintech,1361000,45,2020-10-20,active\nBridgette Heller,Canada,Food & Beverage,1818000,2789,2022-07-28,prospect\nJoshuah Herzog,Ireland,Energy,45660000,3060,2022-10-10,active\nAmerica Kassulke,Germany,Energy,17892000,5274,2021-01-20,churned\nCasper Raynor,Australia,Retail,259000,157,2020-10-29,churned\nMichaela Goyette,Ireland,Media,1262000,3360,2021-03-28,active\nDayton Braun,Spain,Retail,6416000,466,2021-12-15,active\nJared Kerluke,Sweden,Energy,2815000,3000,2023-02-17,active\nNicklaus Auer,Ireland,Media,1676000,2256,2024-05-13,active\nAurelia Ortiz,South Korea,Education,1083000,3446,2021-08-02,active\nRickie Rice,United States,Manufacturing,670000,4771,2022-03-03,active\nAlvina Wiza,Ireland,Media,1541000,201,2020-02-10,active\nAracely Kunze,Brazil,Healthcare,1656000,6397,2023-06-23,active\nDonnell Olson,Mexico,Retail,1485000,2591,2023-04-30,active\nMackenzie Pouros,Denmark,Energy,682000,6313,2022-03-26,prospect\nAudie Beer,United States,Healthcare,8316000,941,2020-09-18,prospect\nAntonetta Weimann,United States,Healthcare,17045000,2661,2023-06-21,prospect\nHelga Ferry,United Kingdom,Food & Beverage,663000,1872,2020-03-17,active\nEdward Kunze,Netherlands,Media,1211000,7533,2020-11-14,active\nPolly Bahringer,Netherlands,Retail,6642000,1119,2024-03-05,churned\nZena Runte,India,Education,956000,1037,2024-10-09,active\nLinda Bergnaum,Switzerland,Food & Beverage,13476000,7099,2022-05-12,active\nJailyn Rempel,Japan,Energy,1136000,7878,2024-09-08,active\nPriscilla Langworth,Netherlands,Logistics,265000,4939,2020-07-26,active\nKenyon Wehner,South Korea,Logistics,1942000,3453,2021-09-26,active\nTrinity McGlynn,South Korea,Fintech,1297000,6630,2023-12-02,active\nLou Moore,Singapore,Media,1815000,536,2022-09-02,active\nEunice Bogisich,Japan,Education,918000,1328,2023-07-14,active\nMarjory Stark,Poland,Healthcare,1667000,2786,2023-05-23,active\nIsobel Beatty,Australia,SaaS,7059000,1392,2021-11-24,prospect\nNeha Feeney,Singapore,Food & Beverage,1822000,4996,2020-08-01,churned\nCindy Sawayn,Canada,Fintech,2636000,5967,2021-01-04,churned\nAdolf Grimes,Poland,Retail,334000,4471,2021-09-18,prospect\nJamel Berge,Switzerland,Fintech,167055000,6821,2024-09-09,active\nQuinton Jacobs,Japan,Manufacturing,24639000,4830,2023-04-19,active\nOrin Haley,United States,Education,180113000,2975,2020-12-22,active\nBeulah Turcotte,Switzerland,Media,18768000,6569,2022-11-01,active\nRyder Kessler,Mexico,SaaS,5227000,5553,2021-02-23,active\nEldon Price,India,Media,14233000,7568,2021-06-24,active\nLonnie Lowe,Italy,Manufacturing,19375000,408,2024-06-14,active\nVincenza Rau,Australia,Energy,76138000,2723,2020-05-24,active\nNella Emmerich,Ireland,Media,96879000,3803,2024-06-28,active\nDalton Stanton,Australia,Fintech,155000,3850,2023-04-25,active",
+        "timestamp": "2025-01-07"
+      },
+      {
+        "role": "assistant",
+        "content": "Ingested 63 customers. The top countries in this batch are Ireland, Australia, South Korea. Let me know when you have the next batch.",
+        "timestamp": "2025-01-07"
+      }
+    ],
+    "metadata": {
+      "date": "2025-01-07",
+      "type": "A",
+      "pattern": "bulk_csv_v1"
+    }
+  },
+  {
+    "sessionId": "session-A04-csv-v1",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Here's batch 4 of the customer export from Salesforce. Please ingest these records.\n\nname,country,industry,annual_revenue_usd,employees,signup_date,status\nGillian Hermiston,Australia,Manufacturing,1004000,5311,2024-09-07,prospect\nRobbie Moore,Sweden,Manufacturing,774000,3308,2023-05-19,active\nDelfina Luettgen,Canada,Healthcare,3468000,706,2020-11-09,active\nHarley Sanford,Switzerland,Logistics,9722000,6008,2023-10-10,active\nAileen Leffler,Japan,Manufacturing,157000,7693,2023-05-05,churned\nEriberto Goldner,France,Logistics,91128000,5829,2021-09-23,active\nLesly Schroeder,Canada,Media,1318000,3732,2020-12-13,prospect\nEverette Kiehn,Singapore,Retail,363000,7862,2021-04-01,active\nHelene Schaden,United Kingdom,Healthcare,8909000,4577,2022-12-09,active\nLilian Hoeger,Singapore,Retail,149000,2733,2021-11-25,active\nLacey Parisian,Denmark,Fintech,581000,3605,2024-10-15,active\nMittie Keeling,United Kingdom,Retail,812000,4973,2023-08-06,active\nTremaine Kshlerin,South Korea,Logistics,1967000,693,2024-01-27,active\nZora Jacobi,South Korea,SaaS,488000,2726,2022-07-21,active\nSteve Shanahan,Switzerland,Education,121000,7244,2020-06-15,active\nPink Heller-Runolfsson,Denmark,Healthcare,17726000,7873,2023-11-04,active\nEsteban Hintz,India,Energy,13381000,1596,2022-02-03,prospect\nMia Macejkovic,Japan,Healthcare,912000,208,2020-07-16,active\nKristy Trantow,South Korea,Food & Beverage,821000,4724,2021-05-04,active\nLempi Brakus,Italy,Manufacturing,454000,2284,2020-11-12,churned\nGrady Doyle,Netherlands,Education,262000,1667,2020-02-18,active\nWerner Auer,Japan,Education,605000,145,2021-06-19,prospect\nAlphonso Legros,Ireland,Fintech,1942000,4187,2023-02-23,active\nJeanie Franey,Switzerland,Education,7444000,6871,2024-04-15,prospect\nDavonte Rowe,Switzerland,Healthcare,1955000,5167,2024-09-03,active\nJarret Hoppe,Italy,Education,459000,5765,2022-07-22,active\nKatrina Terry,Denmark,SaaS,1535000,4964,2023-07-10,active\nAmalia Shanahan,Canada,Food & Beverage,11984000,6609,2023-02-27,prospect\nRamiro Veum,United States,Retail,13699000,5617,2023-12-24,churned\nValentin Marvin-Murray,Denmark,Manufacturing,1378000,6020,2023-12-17,prospect\nRickey Jacobi,Denmark,Logistics,1618000,2677,2023-08-28,active\nJoesph Buckridge,Mexico,Manufacturing,393000,3852,2022-08-31,active\nAditya Huel,Poland,Energy,1420000,6882,2023-11-25,active\nTaurean Hoppe,United States,Fintech,1502000,667,2023-01-06,active\nJayden Bergnaum,Canada,Retail,1247000,5414,2024-01-10,active\nJaren Williamson,India,Media,118007000,7703,2020-05-18,active\nZaria Hyatt,Japan,Energy,1650000,1799,2021-02-12,active\nMichael Brakus,United States,Retail,1873000,6621,2023-06-27,prospect\nJoelle Kunde,Australia,Logistics,622000,3160,2022-02-09,active\nBria Herzog,South Korea,Manufacturing,1919000,75,2024-12-28,active\nGeoffrey Brown-Jones,France,Media,70407000,6868,2021-06-17,churned\nTriston Swift,Ireland,SaaS,2725000,3246,2022-08-01,active\nMadisyn Rutherford,United Kingdom,Logistics,548000,592,2020-11-06,active\nBrandyn Sauer,Australia,Fintech,600000,2884,2020-06-09,churned\nLisa Morissette,Spain,Fintech,2383000,6999,2022-08-24,churned\nJustus Batz,United Kingdom,Healthcare,76908000,4060,2020-03-16,active\nAudie Lubowitz,Denmark,Retail,5533000,185,2024-04-23,active\nJayda Flatley,Ireland,SaaS,1274000,5621,2022-10-19,active\nMaudie Keebler,Australia,Energy,43111000,837,2023-08-16,active\nAlfonzo Feest-Becker,Italy,Fintech,1625000,2733,2022-03-22,active\nTillman Runolfsdottir,Denmark,Energy,403000,1288,2020-05-08,active\nDave Nolan,Mexico,Energy,1666000,1636,2022-05-06,prospect\nWillard O'Kon,Italy,Retail,1947000,4870,2021-09-30,active\nEdwina VonRueden,Ireland,Fintech,8691000,3143,2023-10-10,churned\nMartina Kuhic,France,Retail,89157000,316,2020-02-26,active\nBrandyn Schmeler,United Kingdom,Manufacturing,14961000,5131,2023-06-21,active\nAida Paucek,Germany,Food & Beverage,2419000,6517,2021-05-29,active\nGreen Zemlak,India,Retail,11377000,4991,2020-06-11,prospect\nJo Kulas,Italy,Media,146000,5166,2020-11-19,churned\nSonya Brown,Spain,Healthcare,17493000,60,2022-07-22,active\nLela Ledner,Spain,Energy,939000,1311,2020-12-03,active\nKylie Kemmer,United Kingdom,Manufacturing,1327000,4568,2021-10-12,churned\nNyah Morar,Germany,Healthcare,874000,3260,2020-04-30,active",
+        "timestamp": "2025-01-09"
+      },
+      {
+        "role": "assistant",
+        "content": "Ingested 63 customers. The top countries in this batch are Denmark, United Kingdom, Italy. Let me know when you have the next batch.",
+        "timestamp": "2025-01-09"
+      }
+    ],
+    "metadata": {
+      "date": "2025-01-09",
+      "type": "A",
+      "pattern": "bulk_csv_v1"
+    }
+  },
+  {
+    "sessionId": "session-A05-csv-v1",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Here's batch 5 of the customer export from Salesforce. Please ingest these records.\n\nname,country,industry,annual_revenue_usd,employees,signup_date,status\nDelia Kilback,United States,Food & Beverage,411000,3132,2024-11-06,active\nCleve Windler,United Kingdom,Healthcare,1129000,692,2020-04-14,active\nMarc Muller,Poland,Retail,1500000,6903,2021-01-30,active\nHerbert Brown,Poland,Fintech,207000,955,2020-08-02,active\nEva Jast,Switzerland,Energy,8563000,1747,2024-12-10,active\nJoannie Keebler,Mexico,Media,870000,2157,2020-12-28,prospect\nJulia Goldner,France,Logistics,1195000,2196,2022-10-09,active\nGeovany Oberbrunner,Japan,Manufacturing,6753000,7513,2023-03-08,active\nClare Little,Germany,Logistics,1733000,1354,2024-04-09,active\nMurl Kris,India,Food & Beverage,126000,657,2021-04-17,active\nDoyle Connelly-Douglas,Italy,Education,4738000,3525,2023-01-29,active\nRachel Baumbach,Mexico,Logistics,16745000,7075,2021-02-20,active\nAgnes Farrell,Mexico,SaaS,8961000,7495,2020-09-08,active\nLucinda Mraz,Brazil,SaaS,1583000,3681,2020-04-16,churned\nRolando Pacocha,Ireland,SaaS,924000,745,2023-09-29,churned\nIrwin Herman,India,Retail,16613000,2738,2022-03-03,prospect\nGrace Howell,Denmark,Manufacturing,532000,590,2023-01-07,active\nRobyn Hoeger,Switzerland,Fintech,886000,3945,2022-01-08,active\nClint O'Connell,Netherlands,Education,17237000,7352,2021-04-05,prospect\nColeman Boyer,Poland,Media,1363000,6365,2024-08-20,active\nMakenzie Johns,Denmark,Media,1658000,5192,2022-02-04,active\nAmos Hamill,France,Retail,625000,5657,2020-04-24,prospect\nZita Bauch,Denmark,SaaS,785000,6271,2022-10-31,active\nClemmie Jerde,South Korea,Media,2199000,3332,2022-05-29,active\nHosea Kerluke,Australia,Fintech,1265000,5103,2021-03-18,prospect\nWellington Dooley,Brazil,Fintech,590000,3704,2024-05-05,prospect\nHunter Spencer,France,Logistics,1311000,5277,2024-06-23,active\nWerner Deckow,Japan,Energy,1155000,5755,2021-02-21,churned\nGia Jacobi,United States,Healthcare,1694000,1167,2022-07-12,active\nJosh Hilpert,France,Manufacturing,19536000,6778,2020-02-13,churned\nVelma Hilpert,France,Logistics,1937000,7710,2024-04-07,active\nKyle Feest,Mexico,Education,1046000,5516,2021-04-05,active\nSigrid Schroeder,Denmark,Media,122982000,1450,2021-05-06,active\nLorenza Satterfield,United Kingdom,Media,1930000,2738,2023-03-01,churned\nRhianna Daniel,Australia,Education,556000,1140,2021-09-27,active\nChelsie Tillman,Switzerland,Energy,1411000,2532,2020-04-11,active\nDarian Ernser,Italy,Media,210000,7753,2024-06-02,churned\nJaime Simonis,Australia,SaaS,14078000,5578,2021-10-25,churned\nJodie Auer,Singapore,Logistics,1424000,7381,2023-07-16,active\nTyrel Morar,Italy,Logistics,1891000,5199,2023-01-15,active\nDimitri Pagac,Switzerland,Education,179274000,5914,2021-05-21,active\nJerome Vandervort,Netherlands,Energy,1088000,4376,2020-12-03,churned\nGaetano Connelly,Canada,SaaS,516000,1466,2024-02-17,active\nLavada Ward,Switzerland,Retail,1992000,7850,2023-04-01,prospect\nLizzie Swift,India,Fintech,1632000,5988,2020-12-03,active\nGordon Kling,Denmark,Logistics,329000,4679,2024-11-05,active\nGerman Ebert,Spain,Healthcare,292000,1344,2020-09-26,churned\nHal Crist,Australia,Energy,522000,1852,2023-05-12,active\nJosh Osinski,Mexico,Media,470000,7124,2023-10-02,churned\nMelba King,United Kingdom,Manufacturing,175000,7819,2021-03-18,active\nQueen Doyle,Germany,Education,1129000,7745,2020-05-01,active\nDeonte Kozey,France,SaaS,1946000,2654,2022-05-30,active\nAudie Thiel,Australia,Fintech,507000,2170,2021-03-28,active\nKara Bayer,India,Education,247000,1363,2020-08-19,active\nFredy Cormier,Switzerland,Education,86296000,3592,2023-08-12,churned\nAnthony Davis,Italy,Education,896000,1349,2024-05-25,active\nNina O'Kon,Singapore,Retail,4817000,3794,2023-08-01,active\nOrie Kuhlman,France,Fintech,45064000,4262,2022-01-21,active\nKoby Schumm,Japan,Fintech,504000,5310,2022-01-21,active\nChase Cormier-Johns,Germany,Logistics,1231000,541,2023-10-02,active\nJarrod Huels,Poland,Media,19196000,6297,2021-07-30,active\nSylvia Rolfson,Singapore,Education,1917000,3016,2021-09-11,active\nWill Bergstrom,Canada,Media,1352000,4261,2020-07-07,active",
+        "timestamp": "2025-01-11"
+      },
+      {
+        "role": "assistant",
+        "content": "Ingested 63 customers. The top countries in this batch are France, Switzerland, Mexico. Let me know when you have the next batch.",
+        "timestamp": "2025-01-11"
+      }
+    ],
+    "metadata": {
+      "date": "2025-01-11",
+      "type": "A",
+      "pattern": "bulk_csv_v1"
+    }
+  },
+  {
+    "sessionId": "session-A06-csv-v1",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Here's batch 6 of the customer export from Salesforce. Please ingest these records.\n\nname,country,industry,annual_revenue_usd,employees,signup_date,status\nKevin Kertzmann,Canada,Fintech,19661000,1525,2023-12-19,churned\nAlden Windler,United States,Logistics,692000,4052,2022-03-13,active\nDale Schowalter,South Korea,Food & Beverage,676000,7461,2020-08-04,churned\nEugenia Fahey,Sweden,Healthcare,1265000,7545,2021-03-15,active\nTrycia Ryan,Sweden,SaaS,1134000,7807,2021-11-05,active\nTracey Senger,Canada,Media,1655000,325,2024-06-13,churned\nKendall Bernhard,Germany,Energy,1843000,3256,2020-09-18,prospect\nJonas Effertz,France,Food & Beverage,18889000,6971,2023-10-31,prospect\nMargot Ebert,South Korea,SaaS,1743000,1243,2020-05-31,active\nColumbus Howe,United States,Healthcare,1745000,7846,2022-01-14,prospect\nReinhold Ryan,Ireland,Manufacturing,646000,6344,2022-11-21,active\nEsther Nicolas,Sweden,SaaS,1647000,3060,2020-08-29,active\nOphelia Tremblay,Canada,Logistics,472000,366,2021-08-17,active\nJefferey Lowe,Poland,Education,1028000,1204,2021-08-16,prospect\nFreeman Bechtelar,Japan,Healthcare,17306000,1700,2023-04-15,active\nColt Flatley,Spain,Healthcare,111271000,1507,2020-05-20,active\nMarlin Dooley,Poland,Fintech,611000,6382,2021-07-21,active\nMatteo Bode,Brazil,Energy,1907000,1212,2022-02-28,churned\nBernita White,Germany,Logistics,669000,619,2022-07-03,prospect\nLuella Lockman,India,Food & Beverage,182963000,1570,2020-05-06,active\nAnnie Grady,Netherlands,Manufacturing,64918000,2179,2023-10-19,active\nDarrell Skiles,Ireland,SaaS,1750000,7413,2022-02-05,active\nTroy Brakus,Sweden,Retail,468000,6872,2023-05-21,prospect\nCristobal Gislason,Canada,Fintech,1234000,2677,2023-11-09,active\nKaylie Veum,France,Food & Beverage,1556000,5619,2021-08-28,active\nFermin Harvey,Australia,Healthcare,1589000,2289,2022-03-01,active\nJerrod Renner,Japan,SaaS,4436000,6012,2023-04-15,churned\nGracie Streich,Italy,Food & Beverage,1756000,5383,2023-12-26,active\nDessie Mitchell,Brazil,SaaS,967000,2955,2020-08-09,active\nPercival McCullough,Ireland,Education,221000,6652,2022-12-30,active\nWyatt Abshire-Wilderman,Mexico,Education,1080000,3913,2023-05-03,active\nLeda Wyman,Netherlands,Logistics,832000,2726,2022-09-16,active\nNelle Mraz,Sweden,Education,1960000,5075,2020-08-18,active\nRussell Cruickshank,Germany,Energy,1213000,7523,2022-11-17,active\nDorothy Koelpin,United States,Healthcare,415000,3567,2021-01-17,active\nZander Lynch,Australia,Healthcare,1168000,7662,2020-11-16,active\nVern Rempel,Switzerland,Food & Beverage,284000,1436,2023-12-28,active\nDrake Kohler,Sweden,Retail,1951000,7890,2023-06-29,active\nDoris Bogan,Singapore,SaaS,531000,2843,2020-05-06,active\nEugene Botsford,Canada,Fintech,1131000,2296,2022-12-15,active\nHector Jacobi,Netherlands,Logistics,1799000,1843,2021-01-24,active\nMacie Stracke,Poland,Logistics,1750000,6214,2023-11-09,prospect\nLiana Boehm,Australia,Fintech,14712000,655,2020-06-03,churned\nKailey Jacobson,Italy,Retail,1850000,4668,2022-12-19,active\nVinnie Reichert,United States,Education,1602000,1003,2023-12-22,active\nTimmothy Marquardt-Conroy,Sweden,Media,265000,4457,2024-03-24,prospect\nShayna Vandervort,Switzerland,Energy,462000,1481,2021-09-17,active\nArjun Upton,Sweden,Manufacturing,388000,3465,2022-12-24,active\nValerie Hermiston,Japan,Manufacturing,781000,5255,2021-03-15,active\nWaino Smitham,Poland,Healthcare,207000,6919,2024-01-25,churned\nJason Hettinger,South Korea,Food & Beverage,261000,3736,2022-05-30,prospect\nKaya Ebert,Australia,Fintech,1582000,4513,2021-04-22,active\nLarue Bosco,Singapore,Manufacturing,1789000,7646,2024-04-24,prospect\nIke MacGyver,Italy,SaaS,19030000,2989,2021-05-09,active\nMathilde Muller,Australia,Manufacturing,349000,4850,2024-03-31,active\nEinar Hodkiewicz,Singapore,Logistics,727000,858,2024-10-07,active\nGracie Stoltenberg,India,SaaS,108581000,2069,2022-04-18,churned\nSusie Kreiger,Spain,Energy,128629000,2866,2023-03-29,active\nMargie Rohan,Sweden,Energy,1524000,4368,2021-01-07,active\nLouie Lang,India,Manufacturing,1536000,1834,2020-05-20,active\nKaya Ruecker,South Korea,Healthcare,593000,1561,2020-04-15,active\nNeva Block,Sweden,Logistics,14216000,2898,2022-12-20,active\nStanford Hansen,France,Education,3880000,4617,2022-04-27,active",
+        "timestamp": "2025-01-13"
+      },
+      {
+        "role": "assistant",
+        "content": "Ingested 63 customers. The top countries in this batch are Sweden, Canada, Australia. Let me know when you have the next batch.",
+        "timestamp": "2025-01-13"
+      }
+    ],
+    "metadata": {
+      "date": "2025-01-13",
+      "type": "A",
+      "pattern": "bulk_csv_v1"
+    }
+  },
+  {
+    "sessionId": "session-A07-csv-v1",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Here's batch 7 of the customer export from Salesforce. Please ingest these records.\n\nname,country,industry,annual_revenue_usd,employees,signup_date,status\nDemetrius Davis,India,Retail,978000,7579,2020-10-07,active\nWilford Prohaska,Australia,Retail,109327000,3047,2020-10-24,prospect\nEldred Runolfsson,Netherlands,Education,339000,7834,2023-05-16,prospect\nShanelle Pagac,Mexico,Manufacturing,1338000,5910,2021-07-30,active\nBarrett Gorczany,Denmark,Logistics,1086000,1439,2024-11-08,active\nCale Kerluke,Germany,Manufacturing,1498000,7987,2024-08-31,active\nDonavon Hermiston,Netherlands,Retail,1624000,601,2024-12-08,prospect\nStan Dicki,France,Healthcare,225000,6206,2022-04-08,active\nShaniya Gerhold,Poland,Manufacturing,18546000,3393,2021-09-17,churned\nAlexa Purdy,Spain,Energy,36902000,5383,2022-03-21,churned\nEloisa Crooks,Ireland,Manufacturing,11840000,7077,2022-10-09,active\nNaomie Kub,South Korea,Food & Beverage,9322000,2629,2022-04-09,prospect\nStacey Nader,Switzerland,Food & Beverage,18148000,7098,2023-11-25,active\nGarnet Keeling,United Kingdom,Education,393000,208,2023-03-25,active\nCheyanne Turcotte,South Korea,Logistics,9078000,4727,2023-04-22,active\nNorval Will,Spain,SaaS,9905000,6777,2024-06-19,active\nFrancisco Weissnat,Mexico,Media,17211000,3163,2020-04-03,active\nAlphonso Huel,India,SaaS,3956000,7851,2021-11-28,prospect\nOswaldo Pouros,Ireland,Food & Beverage,1376000,5836,2022-11-16,active\nIzaiah Leffler,Australia,Fintech,569000,1280,2024-05-11,active\nDarien Renner,Ireland,Manufacturing,18817000,7332,2023-03-06,active\nHans Murray,United States,SaaS,4110000,2701,2020-09-17,active\nJustus Nienow,Australia,Logistics,714000,6363,2021-05-09,active\nKody Schneider,Singapore,Fintech,4520000,3329,2022-09-29,active\nEveline Dicki,United Kingdom,Logistics,179744000,5005,2024-01-16,active\nMalcolm Sporer,South Korea,Retail,5705000,899,2021-05-07,active\nPierce Volkman,United States,SaaS,16279000,2537,2024-04-15,churned\nCleta Von,Switzerland,Food & Beverage,8099000,7617,2023-09-10,active\nReanna Wisoky,Germany,Retail,17528000,1438,2024-01-01,active\nJeffrey Paucek,Denmark,Manufacturing,96713000,3614,2020-10-25,prospect\nArnulfo Rolfson,Germany,Healthcare,735000,3160,2022-08-26,active\nKeagan Orn,Switzerland,Education,7855000,7209,2024-12-24,prospect\nMoshe Oberbrunner,Brazil,Education,1030000,1773,2024-12-09,churned\nConsuelo Tremblay,Spain,Retail,134000,6343,2020-05-06,active\nShaun Howell,Brazil,Healthcare,3106000,6511,2024-09-14,active\nTorey Bayer,France,Food & Beverage,19771000,1207,2022-12-21,active\nLinnea McGlynn,Canada,Logistics,9961000,5661,2021-12-12,active\nRafaela Schmeler,Denmark,Education,1135000,51,2021-08-16,active\nJake Powlowski,Australia,Education,1633000,1566,2021-09-22,active\nMarkus Bartoletti,Poland,Healthcare,1347000,7770,2022-10-24,prospect\nGarnet Reynolds-Miller,Italy,SaaS,1746000,4811,2023-07-17,active\nAngelita Lakin,Italy,Energy,101313000,2841,2022-01-02,active\nBrody Hilll,Poland,Media,1077000,4741,2020-03-25,active\nAlivia Walsh,Italy,Retail,26110000,5581,2021-06-27,churned\nLessie Leannon,Italy,Media,1392000,338,2020-06-03,prospect\nOtis Koch,Sweden,Food & Beverage,534000,1976,2022-06-03,prospect\nJohathan Schultz-Morar,Switzerland,Energy,910000,1050,2024-06-07,active\nDelores Zemlak,Singapore,Fintech,8220000,60,2022-01-07,active\nBrooks Kuphal,Denmark,Logistics,1203000,5060,2020-01-24,active\nMurphy Bailey,South Korea,Fintech,19465000,3504,2021-03-05,prospect\nRoger Cremin,Australia,Energy,15855000,7804,2022-11-13,active\nHayden Becker,Ireland,Manufacturing,677000,1847,2020-01-03,prospect\nArlo Jenkins,Ireland,SaaS,1942000,6925,2024-02-01,active\nBradly Strosin,United States,Retail,204000,2685,2024-01-06,active\nDelmer Bartoletti,Canada,Media,8157000,6571,2020-07-21,prospect\nCecilia Ward,Canada,Retail,1562000,1500,2021-08-14,active\nGudrun Lemke,Brazil,Healthcare,16840000,1175,2024-03-01,active\nLindsay Gleichner,France,Logistics,1384000,5655,2023-01-19,active\nKenyatta Rice,Mexico,Healthcare,597000,3356,2022-12-30,active\nDon Lynch-Heidenreich,Canada,SaaS,1290000,3914,2022-01-04,churned\nCheyenne Treutel,Poland,Energy,465000,331,2020-11-04,active\nGolden Dooley,Singapore,Manufacturing,210000,896,2022-07-31,active\nAnnamarie Feest,United States,Education,11593000,2598,2021-08-31,active",
+        "timestamp": "2025-01-15"
+      },
+      {
+        "role": "assistant",
+        "content": "Ingested 63 customers. The top countries in this batch are Australia, Ireland, Denmark. Let me know when you have the next batch.",
+        "timestamp": "2025-01-15"
+      }
+    ],
+    "metadata": {
+      "date": "2025-01-15",
+      "type": "A",
+      "pattern": "bulk_csv_v1"
+    }
+  },
+  {
+    "sessionId": "session-A08-csv-v1",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Here's batch 8 of the customer export from Salesforce. Please ingest these records.\n\nname,country,industry,annual_revenue_usd,employees,signup_date,status\nFletcher Shields,Japan,Food & Beverage,191507000,2617,2021-10-09,active\nWalter Krajcik,Singapore,Education,1675000,300,2022-12-25,active\nSerena Cormier,Poland,Logistics,1741000,4712,2021-11-16,active\nDahlia Morissette-Lynch,Denmark,Healthcare,1423000,5619,2020-11-09,active\nDalton Hauck,India,Food & Beverage,1436000,2912,2024-11-10,churned\nLamont Bosco,India,SaaS,100281000,1485,2022-09-17,churned\nRebekah Shields,France,Food & Beverage,544000,550,2020-12-07,active\nCarroll Russel,Poland,Fintech,778000,7410,2021-02-21,active\nChanel Ernser,Spain,Education,600000,10,2024-05-09,prospect\nAnnette Kohler,Australia,Energy,2151000,1745,2023-04-23,active\nNikolas Buckridge,France,Fintech,14666000,3796,2020-06-27,active\nBeryl Terry,Netherlands,Energy,11994000,4240,2021-03-17,active\nMadie Bogisich,Denmark,Food & Beverage,1474000,3970,2020-05-28,active\nPrecious Cummings,United Kingdom,Energy,2569000,7490,2020-04-04,active\nArno Haag,South Korea,Fintech,971000,5802,2022-11-15,active\nHaley Kertzmann,Netherlands,Logistics,4522000,6949,2022-06-09,churned\nNash Hegmann,Sweden,Logistics,1747000,4632,2022-03-12,prospect\nDonato Streich,India,SaaS,1895000,5894,2024-06-01,active\nMadelyn Ankunding,Japan,Energy,2701000,6698,2023-02-05,active\nBarton Pfeffer,Germany,Food & Beverage,3212000,4660,2021-09-23,active\nTomasa Padberg,Spain,Energy,1337000,857,2023-04-16,churned\nJohnson Breitenberg,Denmark,Retail,612000,3021,2020-02-06,active\nVito Olson,Australia,Education,676000,2606,2023-07-25,prospect\nDanyka Mosciski,Sweden,SaaS,11366000,6180,2022-08-08,churned\nNoemie Cole,France,Logistics,16338000,3855,2020-08-02,active\nGermaine Halvorson,Italy,Retail,145285000,4563,2020-06-26,active\nKellen Pfeffer,Netherlands,Fintech,11642000,6690,2024-02-09,prospect\nBeaulah Daugherty,Brazil,Manufacturing,562000,5780,2024-04-12,prospect\nLyla Treutel,United Kingdom,Food & Beverage,12752000,3152,2022-05-14,churned\nCorbin Upton,Poland,Healthcare,4781000,3901,2022-02-24,active\nSavion Renner,Mexico,SaaS,641000,3547,2023-02-01,prospect\nAntonietta Anderson,Ireland,Media,663000,2801,2023-11-16,active\nNoble Kessler-Gottlieb,Japan,Food & Beverage,542000,1041,2021-04-13,active\nGarland Schulist,India,Logistics,8773000,672,2023-11-20,active\nDane Connelly,Mexico,Media,379000,6490,2023-03-07,active\nJack McDermott,India,Fintech,1906000,7123,2022-04-12,active\nCory Carter,Singapore,Retail,16205000,3990,2020-06-07,active\nBen Nolan,France,Food & Beverage,110072000,3465,2022-04-16,active\nJed Turcotte,Denmark,Manufacturing,1833000,1689,2023-02-12,active\nDock Schmeler,Brazil,Education,14751000,6697,2023-06-28,active\nHazle Treutel,Germany,Food & Beverage,132000,5296,2023-01-05,active\nLorna Effertz,France,Food & Beverage,1730000,5337,2022-03-06,churned\nTyra Lebsack-Wolff,Japan,SaaS,1465000,1982,2023-03-16,active\nDevin Skiles,India,SaaS,1864000,499,2020-06-17,active\nLaurianne Kohler,Ireland,Retail,7614000,6193,2023-11-13,active\nJadyn Moen,Brazil,Fintech,170929000,6442,2024-02-12,churned\nWaino Effertz,Italy,SaaS,1097000,3458,2021-06-16,active\nLinnie Sipes,India,Fintech,2933000,4393,2021-06-09,active\nRichie Anderson,United Kingdom,Logistics,12753000,4806,2023-04-30,active\nLeonor Spencer,India,Food & Beverage,1583000,2202,2024-02-11,active\nBilly Rath,Sweden,Manufacturing,1127000,6810,2024-10-15,active\nCecile White,Ireland,Education,286000,5476,2022-03-15,active\nAmie Koch,Spain,Energy,1198000,2877,2024-02-13,prospect\nJannie Heller,India,Education,42374000,5849,2024-09-10,active\nHilma Spinka,Italy,Education,1018000,1072,2020-05-27,prospect\nAric Windler,South Korea,Energy,429000,1255,2021-04-02,active\nDomingo Powlowski,Spain,Retail,1358000,6521,2023-11-22,prospect\nKasey Walker,Germany,Manufacturing,1587000,7941,2021-03-15,churned\nYessenia Leannon,Singapore,Media,14645000,2879,2021-06-20,prospect",
+        "timestamp": "2025-01-17"
+      },
+      {
+        "role": "assistant",
+        "content": "Ingested 59 customers. The top countries in this batch are India, France, Japan. Let me know when you have the next batch.",
+        "timestamp": "2025-01-17"
+      }
+    ],
+    "metadata": {
+      "date": "2025-01-17",
+      "type": "A",
+      "pattern": "bulk_csv_v1"
+    }
+  },
+  {
+    "sessionId": "session-B01-chat",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Quick updates:\n• Steve Shanahan bought $2.4k of software licenses on 2025-03-02.\n• Murl Beer bought $431.2k of catering on 2025-02-04.\n• Lacey Parisian bought $29k of raw materials on 2025-01-09.\n• Lora Leuschke bought $17.4k of office supplies on 2025-02-05.\n• Malcolm Sporer bought $137.8k of raw materials on 2025-02-23.\n• Walter Krajcik bought $38.4k of raw materials on 2025-01-15.\n• Martina Kuhic bought $2.68M of packaging on 2025-02-23.\n• Hazle Treutel bought $3.5k of hardware on 2025-01-11.",
+        "timestamp": "2025-02-10"
+      },
+      {
+        "role": "assistant",
+        "content": "Logged.",
+        "timestamp": "2025-02-10"
+      },
+      {
+        "role": "user",
+        "content": "Quick updates:\n• April Schneider bought $8.7k of consulting on 2025-01-21.\n• Orin Haley bought $8.04M of packaging on 2025-03-02.\n• Ben Nolan bought $4.37M of consulting on 2025-02-04.\n• Melany Bins bought $3.9k of hardware on 2025-01-18.\n• Harley Sanford bought $367.4k of raw materials on 2025-02-24.\n• Shaun Langosh bought $15.9k of paper on 2025-02-01.\n• Quinton Jacobs bought $24k of office supplies on 2025-01-27.\n• Susie Kreiger bought $5.48M of raw materials on 2025-02-23.",
+        "timestamp": "2025-02-10"
+      },
+      {
+        "role": "assistant",
+        "content": "Logged.",
+        "timestamp": "2025-02-10"
+      },
+      {
+        "role": "user",
+        "content": "Quick updates:\n• Enrique Mertz bought $19.3k of consulting on 2025-02-03.\n• Annetta Carroll bought $21.3k of raw materials on 2025-01-13.\n• Kraig Mohr bought $251.4k of software licenses on 2025-02-09.\n• Johan Mann bought $394k of packaging on 2025-02-08.\n• Kenyatta Rice bought $18k of logistics services on 2025-01-05.\n• Helene Schaden bought $86.9k of consulting on 2025-01-13.\n• Brody Hilll bought $29.9k of hardware on 2025-02-13.\n• Aditya Huel bought $10.9k of logistics services on 2025-02-23.",
+        "timestamp": "2025-02-10"
+      },
+      {
+        "role": "assistant",
+        "content": "Logged.",
+        "timestamp": "2025-02-10"
+      },
+      {
+        "role": "user",
+        "content": "Quick updates:\n• Marjory Stark bought $54.9k of catering on 2025-03-03.\n• Julia Goldner bought $38.4k of software licenses on 2025-02-23.\n• Lindsay Gleichner bought $49.8k of office supplies on 2025-01-16.\n• Lindsay Gleichner bought $65.7k of logistics services on 2025-02-10.\n• Grace Howell bought $2.8k of software licenses on 2025-02-19.\n• Luz Frami bought $1.56M of logistics services on 2025-02-15.\n• Mittie Keeling bought $27.5k of paper on 2025-01-25.\n• Murl Beer churned on 2025-06-05 — mark them as churned.",
+        "timestamp": "2025-02-10"
+      },
+      {
+        "role": "assistant",
+        "content": "Logged.",
+        "timestamp": "2025-02-10"
+      },
+      {
+        "role": "user",
+        "content": "Quick updates:\n• Zander Lynch churned on 2025-04-04 — mark them as churned.\n• Triston Swift has pivoted — their industry should now be Energy.\n• Delfina Luettgen's annual revenue was revised to $4.69M.\n• Correction: Simeon Vandervort's employee count is now 4558, not what we had before.",
+        "timestamp": "2025-02-10"
+      },
+      {
+        "role": "assistant",
+        "content": "Logged.",
+        "timestamp": "2025-02-10"
+      }
+    ],
+    "metadata": {
+      "date": "2025-02-10",
+      "type": "B",
+      "pattern": "chat_updates"
+    }
+  },
+  {
+    "sessionId": "session-B02-chat",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Quick updates:\n• Linnea McGlynn bought $446.8k of office supplies on 2025-03-11.\n• Coleman Boyer bought $54.6k of packaging on 2025-04-07.\n• Edward Kunze bought $36.4k of office supplies on 2025-03-23.\n• Trycia Ryan bought $51.2k of software licenses on 2025-03-08.\n• Bell Kuhlman bought $36.3k of consulting on 2025-04-15.\n• Chet Davis bought $30.9k of paper on 2025-04-21.\n• Arno Haag bought $43.3k of consulting on 2025-04-17.\n• Vincenza Rau bought $1.85M of raw materials on 2025-04-18.",
+        "timestamp": "2025-03-11"
+      },
+      {
+        "role": "assistant",
+        "content": "Logged.",
+        "timestamp": "2025-03-11"
+      },
+      {
+        "role": "user",
+        "content": "Quick updates:\n• Jamel Berge bought $719.7k of hardware on 2025-04-10.\n• Adan King bought $17.1k of paper on 2025-03-26.\n• Karlee Cummings bought $731.3k of logistics services on 2025-04-20.\n• Lela Ledner bought $4.4k of packaging on 2025-03-29.\n• Mallory Upton bought $24.5k of office supplies on 2025-04-09.\n• Geovany Oberbrunner bought $41k of logistics services on 2025-04-11.\n• Reanna Wisoky bought $368.8k of catering on 2025-03-23.\n• Fermin Harvey bought $47.9k of office supplies on 2025-04-13.",
+        "timestamp": "2025-03-11"
+      },
+      {
+        "role": "assistant",
+        "content": "Logged.",
+        "timestamp": "2025-03-11"
+      },
+      {
+        "role": "user",
+        "content": "Quick updates:\n• Lora Leuschke bought $20.5k of catering on 2025-04-17.\n• Michale Becker bought $369.9k of paper on 2025-03-29.\n• Anastasia Wyman bought $28.2k of software licenses on 2025-03-14.\n• Audie Lubowitz bought $224.3k of consulting on 2025-04-18.\n• Odie Homenick bought $202.7k of consulting on 2025-04-04.\n• Richie Anderson bought $179.6k of logistics services on 2025-04-05.\n• Trycia Ryan bought $52.7k of hardware on 2025-04-03.\n• Beulah Turcotte bought $390.6k of catering on 2025-04-18.",
+        "timestamp": "2025-03-11"
+      },
+      {
+        "role": "assistant",
+        "content": "Logged.",
+        "timestamp": "2025-03-11"
+      },
+      {
+        "role": "user",
+        "content": "Quick updates:\n• Vito Olson bought $30.8k of packaging on 2025-04-24.\n• Gia Jacobi bought $74.2k of logistics services on 2025-04-02.\n• Leonor Spencer bought $67.6k of paper on 2025-04-11.\n• Jailyn Rempel bought $11.5k of catering on 2025-03-17.\n• Kiana Rowe bought $3.4k of paper on 2025-03-08.\n• Eugene Botsford bought $18.9k of logistics services on 2025-04-07.\n• Garnet Keeling bought $8.5k of consulting on 2025-04-16.\n• Jake Powlowski churned on 2025-06-21 — mark them as churned.",
+        "timestamp": "2025-03-11"
+      },
+      {
+        "role": "assistant",
+        "content": "Logged.",
+        "timestamp": "2025-03-11"
+      },
+      {
+        "role": "user",
+        "content": "Quick updates:\n• Correction: Remington Von's employee count is now 6725, not what we had before.\n• Jed Turcotte has pivoted — their industry should now be Logistics.\n• Correction: Shanelle Pagac's employee count is now 7580, not what we had before.\n• Correction: Abelardo Nitzsche's employee count is now 3706, not what we had before.",
+        "timestamp": "2025-03-11"
+      },
+      {
+        "role": "assistant",
+        "content": "Logged.",
+        "timestamp": "2025-03-11"
+      }
+    ],
+    "metadata": {
+      "date": "2025-03-11",
+      "type": "B",
+      "pattern": "chat_updates"
+    }
+  },
+  {
+    "sessionId": "session-B03-chat",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Quick updates:\n• Gordon Kling bought $12.6k of raw materials on 2025-05-29.\n• Kaya Ebert bought $58.1k of consulting on 2025-05-14.\n• Luz Frami bought $603.4k of office supplies on 2025-05-15.\n• Velma Hilpert bought $19.5k of catering on 2025-05-26.\n• Garland Schulist bought $214.6k of paper on 2025-06-06.\n• Consuelo Tremblay bought $5.9k of paper on 2025-04-29.\n• Connie Erdman bought $270.4k of catering on 2025-06-17.\n• Zander Lynch bought $50k of raw materials on 2025-06-14.",
+        "timestamp": "2025-04-12"
+      },
+      {
+        "role": "assistant",
+        "content": "Logged.",
+        "timestamp": "2025-04-12"
+      },
+      {
+        "role": "user",
+        "content": "Quick updates:\n• Leonor Spencer bought $55.4k of raw materials on 2025-04-29.\n• Corbin Upton bought $11.2k of paper on 2025-06-02.\n• Ophelia Tremblay bought $21.6k of raw materials on 2025-05-17.\n• Jordane Lowe bought $9k of hardware on 2025-05-12.\n• Jefferey Lowe bought $13.6k of software licenses on 2025-05-24.\n• Arjun Upton bought $19.1k of training on 2025-05-23.\n• Mckayla Boyer bought $7.1k of catering on 2025-06-13.\n• Bridgette Heller bought $34.4k of office supplies on 2025-05-17.",
+        "timestamp": "2025-04-12"
+      },
+      {
+        "role": "assistant",
+        "content": "Logged.",
+        "timestamp": "2025-04-12"
+      },
+      {
+        "role": "user",
+        "content": "Quick updates:\n• Torey Bayer bought $562.5k of raw materials on 2025-05-04.\n• Reva Blick bought $90.1k of office supplies on 2025-06-23.\n• Helga Ferry bought $14.6k of packaging on 2025-06-17.\n• Melissa Bode bought $9k of logistics services on 2025-06-09.\n• Annette Kohler bought $84.6k of software licenses on 2025-06-10.\n• Jeramy Nader bought $2.2k of office supplies on 2025-06-08.\n• Marjory Stark bought $45.6k of training on 2025-05-01.\n• Quinton Jacobs bought $99.7k of consulting on 2025-06-26.",
+        "timestamp": "2025-04-12"
+      },
+      {
+        "role": "assistant",
+        "content": "Logged.",
+        "timestamp": "2025-04-12"
+      },
+      {
+        "role": "user",
+        "content": "Quick updates:\n• Trinity McGlynn bought $46.8k of hardware on 2025-05-25.\n• Aurelia Ortiz bought $7.1k of software licenses on 2025-05-25.\n• Hosea Kerluke bought $3.6k of catering on 2025-06-02.\n• Michale Becker bought $92k of hardware on 2025-05-04.\n• Shanelle Pagac bought $23.1k of software licenses on 2025-05-12.\n• Erick Bogisich bought $24.7k of hardware on 2025-05-21.\n• Dawn Kuhn bought $772.1k of paper on 2025-06-03.\n• Cheyenne Treutel churned on 2025-09-04 — mark them as churned.",
+        "timestamp": "2025-04-12"
+      },
+      {
+        "role": "assistant",
+        "content": "Logged.",
+        "timestamp": "2025-04-12"
+      },
+      {
+        "role": "user",
+        "content": "Quick updates:\n• Chet Davis churned on 2025-07-22 — mark them as churned.\n• Cecile White churned on 2025-07-31 — mark them as churned.\n• Joshuah Herzog churned on 2025-07-17 — mark them as churned.\n• Correction: Alysson Jaskolski-Strosin's employee count is now 4290, not what we had before.",
+        "timestamp": "2025-04-12"
+      },
+      {
+        "role": "assistant",
+        "content": "Logged.",
+        "timestamp": "2025-04-12"
+      }
+    ],
+    "metadata": {
+      "date": "2025-04-12",
+      "type": "B",
+      "pattern": "chat_updates"
+    }
+  },
+  {
+    "sessionId": "session-B04-chat",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Quick updates:\n• Enrique Mertz bought $31.1k of training on 2025-06-30.\n• Dorothy Koelpin bought $2.1k of office supplies on 2025-07-01.\n• Valerie Hermiston bought $34k of consulting on 2025-08-13.\n• Makenzie Johns bought $51.3k of catering on 2025-06-30.\n• Jannie Heller bought $136.9k of office supplies on 2025-07-10.\n• Taurean Hoppe bought $30.8k of training on 2025-07-19.\n• Donnell Olson bought $60.9k of software licenses on 2025-07-19.\n• Waino Effertz bought $6.8k of hardware on 2025-07-16.",
+        "timestamp": "2025-05-13"
+      },
+      {
+        "role": "assistant",
+        "content": "Logged.",
+        "timestamp": "2025-05-13"
+      },
+      {
+        "role": "user",
+        "content": "Quick updates:\n• Shanel Feeney bought $10.5k of software licenses on 2025-07-01.\n• Delores Zemlak bought $368.8k of paper on 2025-07-06.\n• Priscilla Langworth bought $2.1k of training on 2025-07-26.\n• Jarret Hoppe bought $22.5k of training on 2025-07-14.\n• Audie Thiel bought $24k of logistics services on 2025-08-08.\n• Shania Marks bought $3.3k of catering on 2025-07-26.\n• Tremaine Kshlerin bought $79.9k of paper on 2025-07-28.\n• Kenyon Wehner bought $16.2k of consulting on 2025-08-01.",
+        "timestamp": "2025-05-13"
+      },
+      {
+        "role": "assistant",
+        "content": "Logged.",
+        "timestamp": "2025-05-13"
+      },
+      {
+        "role": "user",
+        "content": "Quick updates:\n• Charley Kilback-Lemke bought $17.2k of logistics services on 2025-08-10.\n• Cecile White bought $11.6k of training on 2025-07-07.\n• Kirk Kassulke bought $1.01M of hardware on 2025-08-11.\n• Katrina Terry bought $34.4k of consulting on 2025-07-11.\n• Anastasia Wyman bought $24.3k of logistics services on 2025-07-06.\n• Nina O'Kon bought $167.2k of packaging on 2025-07-31.\n• Caden Welch bought $5.7k of training on 2025-07-30.\n• Margaretta Halvorson bought $22.3k of raw materials on 2025-08-05.",
+        "timestamp": "2025-05-13"
+      },
+      {
+        "role": "assistant",
+        "content": "Logged.",
+        "timestamp": "2025-05-13"
+      },
+      {
+        "role": "user",
+        "content": "Quick updates:\n• Dalton Hauck bought $58.2k of office supplies on 2025-06-29.\n• Aditya Huel bought $41.8k of software licenses on 2025-06-30.\n• Cristian Jacobs bought $222.4k of paper on 2025-06-29.\n• Joannie Keebler bought $17.8k of hardware on 2025-08-11.\n• Ryder Kessler bought $115.7k of consulting on 2025-08-06.\n• Jailyn Rempel bought $33.4k of packaging on 2025-08-08.\n• Zora Jacobi bought $7.3k of logistics services on 2025-08-01.\n• Shanel Feeney churned on 2025-10-09 — mark them as churned.",
+        "timestamp": "2025-05-13"
+      },
+      {
+        "role": "assistant",
+        "content": "Logged.",
+        "timestamp": "2025-05-13"
+      },
+      {
+        "role": "user",
+        "content": "Quick updates:\n• Correction: Maudie Keebler's employee count is now 1216, not what we had before.\n• Annetta Carroll's annual revenue was revised to $4.15M.\n• Anthony Davis's annual revenue was revised to $1.14M.\n• Bria Herzog has pivoted — their industry should now be Retail.",
+        "timestamp": "2025-05-13"
+      },
+      {
+        "role": "assistant",
+        "content": "Logged.",
+        "timestamp": "2025-05-13"
+      }
+    ],
+    "metadata": {
+      "date": "2025-05-13",
+      "type": "B",
+      "pattern": "chat_updates"
+    }
+  },
+  {
+    "sessionId": "session-D01-narrative",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Recap for the period ending 2025-05-20. Notable customer activity:\n• Bradly Strosin came in with 1 order (logistics services) totaling $5.9k.\n• Helga Ferry came in with 1 order (catering) totaling $21.5k.\n• Laurianne Kohler came in with 1 order (training) totaling $93.2k.\n• Lou Moore came in with 1 order (raw materials) totaling $90.4k.\n• Mason O'Conner came in with 1 order (consulting) totaling $488.5k.\n\nIndividual transactions:\n  - Mason O'Conner / consulting / $488.5k / 2025-09-24\n  - Helga Ferry / catering / $21.5k / 2025-08-12\n  - Laurianne Kohler / training / $93.2k / 2025-07-06\n  - Bradly Strosin / logistics services / $5.9k / 2025-03-13\n  - Lou Moore / raw materials / $90.4k / 2025-06-10",
+        "timestamp": "2025-05-20"
+      },
+      {
+        "role": "assistant",
+        "content": "Recap logged — 5 transactions across 5 accounts.",
+        "timestamp": "2025-05-20"
+      }
+    ],
+    "metadata": {
+      "date": "2025-05-20",
+      "type": "D",
+      "pattern": "narrative_multi_entity"
+    }
+  },
+  {
+    "sessionId": "session-B05-chat",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Quick updates:\n• Grace Howell bought $3.9k of logistics services on 2025-10-09.\n• Naomie Kub bought $439k of catering on 2025-09-17.\n• Corbin Upton bought $132.9k of raw materials on 2025-10-10.\n• Grant Little-Gorczany bought $265.8k of packaging on 2025-08-31.\n• Stan Dicki bought $7.4k of paper on 2025-09-01.\n• Reanna Wisoky bought $480k of logistics services on 2025-10-05.\n• Cloyd Schultz bought $97k of hardware on 2025-08-16.\n• Remington Von bought $9.6k of software licenses on 2025-09-16.",
+        "timestamp": "2025-06-14"
+      },
+      {
+        "role": "assistant",
+        "content": "Logged.",
+        "timestamp": "2025-06-14"
+      },
+      {
+        "role": "user",
+        "content": "Quick updates:\n• Alf Predovic bought $63.3k of software licenses on 2025-08-27.\n• Priscilla Langworth bought $8.6k of raw materials on 2025-09-19.\n• Edna Wisozk bought $95k of paper on 2025-08-24.\n• Cale Kerluke bought $73.4k of hardware on 2025-09-28.\n• Arlo Jenkins bought $18.5k of packaging on 2025-08-20.\n• Kendall Bernhard bought $68.8k of training on 2025-08-20.\n• Rickie Rice bought $12k of office supplies on 2025-09-17.\n• Esther Nicolas bought $11.4k of training on 2025-09-15.",
+        "timestamp": "2025-06-14"
+      },
+      {
+        "role": "assistant",
+        "content": "Logged.",
+        "timestamp": "2025-06-14"
+      },
+      {
+        "role": "user",
+        "content": "Quick updates:\n• Vern Rempel bought $8.9k of training on 2025-08-15.\n• Jarrod Huels bought $486.9k of software licenses on 2025-10-04.\n• Priscilla Langworth bought $13k of paper on 2025-09-05.\n• Mittie Keeling bought $11.4k of office supplies on 2025-09-09.\n• Darian Ernser bought $8.3k of hardware on 2025-08-21.\n• Jed Turcotte bought $70.6k of catering on 2025-08-25.\n• Madie Bogisich bought $37.5k of training on 2025-08-18.\n• Dimitri Pagac bought $7.97M of consulting on 2025-08-19.",
+        "timestamp": "2025-06-14"
+      },
+      {
+        "role": "assistant",
+        "content": "Logged.",
+        "timestamp": "2025-06-14"
+      },
+      {
+        "role": "user",
+        "content": "Quick updates:\n• Eugene Botsford bought $47.2k of software licenses on 2025-09-13.\n• Tillman Runolfsdottir bought $14.4k of logistics services on 2025-09-13.\n• Stacey Nader bought $681k of packaging on 2025-10-14.\n• Rosalyn Hoeger bought $292.8k of raw materials on 2025-09-03.\n• Rachel Baumbach bought $427.9k of packaging on 2025-10-01.\n• Lilian Hoeger bought $6.9k of hardware on 2025-09-16.\n• Cristian Jacobs bought $12.2k of paper on 2025-10-05.\n• Lora Leuschke churned on 2025-11-08 — mark them as churned.",
+        "timestamp": "2025-06-14"
+      },
+      {
+        "role": "assistant",
+        "content": "Logged.",
+        "timestamp": "2025-06-14"
+      },
+      {
+        "role": "user",
+        "content": "Quick updates:\n• Linnea McGlynn churned on 2025-11-12 — mark them as churned.\n• Cleve Windler's annual revenue was revised to $1.50M.\n• Barrett Gorczany has pivoted — their industry should now be Manufacturing.\n• Correction: Murl Beer's employee count is now 3590, not what we had before.",
+        "timestamp": "2025-06-14"
+      },
+      {
+        "role": "assistant",
+        "content": "Logged.",
+        "timestamp": "2025-06-14"
+      }
+    ],
+    "metadata": {
+      "date": "2025-06-14",
+      "type": "B",
+      "pattern": "chat_updates"
+    }
+  },
+  {
+    "sessionId": "session-B06-chat",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Quick updates:\n• Rickie Rice bought $14.1k of raw materials on 2025-11-15.\n• Helga Ferry bought $4.6k of hardware on 2025-10-27.\n• Jake Powlowski bought $79.9k of hardware on 2025-10-31.\n• Adan King bought $24.6k of hardware on 2025-10-23.\n• Reanna Wisoky bought $4k of paper on 2025-11-05.\n• Valerie Hermiston bought $15.7k of packaging on 2025-11-09.",
+        "timestamp": "2025-07-15"
+      },
+      {
+        "role": "assistant",
+        "content": "Logged.",
+        "timestamp": "2025-07-15"
+      },
+      {
+        "role": "user",
+        "content": "Quick updates:\n• Vivien Greenholt bought $8.5k of logistics services on 2025-11-18.\n• Izaiah Leffler bought $4.8k of software licenses on 2025-10-28.\n• Helga Ferry bought $10.6k of consulting on 2025-11-12.\n• Cecile White bought $8.6k of software licenses on 2025-11-21.\n• Louie Lang bought $34.8k of office supplies on 2025-11-12.\n• Madisyn Rutherford bought $16.3k of paper on 2025-11-07.",
+        "timestamp": "2025-07-15"
+      },
+      {
+        "role": "assistant",
+        "content": "Logged.",
+        "timestamp": "2025-07-15"
+      },
+      {
+        "role": "user",
+        "content": "Quick updates:\n• Freeman Bechtelar bought $149.4k of packaging on 2025-11-28.\n• Vern Rempel bought $13.7k of training on 2025-11-29.\n• Priscilla Collins bought $158.3k of hardware on 2025-10-25.\n• Charlie Smitham bought $20.4k of catering on 2025-11-20.\n• Otis Koch bought $24.5k of hardware on 2025-11-13.\n• Kiana Rowe bought $38.7k of paper on 2025-11-28.",
+        "timestamp": "2025-07-15"
+      },
+      {
+        "role": "assistant",
+        "content": "Logged.",
+        "timestamp": "2025-07-15"
+      },
+      {
+        "role": "user",
+        "content": "Quick updates:\n• Aurelia Ortiz bought $26.4k of packaging on 2025-10-15.\n• Mckenna Cummerata bought $3.08M of packaging on 2025-11-04.\n• Doris Bogan bought $21.9k of raw materials on 2025-10-29.\n• Simeon Vandervort bought $53.3k of hardware on 2025-11-30.\n• Nikolas Buckridge bought $234k of packaging on 2025-11-12.\n• Eliza Schneider bought $14.8k of raw materials on 2025-11-13.",
+        "timestamp": "2025-07-15"
+      },
+      {
+        "role": "assistant",
+        "content": "Logged.",
+        "timestamp": "2025-07-15"
+      },
+      {
+        "role": "user",
+        "content": "Quick updates:\n• Leda Wyman bought $18.8k of logistics services on 2025-11-10.\n• Pierce Volkman bought $408.7k of raw materials on 2025-11-10.\n• Alfonzo Feest-Becker bought $61.9k of paper on 2025-10-18.\n• Richie Anderson bought $577.6k of software licenses on 2025-11-18.\n• Donato Streich bought $46.5k of consulting on 2025-10-18.\n• Susie Kreiger bought $1.40M of office supplies on 2025-11-24.",
+        "timestamp": "2025-07-15"
+      },
+      {
+        "role": "assistant",
+        "content": "Logged.",
+        "timestamp": "2025-07-15"
+      }
+    ],
+    "metadata": {
+      "date": "2025-07-15",
+      "type": "B",
+      "pattern": "chat_updates"
+    }
+  },
+  {
+    "sessionId": "session-D02-narrative",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Recap for the period ending 2025-07-20. Notable customer activity:\n• Aditya Huel came in with 1 order (logistics services) totaling $68.9k.\n• Alivia Huel came in with 1 order (catering) totaling $32.7k.\n• Charlie Smitham came in with 1 order (paper) totaling $22.2k.\n• Dayton Braun came in with 1 order (paper) totaling $278.3k.\n• Shaun Howell came in with 1 order (office supplies) totaling $70k.\n\nIndividual transactions:\n  - Aditya Huel / logistics services / $68.9k / 2025-08-23\n  - Alivia Huel / catering / $32.7k / 2025-09-25\n  - Dayton Braun / paper / $278.3k / 2025-03-15\n  - Charlie Smitham / paper / $22.2k / 2025-04-29\n  - Shaun Howell / office supplies / $70k / 2025-07-26",
+        "timestamp": "2025-07-20"
+      },
+      {
+        "role": "assistant",
+        "content": "Recap logged — 5 transactions across 5 accounts.",
+        "timestamp": "2025-07-20"
+      }
+    ],
+    "metadata": {
+      "date": "2025-07-20",
+      "type": "D",
+      "pattern": "narrative_multi_entity"
+    }
+  },
+  {
+    "sessionId": "session-D03-narrative",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Recap for the period ending 2025-09-20. Notable customer activity:\n• Billy Rath came in with 1 order (hardware) totaling $9.2k.\n• Hanna Pacocha came in with 1 order (packaging) totaling $246.8k.\n• Harley Sanford came in with 1 order (hardware) totaling $236.6k.\n• Helene Schaden came in with 1 order (office supplies) totaling $441k.\n• Joelle Kunde came in with 1 order (training) totaling $13.9k.\n\nIndividual transactions:\n  - Hanna Pacocha / packaging / $246.8k / 2025-01-16\n  - Helene Schaden / office supplies / $441k / 2025-01-29\n  - Billy Rath / hardware / $9.2k / 2025-03-22\n  - Joelle Kunde / training / $13.9k / 2025-10-01\n  - Harley Sanford / hardware / $236.6k / 2025-02-12",
+        "timestamp": "2025-09-20"
+      },
+      {
+        "role": "assistant",
+        "content": "Recap logged — 5 transactions across 5 accounts.",
+        "timestamp": "2025-09-20"
+      }
+    ],
+    "metadata": {
+      "date": "2025-09-20",
+      "type": "D",
+      "pattern": "narrative_multi_entity"
+    }
+  },
+  {
+    "sessionId": "session-C01-csv-v2",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Fresh Salesforce export v2 — here are the changed/new rows since the last sync:\n\nname,country,industry,annual_revenue_usd,employees,signup_date,status\nPriscilla Collins,Ireland,Food & Beverage,19113000,6497,2024-09-23,active\nAbelardo Nitzsche,Denmark,Education,146000,2686,2020-11-19,active\nKaya Ebert,Australia,Fintech,1582000,5276,2021-04-22,active\nBarton Pfeffer,Germany,Food & Beverage,4147000,4660,2021-09-23,active\nBeulah Turcotte,Switzerland,Media,18768000,9812,2022-11-01,active\nWilly Abshire,Canada,Media,3809000,605,2025-06-06,active\nEldon Price,India,Media,14233000,9272,2021-06-24,active\nOdell Lang-Greenholt,Switzerland,Manufacturing,983000,777,2025-06-14,prospect\nEva Jast,Switzerland,Energy,10171000,1747,2024-12-10,active\n\nChange log:\n- Priscilla Collins: annual_revenue_usd updated.\n- Abelardo Nitzsche: industry updated.\n- Kaya Ebert: employees updated.\n- Barton Pfeffer: annual_revenue_usd updated.\n- Beulah Turcotte: employees updated.\n- New entry: Willy Abshire.\n- Eldon Price: employees updated.\n- New entry: Odell Lang-Greenholt.\n- Eva Jast: annual_revenue_usd updated.",
+        "timestamp": "2025-10-15"
+      },
+      {
+        "role": "assistant",
+        "content": "Processed 9 updated/new rows. The CRM now reflects the latest values.",
+        "timestamp": "2025-10-15"
+      }
+    ],
+    "metadata": {
+      "date": "2025-10-15",
+      "type": "C",
+      "pattern": "csv_v2_diff"
+    }
+  },
+  {
+    "sessionId": "session-C02-csv-v2",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Fresh Salesforce export v3 — here are the changed/new rows since the last sync:\n\nname,country,industry,annual_revenue_usd,employees,signup_date,status\nHadley Nikolaus,United Kingdom,Healthcare,2123000,232,2025-07-03,prospect\nEthelyn Berge,Ireland,Manufacturing,6584000,5454,2023-10-20,active\nCarter Mosciski,Denmark,Energy,530000,294,2025-08-03,active\nEddie Schmitt,United States,Food & Beverage,17361000,2184,2022-01-25,active\nHilton Spinka,Poland,Manufacturing,1930000,497,2025-08-04,prospect\nEugene Daniel,Canada,Media,13409000,634,2025-08-28,active\nSonya Brown,Spain,Healthcare,17493000,86,2022-07-22,active\nMaureen Hudson,Poland,Energy,2108000,476,2025-09-10,active\nMarc Muller,Poland,Retail,2068000,6903,2021-01-30,active\n\nChange log:\n- New entry: Hadley Nikolaus.\n- Ethelyn Berge: industry updated.\n- New entry: Carter Mosciski.\n- Eddie Schmitt: annual_revenue_usd updated.\n- New entry: Hilton Spinka.\n- New entry: Eugene Daniel.\n- Sonya Brown: employees updated.\n- New entry: Maureen Hudson.\n- Marc Muller: annual_revenue_usd updated.",
+        "timestamp": "2025-11-16"
+      },
+      {
+        "role": "assistant",
+        "content": "Processed 9 updated/new rows. The CRM now reflects the latest values.",
+        "timestamp": "2025-11-16"
+      }
+    ],
+    "metadata": {
+      "date": "2025-11-16",
+      "type": "C",
+      "pattern": "csv_v2_diff"
+    }
+  },
+  {
+    "sessionId": "session-C03-csv-v2",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Fresh Salesforce export v4 — here are the changed/new rows since the last sync:\n\nname,country,industry,annual_revenue_usd,employees,signup_date,status\nKatheryn D'Amore-Legros,Australia,Retail,6202000,610,2025-10-09,active\nFrancis Jakubowski-Schneider,Brazil,Manufacturing,7614000,330,2025-10-12,active\nAlden Windler,United States,Logistics,692000,4640,2022-03-13,active\nLizzie Swift,India,Fintech,1632000,7685,2020-12-03,active\nRemington Von,Denmark,Media,805000,4811,2023-07-13,active\nHal Crist,Australia,Energy,522000,2199,2023-05-12,active\nSeth Weber,Singapore,Food & Beverage,7384000,330,2025-11-28,active\n\nChange log:\n- New entry: Katheryn D'Amore-Legros.\n- New entry: Francis Jakubowski-Schneider.\n- Alden Windler: employees updated.\n- Lizzie Swift: employees updated.\n- Remington Von: industry updated.\n- Hal Crist: employees updated.\n- New entry: Seth Weber.",
+        "timestamp": "2025-12-17"
+      },
+      {
+        "role": "assistant",
+        "content": "Processed 7 updated/new rows. The CRM now reflects the latest values.",
+        "timestamp": "2025-12-17"
+      }
+    ],
+    "metadata": {
+      "date": "2025-12-17",
+      "type": "C",
+      "pattern": "csv_v2_diff"
+    }
+  }
+]
