@@ -122,7 +122,14 @@ async function main() {
   }
 
   const provider = await loadProvider(args.provider)
-  await provider.initialize({ apiKey: process.env.OPENAI_API_KEY })
+  // Pass provider-specific apiKey when unambiguous; otherwise pass an empty
+  // config so each provider reads its own env vars (SUPERMEMORY_API_KEY /
+  // MEM0_API_KEY / ZEP_API_KEY / SANDRA_URL+TOKEN / ANTHROPIC_API_KEY).
+  // Using process.env.OPENAI_API_KEY universally was wrong: Sandra's
+  // extractor interpreted it as an Anthropic key because config.apiKey
+  // takes precedence over env resolution inside the extractor.
+  const providerConfig = resolveProviderConfig(args.provider)
+  await provider.initialize(providerConfig)
 
   const containerTag = `srb-${Date.now()}`
   const ingestStart = Date.now()
@@ -192,6 +199,30 @@ async function main() {
     Object.fromEntries(Object.entries(summary.perClass).map(([k, v]) => [k, v.mean.toFixed(3)]))
   )}`)
   console.log(`[runner] reconciliation breakdown: ${JSON.stringify(summary.reconciliationBreakdown)}`)
+}
+
+function resolveProviderConfig(name: string): { apiKey?: string } & Record<string, unknown> {
+  // Each provider reads its own env vars. We only set apiKey when the
+  // provider's initialize() expects a specific key and doesn't read env itself.
+  switch (name) {
+    case "full-context":
+      return {}
+    case "supermemory":
+      return { apiKey: process.env.SUPERMEMORY_API_KEY, baseUrl: process.env.SUPERMEMORY_BASE_URL }
+    case "mem0":
+      return { apiKey: process.env.MEM0_API_KEY }
+    case "zep":
+      return { apiKey: process.env.ZEP_API_KEY }
+    case "sandra":
+      // Sandra provider reads SANDRA_URL/SANDRA_TOKEN and (optionally)
+      // ANTHROPIC_API_KEY from env. config.apiKey in its initialize() is
+      // specifically the Anthropic extractor key — pass it only if the user
+      // has ANTHROPIC_API_KEY; otherwise let the extractor fall through to
+      // OPENAI_API_KEY (when SANDRA_EXTRACTOR_MODEL is an OpenAI model).
+      return process.env.ANTHROPIC_API_KEY ? { apiKey: process.env.ANTHROPIC_API_KEY } : {}
+    default:
+      return {}
+  }
 }
 
 function extractCanonicalNamesFromSession(s: import("./types/memorybench").UnifiedSession): string[] {

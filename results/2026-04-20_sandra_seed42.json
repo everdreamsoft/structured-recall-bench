@@ -1,0 +1,143 @@
+{
+  "benchmark": "structured-recall-bench",
+  "dataset": "customer-records-v1",
+  "seed": 42,
+  "provider": "sandra",
+  "model": "gpt-4o-mini",
+  "timestamp": "2026-04-20T10:56:22.409Z",
+  "summary": {
+    "composite": 0.5438752204246085,
+    "perClass": {
+      "enumeration_csv": {
+        "count": 1,
+        "mean": 0
+      },
+      "enumeration_chat": {
+        "count": 1,
+        "mean": 0.9523809523809523
+      },
+      "aggregation_cross_source": {
+        "count": 1,
+        "mean": 0.7669951497420895
+      },
+      "reconciliation_update": {
+        "count": 1,
+        "mean": 1
+      },
+      "mixed_conditional": {
+        "count": 1,
+        "mean": 0
+      }
+    },
+    "reconciliationBreakdown": {
+      "correct": 1,
+      "stale-v1": 0,
+      "wrong": 0,
+      "no-answer": 0
+    }
+  },
+  "results": [
+    {
+      "questionId": "ecsv-country-switzerland-churned",
+      "questionClass": "enumeration_csv",
+      "response": "None",
+      "score": {
+        "kind": "enumeration",
+        "precision": 1,
+        "recall": 0,
+        "f1": 0,
+        "score": 0,
+        "matchedCorrect": [],
+        "missed": [
+          "Fredy Cormier"
+        ],
+        "falsePositives": []
+      },
+      "searchMs": 8258,
+      "answerMs": 1284
+    },
+    {
+      "questionId": "echat-product-paper",
+      "questionClass": "enumeration_chat",
+      "response": "Alfonzo Feest-Becker, Reanna Wisoky, Kiana Rowe, Madisyn Rutherford, Cristian Jacobs, Tremaine Kshlerin, Shaun Langosh, Garland Schulist, Consuelo Tremblay, Edna Wisozk, Michale Becker, Chet Davis, Priscilla Langworth, Mittie Keeling, Delores Zemlak, Dawn Kuhn, Adan King, Stan Dicki, Corbin Upton, Leonor Spencer",
+      "score": {
+        "kind": "enumeration",
+        "precision": 1,
+        "recall": 0.9090909090909091,
+        "f1": 0.9523809523809523,
+        "score": 0.9523809523809523,
+        "matchedCorrect": [
+          "Michale Becker",
+          "Adan King",
+          "Chet Davis",
+          "Edna Wisozk",
+          "Kiana Rowe",
+          "Dawn Kuhn",
+          "Shaun Langosh",
+          "Cristian Jacobs",
+          "Priscilla Langworth",
+          "Mittie Keeling",
+          "Tremaine Kshlerin",
+          "Madisyn Rutherford",
+          "Alfonzo Feest-Becker",
+          "Stan Dicki",
+          "Reanna Wisoky",
+          "Consuelo Tremblay",
+          "Delores Zemlak",
+          "Corbin Upton",
+          "Garland Schulist",
+          "Leonor Spencer"
+        ],
+        "missed": [
+          "Charlie Smitham",
+          "Dayton Braun"
+        ],
+        "falsePositives": []
+      },
+      "searchMs": 8578,
+      "answerMs": 2213
+    },
+    {
+      "questionId": "agg-country-switzerland",
+      "questionClass": "aggregation_cross_source",
+      "response": "$7,970,000",
+      "score": {
+        "kind": "aggregation",
+        "extracted": 7970000,
+        "expected": 10391200,
+        "relativeDelta": 0.23300485025791054,
+        "score": 0.7669951497420895
+      },
+      "searchMs": 8298,
+      "answerMs": 1043
+    },
+    {
+      "questionId": "recon-priscilla-collins-annual_revenue_usd",
+      "questionClass": "reconciliation_update",
+      "response": "$19,113,000",
+      "score": {
+        "kind": "reconciliation",
+        "extracted": "19113000",
+        "expected": "19113000",
+        "staleV1": "15533000",
+        "score": 1,
+        "category": "correct"
+      },
+      "searchMs": 8340,
+      "answerMs": 1030
+    },
+    {
+      "questionId": "mixed-country-top-france",
+      "questionClass": "mixed_conditional",
+      "response": "Susie Kreiger",
+      "score": {
+        "kind": "mixed_conditional",
+        "extracted": null,
+        "expected": "Ben Nolan",
+        "score": 0
+      },
+      "searchMs": 8392,
+      "answerMs": 919
+    }
+  ]
+}
