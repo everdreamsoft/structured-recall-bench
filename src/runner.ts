@@ -21,6 +21,7 @@ import { fileURLToPath } from "url"
 
 import SRBBenchmark from "./benchmark"
 import { FullContextProvider } from "./providers/full-context"
+import { SandraStructuredProvider } from "./providers/sandra-structured"
 import { scoreResponse, composeSummary } from "./scorer"
 import { generateAnswer } from "./utils/llm"
 import type { Provider } from "./types/memorybench"
@@ -51,6 +52,7 @@ function parseArgs(argv: string[]): CliArgs {
 
 async function loadProvider(name: string): Promise<Provider> {
   if (name === "full-context") return new FullContextProvider()
+  if (name === "sandra-structured") return new SandraStructuredProvider()
 
   // Try loading from sibling memorybench clone
   const mbRoot = resolve(REPO_ROOT, "..", "memorybench")
@@ -206,6 +208,7 @@ function resolveProviderConfig(name: string): { apiKey?: string } & Record<strin
   // provider's initialize() expects a specific key and doesn't read env itself.
   switch (name) {
     case "full-context":
+    case "sandra-structured":
       return {}
     case "supermemory":
       return { apiKey: process.env.SUPERMEMORY_API_KEY, baseUrl: process.env.SUPERMEMORY_BASE_URL }

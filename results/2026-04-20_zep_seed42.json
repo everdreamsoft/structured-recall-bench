@@ -1,0 +1,2313 @@
+{
+  "benchmark": "structured-recall-bench",
+  "dataset": "customer-records-v1",
+  "seed": 42,
+  "provider": "zep",
+  "model": "gpt-4o-mini",
+  "timestamp": "2026-04-20T12:25:03.685Z",
+  "summary": {
+    "composite": 0.3959224592203251,
+    "perClass": {
+      "enumeration_csv": {
+        "count": 20,
+        "mean": 0.4891200710225707
+      },
+      "enumeration_chat": {
+        "count": 20,
+        "mean": 0.7719727946225718
+      },
+      "aggregation_cross_source": {
+        "count": 20,
+        "mean": 0.21851943045648312
+      },
+      "reconciliation_update": {
+        "count": 20,
+        "mean": 0.45
+      },
+      "mixed_conditional": {
+        "count": 20,
+        "mean": 0.05
+      }
+    },
+    "reconciliationBreakdown": {
+      "correct": 9,
+      "stale-v1": 10,
+      "wrong": 0,
+      "no-answer": 1
+    }
+  },
+  "results": [
+    {
+      "questionId": "ecsv-country-switzerland-churned",
+      "questionClass": "enumeration_csv",
+      "response": "Cecile White, Joshuah Herzog, Linnea McGlynn, Shanel Feeney, Cheyenne Treutel",
+      "score": {
+        "kind": "enumeration",
+        "precision": 0,
+        "recall": 0,
+        "f1": 0,
+        "score": 0,
+        "matchedCorrect": [],
+        "missed": [
+          "Fredy Cormier"
+        ],
+        "falsePositives": [
+          "Shanel Feeney",
+          "Joshuah Herzog",
+          "Linnea McGlynn",
+          "Cheyenne Treutel",
+          "Cecile White"
+        ]
+      },
+      "searchMs": 300,
+      "answerMs": 2566
+    },
+    {
+      "questionId": "ecsv-country-united-kingdom-active",
+      "questionClass": "enumeration_csv",
+      "response": "Adan King, Eveline Dicki, Garnet Keeling, Mittie Keeling, Melba King, Richie Anderson",
+      "score": {
+        "kind": "enumeration",
+        "precision": 1,
+        "recall": 0.35294117647058826,
+        "f1": 0.5217391304347826,
+        "score": 0.5217391304347826,
+        "matchedCorrect": [
+          "Adan King",
+          "Mittie Keeling",
+          "Melba King",
+          "Garnet Keeling",
+          "Eveline Dicki",
+          "Richie Anderson"
+        ],
+        "missed": [
+          "Alia Hessel",
+          "Brandyn Schmeler",
+          "Cleve Windler",
+          "Dayna Bode",
+          "Eliza Schneider",
+          "Helene Schaden",
+          "Helga Ferry",
+          "Justus Batz",
+          "Madisyn Rutherford",
+          "Precious Cummings",
+          "Queenie Lebsack"
+        ],
+        "falsePositives": []
+      },
+      "searchMs": 314,
+      "answerMs": 2847
+    },
+    {
+      "questionId": "ecsv-country-south-korea-active",
+      "questionClass": "enumeration_csv",
+      "response": "Cordia Carroll, Zora Jacobi, Tremaine Kshlerin, Cristian Jacobs",
+      "score": {
+        "kind": "enumeration",
+        "precision": 1,
+        "recall": 0.2222222222222222,
+        "f1": 0.3636363636363636,
+        "score": 0.3636363636363636,
+        "matchedCorrect": [
+          "Cordia Carroll",
+          "Cristian Jacobs",
+          "Tremaine Kshlerin",
+          "Zora Jacobi"
+        ],
+        "missed": [
+          "Aric Windler",
+          "Arno Haag",
+          "Aurelia Ortiz",
+          "Bria Herzog",
+          "Casimir Reinger",
+          "Cheyanne Turcotte",
+          "Clemmie Jerde",
+          "Hanna Pacocha",
+          "Kaya Ruecker",
+          "Kenyon Wehner",
+          "Kristy Trantow",
+          "Malcolm Sporer",
+          "Margot Ebert",
+          "Trinity McGlynn"
+        ],
+        "falsePositives": []
+      },
+      "searchMs": 347,
+      "answerMs": 1541
+    },
+    {
+      "questionId": "ecsv-country-italy-active",
+      "questionClass": "enumeration_csv",
+      "response": "Brandi Wilderman, Alf Predovic, Angelita Lakin, Waino Effertz",
+      "score": {
+        "kind": "enumeration",
+        "precision": 1,
+        "recall": 0.21052631578947367,
+        "f1": 0.34782608695652173,
+        "score": 0.34782608695652173,
+        "matchedCorrect": [
+          "Brandi Wilderman",
+          "Alf Predovic",
+          "Angelita Lakin",
+          "Waino Effertz"
+        ],
+        "missed": [
+          "Alfonzo Feest-Becker",
+          "Anthony Davis",
+          "Doyle Connelly-Douglas",
+          "Else Paucek",
+          "Era Bernhard",
+          "Garnet Reynolds-Miller",
+          "Germaine Halvorson",
+          "Gracie Streich",
+          "Ike MacGyver",
+          "Jarret Hoppe",
+          "Kailey Jacobson",
+          "Kiana Rowe",
+          "Lonnie Lowe",
+          "Tyrel Morar",
+          "Willard O'Kon"
+        ],
+        "falsePositives": []
+      },
+      "searchMs": 299,
+      "answerMs": 1660
+    },
+    {
+      "questionId": "ecsv-country-ireland-active",
+      "questionClass": "enumeration_csv",
+      "response": "Eloisa Crooks, Margaret Bode, Nicklaus Auer, Vivien Greenholt",
+      "score": {
+        "kind": "enumeration",
+        "precision": 1,
+        "recall": 0.19047619047619047,
+        "f1": 0.32,
+        "score": 0.32,
+        "matchedCorrect": [
+          "Margaret Bode",
+          "Vivien Greenholt",
+          "Nicklaus Auer",
+          "Eloisa Crooks"
+        ],
+        "missed": [
+          "Alphonso Legros",
+          "Alvina Wiza",
+          "Antonietta Anderson",
+          "Arlo Jenkins",
+          "Darien Renner",
+          "Darrell Skiles",
+          "Dawn Kuhn",
+          "Ethelyn Berge",
+          "Jayda Flatley",
+          "Laurianne Kohler",
+          "Michaela Goyette",
+          "Nella Emmerich",
+          "Oswaldo Pouros",
+          "Percival McCullough",
+          "Priscilla Collins",
+          "Reinhold Ryan",
+          "Triston Swift"
+        ],
+        "falsePositives": []
+      },
+      "searchMs": 333,
+      "answerMs": 1603
+    },
+    {
+      "questionId": "ecsv-country-denmark-prospect",
+      "questionClass": "enumeration_csv",
+      "response": "Mackenzie Pouros, Eldred Runolfsson",
+      "score": {
+        "kind": "enumeration",
+        "precision": 0.5,
+        "recall": 0.25,
+        "f1": 0.3333333333333333,
+        "score": 0.3333333333333333,
+        "matchedCorrect": [
+          "Mackenzie Pouros"
+        ],
+        "missed": [
+          "Jeffrey Paucek",
+          "Laurianne Wisoky",
+          "Valentin Marvin-Murray"
+        ],
+        "falsePositives": [
+          "Eldred Runolfsson"
+        ]
+      },
+      "searchMs": 273,
+      "answerMs": 1112
+    },
+    {
+      "questionId": "ecsv-country-spain-active",
+      "questionClass": "enumeration_csv",
+      "response": "Anastasia Wyman, Norval Will, Sonya Brown",
+      "score": {
+        "kind": "enumeration",
+        "precision": 1,
+        "recall": 0.2727272727272727,
+        "f1": 0.42857142857142855,
+        "score": 0.42857142857142855,
+        "matchedCorrect": [
+          "Anastasia Wyman",
+          "Sonya Brown",
+          "Norval Will"
+        ],
+        "missed": [
+          "Colt Flatley",
+          "Consuelo Tremblay",
+          "Dayton Braun",
+          "Jeramy Nader",
+          "Lela Ledner",
+          "Mckayla Boyer",
+          "Odie Homenick",
+          "Susie Kreiger"
+        ],
+        "falsePositives": []
+      },
+      "searchMs": 346,
+      "answerMs": 1879
+    },
+    {
+      "questionId": "ecsv-country-brazil-active",
+      "questionClass": "enumeration_csv",
+      "response": "Malika Schultz, Glenda Cronin, Johan Mann",
+      "score": {
+        "kind": "enumeration",
+        "precision": 1,
+        "recall": 0.21428571428571427,
+        "f1": 0.35294117647058826,
+        "score": 0.35294117647058826,
+        "matchedCorrect": [
+          "Malika Schultz",
+          "Glenda Cronin",
+          "Johan Mann"
+        ],
+        "missed": [
+          "Aracely Kunze",
+          "Bell Kuhlman",
+          "Caden Welch",
+          "Christop Boyle",
+          "Dessie Mitchell",
+          "Dock Schmeler",
+          "Francis Jakubowski-Schneider",
+          "Gudrun Lemke",
+          "Laura Jerde",
+          "Mallory Upton",
+          "Shaun Howell"
+        ],
+        "falsePositives": []
+      },
+      "searchMs": 297,
+      "answerMs": 1206
+    },
+    {
+      "questionId": "ecsv-country-netherlands-churned",
+      "questionClass": "enumeration_csv",
+      "response": "Polly Bahringer, Demetrius Gutkowski, Jerome Vandervort",
+      "score": {
+        "kind": "enumeration",
+        "precision": 1,
+        "recall": 0.6,
+        "f1": 0.7499999999999999,
+        "score": 0.7499999999999999,
+        "matchedCorrect": [
+          "Demetrius Gutkowski",
+          "Polly Bahringer",
+          "Jerome Vandervort"
+        ],
+        "missed": [
+          "Haley Kertzmann",
+          "Sheldon Rippin"
+        ],
+        "falsePositives": []
+      },
+      "searchMs": 278,
+      "answerMs": 1107
+    },
+    {
+      "questionId": "ecsv-country-india-churned",
+      "questionClass": "enumeration_csv",
+      "response": "Gracie Stoltenberg, Dalton Hauck, Lamont Bosco",
+      "score": {
+        "kind": "enumeration",
+        "precision": 1,
+        "recall": 1,
+        "f1": 1,
+        "score": 1,
+        "matchedCorrect": [
+          "Gracie Stoltenberg",
+          "Dalton Hauck",
+          "Lamont Bosco"
+        ],
+        "missed": [],
+        "falsePositives": []
+      },
+      "searchMs": 316,
+      "answerMs": 1128
+    },
+    {
+      "questionId": "ecsv-industry-healthcare-prospect",
+      "questionClass": "enumeration_csv",
+      "response": "Audie Beer, Hadley Nikolaus, Aracely Kunze",
+      "score": {
+        "kind": "enumeration",
+        "precision": 0.6666666666666666,
+        "recall": 0.4,
+        "f1": 0.5,
+        "score": 0.5,
+        "matchedCorrect": [
+          "Audie Beer",
+          "Hadley Nikolaus"
+        ],
+        "missed": [
+          "Antonetta Weimann",
+          "Columbus Howe",
+          "Markus Bartoletti"
+        ],
+        "falsePositives": [
+          "Aracely Kunze"
+        ]
+      },
+      "searchMs": 273,
+      "answerMs": 1161
+    },
+    {
+      "questionId": "ecsv-industry-retail-prospect",
+      "questionClass": "enumeration_csv",
+      "response": "Wilford Prohaska, Troy Brakus, Laurianne Wisoky, Green Zemlak, Michael Brakus",
+      "score": {
+        "kind": "enumeration",
+        "precision": 1,
+        "recall": 0.4166666666666667,
+        "f1": 0.5882352941176471,
+        "score": 0.5882352941176471,
+        "matchedCorrect": [
+          "Laurianne Wisoky",
+          "Michael Brakus",
+          "Green Zemlak",
+          "Troy Brakus",
+          "Wilford Prohaska"
+        ],
+        "missed": [
+          "Adolf Grimes",
+          "Amos Hamill",
+          "Domingo Powlowski",
+          "Donavon Hermiston",
+          "Irwin Herman",
+          "Lavada Ward",
+          "Stefanie Olson"
+        ],
+        "falsePositives": []
+      },
+      "searchMs": 289,
+      "answerMs": 1568
+    },
+    {
+      "questionId": "ecsv-industry-education-prospect",
+      "questionClass": "enumeration_csv",
+      "response": "Chanel Ernser, Vito Olson, Hilma Spinka, Caroline Schowalter, Libbie Cronin, Jefferey Lowe, Clint O'Connell, Eldred Runolfsson, Lesly Schroeder",
+      "score": {
+        "kind": "enumeration",
+        "precision": 0.8888888888888888,
+        "recall": 0.7272727272727273,
+        "f1": 0.7999999999999999,
+        "score": 0.7999999999999999,
+        "matchedCorrect": [
+          "Libbie Cronin",
+          "Caroline Schowalter",
+          "Clint O'Connell",
+          "Jefferey Lowe",
+          "Eldred Runolfsson",
+          "Chanel Ernser",
+          "Vito Olson",
+          "Hilma Spinka"
+        ],
+        "missed": [
+          "Jeanie Franey",
+          "Keagan Orn",
+          "Werner Auer"
+        ],
+        "falsePositives": [
+          "Lesly Schroeder"
+        ]
+      },
+      "searchMs": 292,
+      "answerMs": 14091
+    },
+    {
+      "questionId": "ecsv-industry-food-beverage-active",
+      "questionClass": "enumeration_csv",
+      "response": "Barton Pfeffer, Noble Kessler-Gottlieb, Madie Bogisich, Ben Nolan, Hazle Treutel, Leonor Spencer, Seth Weber, Gracie Streich",
+      "score": {
+        "kind": "enumeration",
+        "precision": 1,
+        "recall": 0.24242424242424243,
+        "f1": 0.3902439024390244,
+        "score": 0.3902439024390244,
+        "matchedCorrect": [
+          "Gracie Streich",
+          "Madie Bogisich",
+          "Barton Pfeffer",
+          "Noble Kessler-Gottlieb",
+          "Ben Nolan",
+          "Hazle Treutel",
+          "Leonor Spencer",
+          "Seth Weber"
+        ],
+        "missed": [
+          "Aida Paucek",
+          "Caden Welch",
+          "Cleta Von",
+          "Cordia Carroll",
+          "Delia Kilback",
+          "Eddie Schmitt",
+          "Estell Lind",
+          "Fletcher Shields",
+          "Guido Purdy",
+          "Helga Ferry",
+          "Kaylie Veum",
+          "Kristy Trantow",
+          "Linda Bergnaum",
+          "Lizeth Corwin",
+          "Luella Lockman",
+          "Mallory Herzog",
+          "Murl Kris",
+          "Oswaldo Pouros",
+          "Priscilla Collins",
+          "Rebekah Shields",
+          "Reva Blick",
+          "Ryan Lindgren",
+          "Stacey Nader",
+          "Torey Bayer",
+          "Vern Rempel"
+        ],
+        "falsePositives": []
+      },
+      "searchMs": 300,
+      "answerMs": 1864
+    },
+    {
+      "questionId": "ecsv-industry-manufacturing-active",
+      "questionClass": "enumeration_csv",
+      "response": "Jed Turcotte, Billy Rath",
+      "score": {
+        "kind": "enumeration",
+        "precision": 0.5,
+        "recall": 0.02631578947368421,
+        "f1": 0.05,
+        "score": 0.05,
+        "matchedCorrect": [
+          "Billy Rath"
+        ],
+        "missed": [
+          "Alberta Mohr",
+          "Annie Grady",
+          "Arjun Upton",
+          "Barrett Gorczany",
+          "Blanche Davis",
+          "Brandyn Schmeler",
+          "Cale Kerluke",
+          "Casimir Reinger",
+          "Darien Renner",
+          "Dawn Kuhn",
+          "Dayna Bode",
+          "Eloisa Crooks",
+          "Ethelyn Berge",
+          "Francis Jakubowski-Schneider",
+          "Geovany Oberbrunner",
+          "Gladyce Cassin",
+          "Golden Dooley",
+          "Grace Howell",
+          "Grant Little-Gorczany",
+          "Heber Kreiger",
+          "Joesph Buckridge",
+          "Lonnie Lowe",
+          "Louie Lang",
+          "Madelynn Terry",
+          "Margot Hegmann",
+          "Mathias Fahey",
+          "Mathilde Muller",
+          "Melany Bins",
+          "Melba King",
+          "Quinton Jacobs",
+          "Reinhold Ryan",
+          "Rickie Rice",
+          "Robbie Moore",
+          "Rosalyn Hoeger",
+          "Shanelle Pagac",
+          "Shania Marks",
+          "Valerie Hermiston"
+        ],
+        "falsePositives": [
+          "Jed Turcotte"
+        ]
+      },
+      "searchMs": 283,
+      "answerMs": 1089
+    },
+    {
+      "questionId": "ecsv-industry-fintech-active",
+      "questionClass": "enumeration_csv",
+      "response": "Luz Frami, Cristian Jacobs, Jack McDermott, Linnie Sipes, Edwina VonRueden, Rosalyn Mayer, Taurean Hoppe, Lizzie Swift",
+      "score": {
+        "kind": "enumeration",
+        "precision": 0.75,
+        "recall": 0.15384615384615385,
+        "f1": 0.25531914893617025,
+        "score": 0.25531914893617025,
+        "matchedCorrect": [
+          "Luz Frami",
+          "Cristian Jacobs",
+          "Taurean Hoppe",
+          "Lizzie Swift",
+          "Jack McDermott",
+          "Linnie Sipes"
+        ],
+        "missed": [
+          "Alfonzo Feest-Becker",
+          "Alphonso Legros",
+          "Arno Haag",
+          "Art Tromp",
+          "Audie Thiel",
+          "Brenna Nolan",
+          "Carolina Sipes",
+          "Carroll Russel",
+          "Cristobal Gislason",
+          "Dalton Stanton",
+          "Delores Zemlak",
+          "Edna Wisozk",
+          "Erick Bogisich",
+          "Eugene Botsford",
+          "Herbert Brown",
+          "Hettie O'Hara",
+          "Izaiah Leffler",
+          "Jamel Berge",
+          "Jeramy Nader",
+          "Kaya Ebert",
+          "Koby Schumm",
+          "Kody Schneider",
+          "Lacey Parisian",
+          "Laura Jerde",
+          "Leonor DuBuque",
+          "Marlin Dooley",
+          "Mckayla Boyer",
+          "Mohammad Jaskolski",
+          "Nikolas Buckridge",
+          "Orie Kuhlman",
+          "Robyn Hoeger",
+          "Talon Kuvalis",
+          "Trinity McGlynn"
+        ],
+        "falsePositives": [
+          "Rosalyn Mayer",
+          "Edwina VonRueden"
+        ]
+      },
+      "searchMs": 260,
+      "answerMs": 1937
+    },
+    {
+      "questionId": "ecsv-industry-energy-prospect",
+      "questionClass": "enumeration_csv",
+      "response": "Ryann Purdy, Kaley Hills, Kendall Bernhard, Mackenzie Pouros, Ethyl Keeling, Carter Mosciski",
+      "score": {
+        "kind": "enumeration",
+        "precision": 0.8333333333333334,
+        "recall": 0.5,
+        "f1": 0.625,
+        "score": 0.625,
+        "matchedCorrect": [
+          "Kaley Hills",
+          "Ryann Purdy",
+          "Ethyl Keeling",
+          "Mackenzie Pouros",
+          "Kendall Bernhard"
+        ],
+        "missed": [
+          "Amie Koch",
+          "Dave Nolan",
+          "Esteban Hintz",
+          "Margaretta Halvorson",
+          "Sibyl Kirlin"
+        ],
+        "falsePositives": [
+          "Carter Mosciski"
+        ]
+      },
+      "searchMs": 307,
+      "answerMs": 1507
+    },
+    {
+      "questionId": "ecsv-industry-logistics-prospect",
+      "questionClass": "enumeration_csv",
+      "response": "Bernita White, Nash Hegmann, Kirk Kassulke, Eveline Botsford",
+      "score": {
+        "kind": "enumeration",
+        "precision": 1,
+        "recall": 0.8,
+        "f1": 0.888888888888889,
+        "score": 0.888888888888889,
+        "matchedCorrect": [
+          "Kirk Kassulke",
+          "Eveline Botsford",
+          "Bernita White",
+          "Nash Hegmann"
+        ],
+        "missed": [
+          "Macie Stracke"
+        ],
+        "falsePositives": []
+      },
+      "searchMs": 399,
+      "answerMs": 1549
+    },
+    {
+      "questionId": "ecsv-industry-media-prospect",
+      "questionClass": "enumeration_csv",
+      "response": "Timmothy Marquardt-Conroy, Joannie Keebler, Lesly Schroeder",
+      "score": {
+        "kind": "enumeration",
+        "precision": 1,
+        "recall": 0.42857142857142855,
+        "f1": 0.6,
+        "score": 0.6,
+        "matchedCorrect": [
+          "Lesly Schroeder",
+          "Joannie Keebler",
+          "Timmothy Marquardt-Conroy"
+        ],
+        "missed": [
+          "Delmer Bartoletti",
+          "Johanna Streich",
+          "Lessie Leannon",
+          "Yessenia Leannon"
+        ],
+        "falsePositives": []
+      },
+      "searchMs": 317,
+      "answerMs": 1571
+    },
+    {
+      "questionId": "ecsv-industry-saas-churned",
+      "questionClass": "enumeration_csv",
+      "response": "Danyka Mosciski, Jerrod Renner, Rolando Pacocha, Gracie Stoltenberg, Don Lynch-Heidenreich",
+      "score": {
+        "kind": "enumeration",
+        "precision": 1,
+        "recall": 0.5,
+        "f1": 0.6666666666666666,
+        "score": 0.6666666666666666,
+        "matchedCorrect": [
+          "Rolando Pacocha",
+          "Jerrod Renner",
+          "Gracie Stoltenberg",
+          "Don Lynch-Heidenreich",
+          "Danyka Mosciski"
+        ],
+        "missed": [
+          "Jaime Simonis",
+          "Josianne Collier-Padberg",
+          "Lamont Bosco",
+          "Lucinda Mraz",
+          "Pierce Volkman"
+        ],
+        "falsePositives": []
+      },
+      "searchMs": 633,
+      "answerMs": 1245
+    },
+    {
+      "questionId": "echat-product-paper",
+      "questionClass": "enumeration_chat",
+      "response": "Priscilla Langworth, Delores Zemlak, Madisyn Rutherford, Kiana Rowe, Shaun Langosh, Corbin Upton, Michale Becker, Cristian Jacobs, Dawn Kuhn, Garland Schulist, Tremaine Kshlerin, Edna Wisozk, Adan King, Leonor Spencer, Stan Dicki",
+      "score": {
+        "kind": "enumeration",
+        "precision": 1,
+        "recall": 0.6818181818181818,
+        "f1": 0.8108108108108109,
+        "score": 0.8108108108108109,
+        "matchedCorrect": [
+          "Michale Becker",
+          "Adan King",
+          "Edna Wisozk",
+          "Kiana Rowe",
+          "Dawn Kuhn",
+          "Shaun Langosh",
+          "Cristian Jacobs",
+          "Priscilla Langworth",
+          "Tremaine Kshlerin",
+          "Madisyn Rutherford",
+          "Stan Dicki",
+          "Delores Zemlak",
+          "Corbin Upton",
+          "Garland Schulist",
+          "Leonor Spencer"
+        ],
+        "missed": [
+          "Alfonzo Feest-Becker",
+          "Charlie Smitham",
+          "Chet Davis",
+          "Consuelo Tremblay",
+          "Dayton Braun",
+          "Mittie Keeling",
+          "Reanna Wisoky"
+        ],
+        "falsePositives": []
+      },
+      "searchMs": 260,
+      "answerMs": 2010
+    },
+    {
+      "questionId": "echat-product-packaging",
+      "questionClass": "enumeration_chat",
+      "response": "Lela Ledner, Freeman Bechtelar, Martina Kuhic, Vito Olson, Mckenna Cummerata, Valerie Hermiston, Grant Little-Gorczany, Aurelia Ortiz, Arlo Jenkins, Nikolas Buckridge, Jailyn Rempel, Orin Haley, Johan Mann, Nina O'Kon, Helga Ferry",
+      "score": {
+        "kind": "enumeration",
+        "precision": 1,
+        "recall": 0.7894736842105263,
+        "f1": 0.8823529411764706,
+        "score": 0.8823529411764706,
+        "matchedCorrect": [
+          "Grant Little-Gorczany",
+          "Mckenna Cummerata",
+          "Johan Mann",
+          "Aurelia Ortiz",
+          "Helga Ferry",
+          "Jailyn Rempel",
+          "Orin Haley",
+          "Martina Kuhic",
+          "Lela Ledner",
+          "Nina O'Kon",
+          "Freeman Bechtelar",
+          "Valerie Hermiston",
+          "Arlo Jenkins",
+          "Nikolas Buckridge",
+          "Vito Olson"
+        ],
+        "missed": [
+          "Coleman Boyer",
+          "Hanna Pacocha",
+          "Rachel Baumbach",
+          "Stacey Nader"
+        ],
+        "falsePositives": []
+      },
+      "searchMs": 325,
+      "answerMs": 3641
+    },
+    {
+      "questionId": "echat-product-office-supplies",
+      "questionClass": "enumeration_chat",
+      "response": "Mallory Upton, Mittie Keeling, Lindsay Gleichner, Lora Leuschke, Bridgette Heller, Dalton Hauck, Quinton Jacobs, Fermin Harvey, Jeramy Nader, Rickie Rice, Louie Lang, Luz Frami, Reva Blick, Susie Kreiger, Edward Kunze, Jannie Heller, Dorothy Koelpin",
+      "score": {
+        "kind": "enumeration",
+        "precision": 1,
+        "recall": 0.85,
+        "f1": 0.9189189189189189,
+        "score": 0.9189189189189189,
+        "matchedCorrect": [
+          "Jeramy Nader",
+          "Mallory Upton",
+          "Reva Blick",
+          "Luz Frami",
+          "Lora Leuschke",
+          "Bridgette Heller",
+          "Rickie Rice",
+          "Edward Kunze",
+          "Quinton Jacobs",
+          "Mittie Keeling",
+          "Fermin Harvey",
+          "Dorothy Koelpin",
+          "Susie Kreiger",
+          "Louie Lang",
+          "Lindsay Gleichner",
+          "Dalton Hauck",
+          "Jannie Heller"
+        ],
+        "missed": [
+          "Helene Schaden",
+          "Linnea McGlynn",
+          "Shaun Howell"
+        ],
+        "falsePositives": []
+      },
+      "searchMs": 294,
+      "answerMs": 2509
+    },
+    {
+      "questionId": "echat-product-logistics-services",
+      "questionClass": "enumeration_chat",
+      "response": "Kenyatta Rice, Reanna Wisoky, Geovany Oberbrunner, Luz Frami, Eugene Botsford, Aditya Huel, Anastasia Wyman, Audie Thiel, Vivien Greenholt, Zora Jacobi, Leda Wyman, Richie Anderson, Karlee Cummings, Grace Howell, Gia Jacobi, Lindsay Gleichner, Melissa Bode, Charley Kilback-Lemke",
+      "score": {
+        "kind": "enumeration",
+        "precision": 1,
+        "recall": 0.9,
+        "f1": 0.9473684210526316,
+        "score": 0.9473684210526316,
+        "matchedCorrect": [
+          "Melissa Bode",
+          "Anastasia Wyman",
+          "Charley Kilback-Lemke",
+          "Karlee Cummings",
+          "Luz Frami",
+          "Vivien Greenholt",
+          "Zora Jacobi",
+          "Aditya Huel",
+          "Geovany Oberbrunner",
+          "Grace Howell",
+          "Gia Jacobi",
+          "Audie Thiel",
+          "Leda Wyman",
+          "Eugene Botsford",
+          "Reanna Wisoky",
+          "Lindsay Gleichner",
+          "Kenyatta Rice",
+          "Richie Anderson"
+        ],
+        "missed": [
+          "Bradly Strosin",
+          "Tillman Runolfsdottir"
+        ],
+        "falsePositives": []
+      },
+      "searchMs": 500,
+      "answerMs": 2600
+    },
+    {
+      "questionId": "echat-product-consulting",
+      "questionClass": "enumeration_chat",
+      "response": "Helene Schaden, Dimitri Pagac, Kenyon Wehner, Ryder Kessler, Ben Nolan, Audie Lubowitz, Odie Homenick, Quinton Jacobs, Kaya Ebert, Katrina Terry, Garnet Keeling, April Schneider, Helga Ferry, Enrique Mertz, Mason O'Conner, Arno Haag, Valerie Hermiston, Bell Kuhlman, Donato Streich",
+      "score": {
+        "kind": "enumeration",
+        "precision": 1,
+        "recall": 1,
+        "f1": 1,
+        "score": 1,
+        "matchedCorrect": [
+          "Enrique Mertz",
+          "Bell Kuhlman",
+          "April Schneider",
+          "Mason O'Conner",
+          "Odie Homenick",
+          "Helga Ferry",
+          "Kenyon Wehner",
+          "Quinton Jacobs",
+          "Ryder Kessler",
+          "Helene Schaden",
+          "Katrina Terry",
+          "Audie Lubowitz",
+          "Dimitri Pagac",
+          "Valerie Hermiston",
+          "Kaya Ebert",
+          "Garnet Keeling",
+          "Arno Haag",
+          "Donato Streich",
+          "Ben Nolan"
+        ],
+        "missed": [],
+        "falsePositives": []
+      },
+      "searchMs": 307,
+      "answerMs": 2578
+    },
+    {
+      "questionId": "echat-product-software-licenses",
+      "questionClass": "enumeration_chat",
+      "response": "Shanelle Pagac, Izaiah Leffler, Kraig Mohr, Annette Kohler, Julia Goldner, Jarrod Huels, Steve Shanahan, Shanel Feeney, Anastasia Wyman, Grace Howell, Alf Predovic, Cecile White, Aditya Huel, Jefferey Lowe, Aurelia Ortiz, Remington Von",
+      "score": {
+        "kind": "enumeration",
+        "precision": 1,
+        "recall": 0.8,
+        "f1": 0.888888888888889,
+        "score": 0.888888888888889,
+        "matchedCorrect": [
+          "Anastasia Wyman",
+          "Alf Predovic",
+          "Kraig Mohr",
+          "Shanel Feeney",
+          "Remington Von",
+          "Aurelia Ortiz",
+          "Steve Shanahan",
+          "Aditya Huel",
+          "Julia Goldner",
+          "Grace Howell",
+          "Jarrod Huels",
+          "Jefferey Lowe",
+          "Shanelle Pagac",
+          "Izaiah Leffler",
+          "Annette Kohler",
+          "Cecile White"
+        ],
+        "missed": [
+          "Donnell Olson",
+          "Eugene Botsford",
+          "Richie Anderson",
+          "Trycia Ryan"
+        ],
+        "falsePositives": []
+      },
+      "searchMs": 280,
+      "answerMs": 2264
+    },
+    {
+      "questionId": "echat-product-hardware",
+      "questionClass": "enumeration_chat",
+      "response": "Melany Bins, Jamel Berge, Erick Bogisich, Trinity McGlynn, Michale Becker, Trycia Ryan, Brody Hilll, Hazle Treutel, Melany Bins, Kirk Kassulke, Joannie Keebler, Cloyd Schultz, Darian Ernser, Cale Kerluke, Adan King, Helga Ferry, Jake Powlowski, Priscilla Collins, Otis Koch, Simeon Vandervort, Lilian Hoeger, Waino Effertz",
+      "score": {
+        "kind": "enumeration",
+        "precision": 1,
+        "recall": 0.875,
+        "f1": 0.9333333333333333,
+        "score": 0.9333333333333333,
+        "matchedCorrect": [
+          "Priscilla Collins",
+          "Michale Becker",
+          "Kirk Kassulke",
+          "Erick Bogisich",
+          "Adan King",
+          "Cloyd Schultz",
+          "Melany Bins",
+          "Simeon Vandervort",
+          "Helga Ferry",
+          "Trinity McGlynn",
+          "Jamel Berge",
+          "Lilian Hoeger",
+          "Joannie Keebler",
+          "Darian Ernser",
+          "Trycia Ryan",
+          "Cale Kerluke",
+          "Jake Powlowski",
+          "Brody Hilll",
+          "Otis Koch",
+          "Hazle Treutel",
+          "Waino Effertz"
+        ],
+        "missed": [
+          "Billy Rath",
+          "Harley Sanford",
+          "Jordane Lowe"
+        ],
+        "falsePositives": []
+      },
+      "searchMs": 274,
+      "answerMs": 2200
+    },
+    {
+      "questionId": "echat-product-catering",
+      "questionClass": "enumeration_chat",
+      "response": "Murl Beer, Marjory Stark, Beulah Turcotte, Reanna Wisoky, Jailyn Rempel, Lora Leuschke, Velma Hilpert, Connie Erdman, Mckayla Boyer, Hosea Kerluke, Jed Turcotte, Charlie Smitham, Naomie Kub, Shania Marks, Makenzie Johns, Alivia Huel",
+      "score": {
+        "kind": "enumeration",
+        "precision": 1,
+        "recall": 0.9411764705882353,
+        "f1": 0.9696969696969697,
+        "score": 0.9696969696969697,
+        "matchedCorrect": [
+          "Shania Marks",
+          "Mckayla Boyer",
+          "Alivia Huel",
+          "Murl Beer",
+          "Lora Leuschke",
+          "Charlie Smitham",
+          "Connie Erdman",
+          "Jailyn Rempel",
+          "Marjory Stark",
+          "Beulah Turcotte",
+          "Makenzie Johns",
+          "Hosea Kerluke",
+          "Velma Hilpert",
+          "Naomie Kub",
+          "Reanna Wisoky",
+          "Jed Turcotte"
+        ],
+        "missed": [
+          "Helga Ferry"
+        ],
+        "falsePositives": []
+      },
+      "searchMs": 325,
+      "answerMs": 1957
+    },
+    {
+      "questionId": "echat-product-training",
+      "questionClass": "enumeration_chat",
+      "response": "Arjun Upton, Madie Bogisich, Marjory Stark, Vern Rempel, Esther Nicolas, Caden Welch, Kendall Bernhard, Jarret Hoppe, Taurean Hoppe, Enrique Mertz",
+      "score": {
+        "kind": "enumeration",
+        "precision": 1,
+        "recall": 0.7142857142857143,
+        "f1": 0.8333333333333333,
+        "score": 0.8333333333333333,
+        "matchedCorrect": [
+          "Enrique Mertz",
+          "Caden Welch",
+          "Marjory Stark",
+          "Jarret Hoppe",
+          "Taurean Hoppe",
+          "Kendall Bernhard",
+          "Esther Nicolas",
+          "Vern Rempel",
+          "Arjun Upton",
+          "Madie Bogisich"
+        ],
+        "missed": [
+          "Cecile White",
+          "Joelle Kunde",
+          "Laurianne Kohler",
+          "Priscilla Langworth"
+        ],
+        "falsePositives": []
+      },
+      "searchMs": 276,
+      "answerMs": 1517
+    },
+    {
+      "questionId": "echat-product-raw-materials",
+      "questionClass": "enumeration_chat",
+      "response": "Margaretta Halvorson, Priscilla Langworth, Lacey Parisian, Walter Krajcik, Susie Kreiger, Eliza Schneider, Zander Lynch, Corbin Upton, Annetta Carroll, Ophelia Tremblay, Leonor Spencer, Harley Sanford, Doris Bogan, Gordon Kling, Malcolm Sporer, Rickie Rice, Torey Bayer, Rosalyn Hoeger, Pierce Volkman, Vincenza Rau",
+      "score": {
+        "kind": "enumeration",
+        "precision": 1,
+        "recall": 0.9523809523809523,
+        "f1": 0.975609756097561,
+        "score": 0.975609756097561,
+        "matchedCorrect": [
+          "Annetta Carroll",
+          "Rosalyn Hoeger",
+          "Eliza Schneider",
+          "Margaretta Halvorson",
+          "Rickie Rice",
+          "Priscilla Langworth",
+          "Vincenza Rau",
+          "Harley Sanford",
+          "Lacey Parisian",
+          "Gordon Kling",
+          "Ophelia Tremblay",
+          "Zander Lynch",
+          "Doris Bogan",
+          "Susie Kreiger",
+          "Malcolm Sporer",
+          "Pierce Volkman",
+          "Torey Bayer",
+          "Walter Krajcik",
+          "Corbin Upton",
+          "Leonor Spencer"
+        ],
+        "missed": [
+          "Lou Moore"
+        ],
+        "falsePositives": []
+      },
+      "searchMs": 260,
+      "answerMs": 2458
+    },
+    {
+      "questionId": "echat-month-2025-01",
+      "questionClass": "enumeration_chat",
+      "response": "Mittie Keeling, Melany Bins, Hazle Treutel, Quinton Jacobs, Lacey Parisian, April Schneider, Walter Krajcik, Kenyatta Rice",
+      "score": {
+        "kind": "enumeration",
+        "precision": 1,
+        "recall": 0.6666666666666666,
+        "f1": 0.8,
+        "score": 0.8,
+        "matchedCorrect": [
+          "Melany Bins",
+          "April Schneider",
+          "Quinton Jacobs",
+          "Lacey Parisian",
+          "Mittie Keeling",
+          "Kenyatta Rice",
+          "Walter Krajcik",
+          "Hazle Treutel"
+        ],
+        "missed": [
+          "Annetta Carroll",
+          "Hanna Pacocha",
+          "Helene Schaden",
+          "Lindsay Gleichner"
+        ],
+        "falsePositives": []
+      },
+      "searchMs": 270,
+      "answerMs": 2741
+    },
+    {
+      "questionId": "echat-month-2025-02",
+      "questionClass": "enumeration_chat",
+      "response": "Brody Hilll, Shaun Langosh, Martina Kuhic, Johan Mann, Murl Beer, Lora Leuschke, Ben Nolan, Susie Kreiger, Enrique Mertz, Malcolm Sporer",
+      "score": {
+        "kind": "enumeration",
+        "precision": 1,
+        "recall": 0.5882352941176471,
+        "f1": 0.7407407407407407,
+        "score": 0.7407407407407407,
+        "matchedCorrect": [
+          "Enrique Mertz",
+          "Murl Beer",
+          "Lora Leuschke",
+          "Johan Mann",
+          "Shaun Langosh",
+          "Martina Kuhic",
+          "Susie Kreiger",
+          "Malcolm Sporer",
+          "Brody Hilll",
+          "Ben Nolan"
+        ],
+        "missed": [
+          "Aditya Huel",
+          "Grace Howell",
+          "Harley Sanford",
+          "Julia Goldner",
+          "Kraig Mohr",
+          "Lindsay Gleichner",
+          "Luz Frami"
+        ],
+        "falsePositives": []
+      },
+      "searchMs": 280,
+      "answerMs": 2127
+    },
+    {
+      "questionId": "echat-month-2025-03",
+      "questionClass": "enumeration_chat",
+      "response": "Adan King, Lela Ledner, Marjory Stark, Orin Haley, Jailyn Rempel, Michale Becker, Reanna Wisoky, Kiana Rowe",
+      "score": {
+        "kind": "enumeration",
+        "precision": 1,
+        "recall": 0.5,
+        "f1": 0.6666666666666666,
+        "score": 0.6666666666666666,
+        "matchedCorrect": [
+          "Michale Becker",
+          "Adan King",
+          "Kiana Rowe",
+          "Jailyn Rempel",
+          "Marjory Stark",
+          "Orin Haley",
+          "Lela Ledner",
+          "Reanna Wisoky"
+        ],
+        "missed": [
+          "Anastasia Wyman",
+          "Billy Rath",
+          "Bradly Strosin",
+          "Dayton Braun",
+          "Edward Kunze",
+          "Linnea McGlynn",
+          "Steve Shanahan",
+          "Trycia Ryan"
+        ],
+        "falsePositives": []
+      },
+      "searchMs": 296,
+      "answerMs": 1671
+    },
+    {
+      "questionId": "echat-month-2025-04",
+      "questionClass": "enumeration_chat",
+      "response": "Trycia Ryan, Jamel Berge, Lora Leuschke, Beulah Turcotte, Vito Olson, Leonor Spencer, Odie Homenick, Audie Lubowitz, Geovany Oberbrunner, Marjory Stark",
+      "score": {
+        "kind": "enumeration",
+        "precision": 0.9,
+        "recall": 0.391304347826087,
+        "f1": 0.5454545454545454,
+        "score": 0.5454545454545454,
+        "matchedCorrect": [
+          "Lora Leuschke",
+          "Odie Homenick",
+          "Jamel Berge",
+          "Beulah Turcotte",
+          "Audie Lubowitz",
+          "Geovany Oberbrunner",
+          "Trycia Ryan",
+          "Vito Olson",
+          "Leonor Spencer"
+        ],
+        "missed": [
+          "Arno Haag",
+          "Bell Kuhlman",
+          "Charlie Smitham",
+          "Chet Davis",
+          "Coleman Boyer",
+          "Consuelo Tremblay",
+          "Eugene Botsford",
+          "Fermin Harvey",
+          "Garnet Keeling",
+          "Gia Jacobi",
+          "Karlee Cummings",
+          "Mallory Upton",
+          "Richie Anderson",
+          "Vincenza Rau"
+        ],
+        "falsePositives": [
+          "Marjory Stark"
+        ]
+      },
+      "searchMs": 285,
+      "answerMs": 2175
+    },
+    {
+      "questionId": "echat-month-2025-05",
+      "questionClass": "enumeration_chat",
+      "response": "Michale Becker, Marjory Stark, Velma Hilpert, Trinity McGlynn, Jordane Lowe, Erick Bogisich, Kaya Ebert, Arjun Upton",
+      "score": {
+        "kind": "enumeration",
+        "precision": 1,
+        "recall": 0.5,
+        "f1": 0.6666666666666666,
+        "score": 0.6666666666666666,
+        "matchedCorrect": [
+          "Michale Becker",
+          "Erick Bogisich",
+          "Jordane Lowe",
+          "Trinity McGlynn",
+          "Marjory Stark",
+          "Velma Hilpert",
+          "Arjun Upton",
+          "Kaya Ebert"
+        ],
+        "missed": [
+          "Aurelia Ortiz",
+          "Bridgette Heller",
+          "Gordon Kling",
+          "Jefferey Lowe",
+          "Luz Frami",
+          "Ophelia Tremblay",
+          "Shanelle Pagac",
+          "Torey Bayer"
+        ],
+        "falsePositives": []
+      },
+      "searchMs": 271,
+      "answerMs": 2138
+    },
+    {
+      "questionId": "echat-month-2025-06",
+      "questionClass": "enumeration_chat",
+      "response": "Cristian Jacobs, Corbin Upton, Dawn Kuhn, Garland Schulist, Helga Ferry, Quinton Jacobs, Mckayla Boyer, Hosea Kerluke, Melissa Bode",
+      "score": {
+        "kind": "enumeration",
+        "precision": 1,
+        "recall": 0.47368421052631576,
+        "f1": 0.6428571428571429,
+        "score": 0.6428571428571429,
+        "matchedCorrect": [
+          "Melissa Bode",
+          "Mckayla Boyer",
+          "Dawn Kuhn",
+          "Cristian Jacobs",
+          "Helga Ferry",
+          "Quinton Jacobs",
+          "Hosea Kerluke",
+          "Corbin Upton",
+          "Garland Schulist"
+        ],
+        "missed": [
+          "Aditya Huel",
+          "Annette Kohler",
+          "Connie Erdman",
+          "Dalton Hauck",
+          "Enrique Mertz",
+          "Jeramy Nader",
+          "Lou Moore",
+          "Makenzie Johns",
+          "Reva Blick",
+          "Zander Lynch"
+        ],
+        "falsePositives": []
+      },
+      "searchMs": 288,
+      "answerMs": 2650
+    },
+    {
+      "questionId": "echat-month-2025-07",
+      "questionClass": "enumeration_chat",
+      "response": "Priscilla Langworth, Shania Marks, Delores Zemlak, Cecile White, Jarret Hoppe, Tremaine Kshlerin, Caden Welch",
+      "score": {
+        "kind": "enumeration",
+        "precision": 1,
+        "recall": 0.3888888888888889,
+        "f1": 0.56,
+        "score": 0.56,
+        "matchedCorrect": [
+          "Shania Marks",
+          "Caden Welch",
+          "Priscilla Langworth",
+          "Tremaine Kshlerin",
+          "Jarret Hoppe",
+          "Delores Zemlak",
+          "Cecile White"
+        ],
+        "missed": [
+          "Anastasia Wyman",
+          "Donnell Olson",
+          "Dorothy Koelpin",
+          "Jannie Heller",
+          "Katrina Terry",
+          "Laurianne Kohler",
+          "Nina O'Kon",
+          "Shanel Feeney",
+          "Shaun Howell",
+          "Taurean Hoppe",
+          "Waino Effertz"
+        ],
+        "falsePositives": []
+      },
+      "searchMs": 262,
+      "answerMs": 1332
+    },
+    {
+      "questionId": "echat-month-2025-08",
+      "questionClass": "enumeration_chat",
+      "response": "Arlo Jenkins, Joannie Keebler, Cloyd Schultz, Jailyn Rempel, Edna Wisozk, Jed Turcotte, Darian Ernser, Kirk Kassulke, Madie Bogisich, Dimitri Pagac, Kenyon Wehner, Vern Rempel, Ryder Kessler, Audie Thiel",
+      "score": {
+        "kind": "enumeration",
+        "precision": 1,
+        "recall": 0.6086956521739131,
+        "f1": 0.7567567567567568,
+        "score": 0.7567567567567568,
+        "matchedCorrect": [
+          "Kirk Kassulke",
+          "Cloyd Schultz",
+          "Edna Wisozk",
+          "Jailyn Rempel",
+          "Kenyon Wehner",
+          "Ryder Kessler",
+          "Joannie Keebler",
+          "Darian Ernser",
+          "Dimitri Pagac",
+          "Audie Thiel",
+          "Vern Rempel",
+          "Arlo Jenkins",
+          "Madie Bogisich",
+          "Jed Turcotte"
+        ],
+        "missed": [
+          "Aditya Huel",
+          "Alf Predovic",
+          "Charley Kilback-Lemke",
+          "Grant Little-Gorczany",
+          "Helga Ferry",
+          "Kendall Bernhard",
+          "Margaretta Halvorson",
+          "Valerie Hermiston",
+          "Zora Jacobi"
+        ],
+        "falsePositives": []
+      },
+      "searchMs": 261,
+      "answerMs": 2464
+    },
+    {
+      "questionId": "echat-month-2025-09",
+      "questionClass": "enumeration_chat",
+      "response": "Priscilla Langworth, Cale Kerluke, Esther Nicolas, Naomie Kub, Rickie Rice, Stan Dicki",
+      "score": {
+        "kind": "enumeration",
+        "precision": 1,
+        "recall": 0.42857142857142855,
+        "f1": 0.6,
+        "score": 0.6,
+        "matchedCorrect": [
+          "Rickie Rice",
+          "Priscilla Langworth",
+          "Esther Nicolas",
+          "Cale Kerluke",
+          "Stan Dicki",
+          "Naomie Kub"
+        ],
+        "missed": [
+          "Alivia Huel",
+          "Eugene Botsford",
+          "Lilian Hoeger",
+          "Mason O'Conner",
+          "Mittie Keeling",
+          "Remington Von",
+          "Rosalyn Hoeger",
+          "Tillman Runolfsdottir"
+        ],
+        "falsePositives": []
+      },
+      "searchMs": 265,
+      "answerMs": 1307
+    },
+    {
+      "questionId": "echat-month-2025-10",
+      "questionClass": "enumeration_chat",
+      "response": "Adan King, Priscilla Collins, Aurelia Ortiz",
+      "score": {
+        "kind": "enumeration",
+        "precision": 1,
+        "recall": 0.17647058823529413,
+        "f1": 0.3,
+        "score": 0.3,
+        "matchedCorrect": [
+          "Priscilla Collins",
+          "Adan King",
+          "Aurelia Ortiz"
+        ],
+        "missed": [
+          "Alfonzo Feest-Becker",
+          "Corbin Upton",
+          "Cristian Jacobs",
+          "Donato Streich",
+          "Doris Bogan",
+          "Grace Howell",
+          "Helga Ferry",
+          "Izaiah Leffler",
+          "Jake Powlowski",
+          "Jarrod Huels",
+          "Joelle Kunde",
+          "Rachel Baumbach",
+          "Reanna Wisoky",
+          "Stacey Nader"
+        ],
+        "falsePositives": []
+      },
+      "searchMs": 268,
+      "answerMs": 1417
+    },
+    {
+      "questionId": "agg-country-switzerland",
+      "questionClass": "aggregation_cross_source",
+      "response": "$1,186,100",
+      "score": {
+        "kind": "aggregation",
+        "extracted": 1186100,
+        "expected": 10391200,
+        "relativeDelta": 0.8858553391331127,
+        "score": 0.11414466086688735
+      },
+      "searchMs": 332,
+      "answerMs": 1319
+    },
+    {
+      "questionId": "agg-country-poland",
+      "questionClass": "aggregation_cross_source",
+      "response": "First, identify all customers located in Poland from the context:\n\n- Serena Cormier\n- Carroll Russel\n- Corbin Upton\n- Aditya Huel\n- Marlin Dooley\n- Coleman Boyer\n- Jefferey Lowe\n- Jarrod Huels\n- Maureen Hudson\n- Waino Smitham\n- Macie Stracke\n- Jazmyne Schiller\n- Melissa Bode\n- Michale Becker\n\nNext, sum all purchase amounts in 2025 from these customers:\n\n- Aditya Huel: $68.9k (logistics services on 2025-08-23)\n- Marlin Dooley: no purchase amount given\n- Coleman Boyer: no purchase amount given\n- Jefferey Lowe: no purchase amount given\n- Jarrod Huels: no purchase amount given\n- Maureen Hudson: no purchase amount given\n- Waino Smitham: no purchase amount given\n- Macie Stracke: no purchase amount given\n- Jazmyne Schiller: no purchase amount given\n- Melissa Bode: no purchase amount given\n- Michale Becker: $92k (hardware on 2025-05-04)\n- Others (Serena Cormier, Carroll Russel, Corbin Upton): no purchase amounts given\n\nAlso, check purchases by persons with Poland location:\n\n- Michale Becker: $92k hardware\n- Aditya Huel: $68.9k logistics services\n- No other purchase amounts explicitly linked to Poland customers.\n\nSum these:\n\n$68,900 + $92,000 = $160,900\n\nNo other purchase amounts for Poland customers are provided.\n\nAnswer: $160,900",
+      "score": {
+        "kind": "aggregation",
+        "extracted": 160900,
+        "expected": 1422100,
+        "relativeDelta": 0.8868574643133394,
+        "score": 0.11314253568666055
+      },
+      "searchMs": 315,
+      "answerMs": 86059
+    },
+    {
+      "questionId": "agg-country-italy",
+      "questionClass": "aggregation_cross_source",
+      "response": "$0",
+      "score": {
+        "kind": "aggregation",
+        "extracted": 0,
+        "expected": 204900,
+        "relativeDelta": 1,
+        "score": 0
+      },
+      "searchMs": 304,
+      "answerMs": 2719
+    },
+    {
+      "questionId": "agg-country-singapore",
+      "questionClass": "aggregation_cross_source",
+      "response": "$0",
+      "score": {
+        "kind": "aggregation",
+        "extracted": 0,
+        "expected": 721300,
+        "relativeDelta": 1,
+        "score": 0
+      },
+      "searchMs": 700,
+      "answerMs": 970
+    },
+    {
+      "questionId": "agg-country-canada",
+      "questionClass": "aggregation_cross_source",
+      "response": "The customers based in Canada mentioned are: Jayden Bergnaum, Lesly Schroeder, Cristobal Gislason, Candido Koch, Gaetano Connelly, Amalia Shanahan, Delfina Luettgen, Sibyl Kirlin, Eugene Botsford, and Willy Abshire.\n\nFrom the purchase data, the following purchases are linked to these customers or their purchases are recorded:\n\n- No direct purchase amounts are explicitly linked to these Canadian customers in the provided purchase events.\n\nTherefore, based on the data given, there are no recorded purchase amounts from customers based in Canada in 2025.\n\nAnswer: $0",
+      "score": {
+        "kind": "aggregation",
+        "extracted": 0,
+        "expected": 1000100,
+        "relativeDelta": 1,
+        "score": 0
+      },
+      "searchMs": 289,
+      "answerMs": 2649
+    },
+    {
+      "questionId": "agg-country-mexico",
+      "questionClass": "aggregation_cross_source",
+      "response": "The customers located in Mexico are: Joesph Buckridge, Dane Connelly, Dave Nolan, Shania Marks, Savion Renner, Edna Wisozk, Joannie Keebler, Vena Kreiger.\n\nFrom the purchase records, the following purchases are linked to these customers or the Mexico location:\n\n- Nikolas Buckridge bought $234k of packaging on 2025-11-12 (likely related to Joesph Buckridge family, but no direct link to Mexico customer, so not counted)\n- Edna Wisozk bought $95k of paper on 2025-08-24 (Edna Wisozk is located in Mexico)\n- Consuelo Tremblay bought $5.9k of paper on 2025-04-29 (no location info, so excluded)\n- No other purchases explicitly linked to Mexico customers.\n\nNo other purchase amounts are explicitly linked to Mexico customers in the data.\n\nTherefore, total purchases in 2025 from customers based in Mexico = $95,000 (Edna Wisozk).\n\nAnswer: $95,000",
+      "score": {
+        "kind": "aggregation",
+        "extracted": 95000,
+        "expected": 849300,
+        "relativeDelta": 0.8881431767337807,
+        "score": 0.11185682326621926
+      },
+      "searchMs": 410,
+      "answerMs": 7139
+    },
+    {
+      "questionId": "agg-country-ireland",
+      "questionClass": "aggregation_cross_source",
+      "response": "The customers based in Ireland mentioned are:\n- Priscilla Collins\n- Darrell Skiles\n- Ethelyn Berge\n- Rolando Pacocha\n- Reinhold Ryan\n- Margaret Bode\n- Percival McCullough\n- Shanon Labadie (churned but was located in Ireland)\n\nNow, checking the purchase records for these customers in 2025:\n\nNo purchase events are explicitly linked to these Ireland-based customers in the provided data. All purchase events list other customer names not identified as Ireland-based.\n\nTherefore, the total amount of all purchases in 2025 from customers based in Ireland is:\n\n$0",
+      "score": {
+        "kind": "aggregation",
+        "extracted": 0,
+        "expected": 1070800,
+        "relativeDelta": 1,
+        "score": 0
+      },
+      "searchMs": 301,
+      "answerMs": 3334
+    },
+    {
+      "questionId": "agg-country-united-states",
+      "questionClass": "aggregation_cross_source",
+      "response": "$1,034,700",
+      "score": {
+        "kind": "aggregation",
+        "extracted": 1034700,
+        "expected": 8622400,
+        "relativeDelta": 0.879998608276118,
+        "score": 0.12000139172388202
+      },
+      "searchMs": 283,
+      "answerMs": 1057
+    },
+    {
+      "questionId": "agg-country-australia",
+      "questionClass": "aggregation_cross_source",
+      "response": "$1,005,800",
+      "score": {
+        "kind": "aggregation",
+        "extracted": 1005800,
+        "expected": 6697300,
+        "relativeDelta": 0.8498200767473459,
+        "score": 0.15017992325265406
+      },
+      "searchMs": 303,
+      "answerMs": 1604
+    },
+    {
+      "questionId": "agg-country-denmark",
+      "questionClass": "aggregation_cross_source",
+      "response": "$19,500",
+      "score": {
+        "kind": "aggregation",
+        "extracted": 19500,
+        "expected": 503000,
+        "relativeDelta": 0.9612326043737575,
+        "score": 0.03876739562624254
+      },
+      "searchMs": 289,
+      "answerMs": 1159
+    },
+    {
+      "questionId": "agg-industry-fintech",
+      "questionClass": "aggregation_cross_source",
+      "response": "$5,707,200",
+      "score": {
+        "kind": "aggregation",
+        "extracted": 5707200,
+        "expected": 4221700,
+        "relativeDelta": 0.35187246843688563,
+        "score": 0.6481275315631143
+      },
+      "searchMs": 287,
+      "answerMs": 879
+    },
+    {
+      "questionId": "agg-industry-saas",
+      "questionClass": "aggregation_cross_source",
+      "response": "$270,800",
+      "score": {
+        "kind": "aggregation",
+        "extracted": 270800,
+        "expected": 1560900,
+        "relativeDelta": 0.8265103465949132,
+        "score": 0.17348965340508682
+      },
+      "searchMs": 291,
+      "answerMs": 1304
+    },
+    {
+      "questionId": "agg-industry-manufacturing",
+      "questionClass": "aggregation_cross_source",
+      "response": "$6,580,000",
+      "score": {
+        "kind": "aggregation",
+        "extracted": 6580000,
+        "expected": 1755200,
+        "relativeDelta": 2.7488605287146766,
+        "score": 0
+      },
+      "searchMs": 300,
+      "answerMs": 1048
+    },
+    {
+      "questionId": "agg-industry-food-beverage",
+      "questionClass": "aggregation_cross_source",
+      "response": "$932,400",
+      "score": {
+        "kind": "aggregation",
+        "extracted": 932400,
+        "expected": 6666400,
+        "relativeDelta": 0.860134405376215,
+        "score": 0.139865594623785
+      },
+      "searchMs": 720,
+      "answerMs": 5245
+    },
+    {
+      "questionId": "agg-industry-healthcare",
+      "questionClass": "aggregation_cross_source",
+      "response": "$1,309,100",
+      "score": {
+        "kind": "aggregation",
+        "extracted": 1309100,
+        "expected": 1200500,
+        "relativeDelta": 0.09046230737192837,
+        "score": 0.9095376926280716
+      },
+      "searchMs": 330,
+      "answerMs": 891
+    },
+    {
+      "questionId": "agg-industry-retail",
+      "questionClass": "aggregation_cross_source",
+      "response": "$1,016,700",
+      "score": {
+        "kind": "aggregation",
+        "extracted": 1016700,
+        "expected": 5786800,
+        "relativeDelta": 0.8243070436165065,
+        "score": 0.17569295638349347
+      },
+      "searchMs": 381,
+      "answerMs": 1428
+    },
+    {
+      "questionId": "agg-industry-energy",
+      "questionClass": "aggregation_cross_source",
+      "response": "$14,831,070",
+      "score": {
+        "kind": "aggregation",
+        "extracted": 14831070,
+        "expected": 13051600,
+        "relativeDelta": 0.13634113825124888,
+        "score": 0.8636588617487511
+      },
+      "searchMs": 266,
+      "answerMs": 892
+    },
+    {
+      "questionId": "agg-industry-media",
+      "questionClass": "aggregation_cross_source",
+      "response": "$0",
+      "score": {
+        "kind": "aggregation",
+        "extracted": 0,
+        "expected": 1303700,
+        "relativeDelta": 1,
+        "score": 0
+      },
+      "searchMs": 333,
+      "answerMs": 1236
+    },
+    {
+      "questionId": "agg-industry-education",
+      "questionClass": "aggregation_cross_source",
+      "response": "$1,136,400",
+      "score": {
+        "kind": "aggregation",
+        "extracted": 1136400,
+        "expected": 17084600,
+        "relativeDelta": 0.933483956311532,
+        "score": 0.06651604368846797
+      },
+      "searchMs": 338,
+      "answerMs": 1147
+    },
+    {
+      "questionId": "agg-industry-logistics",
+      "questionClass": "aggregation_cross_source",
+      "response": "$3,258,400",
+      "score": {
+        "kind": "aggregation",
+        "extracted": 3258400,
+        "expected": 4371300,
+        "relativeDelta": 0.2545924553336536,
+        "score": 0.7454075446663464
+      },
+      "searchMs": 424,
+      "answerMs": 1059
+    },
+    {
+      "questionId": "recon-priscilla-collins-annual_revenue_usd",
+      "questionClass": "reconciliation_update",
+      "response": "$15,533,000",
+      "score": {
+        "kind": "reconciliation",
+        "extracted": "15533000",
+        "expected": "19113000",
+        "staleV1": "15533000",
+        "score": 0,
+        "category": "stale-v1"
+      },
+      "searchMs": 287,
+      "answerMs": 1032
+    },
+    {
+      "questionId": "recon-abelardo-nitzsche-industry",
+      "questionClass": "reconciliation_update",
+      "response": "Education",
+      "score": {
+        "kind": "reconciliation",
+        "extracted": "Education",
+        "expected": "Education",
+        "staleV1": "Healthcare",
+        "score": 1,
+        "category": "correct"
+      },
+      "searchMs": 269,
+      "answerMs": 1057
+    },
+    {
+      "questionId": "recon-kaya-ebert-employees",
+      "questionClass": "reconciliation_update",
+      "response": "4513",
+      "score": {
+        "kind": "reconciliation",
+        "extracted": "4513",
+        "expected": "5276",
+        "staleV1": "4513",
+        "score": 0,
+        "category": "stale-v1"
+      },
+      "searchMs": 488,
+      "answerMs": 2287
+    },
+    {
+      "questionId": "recon-delfina-luettgen-annual_revenue_usd",
+      "questionClass": "reconciliation_update",
+      "response": "$3,468,000",
+      "score": {
+        "kind": "reconciliation",
+        "extracted": "3468000",
+        "expected": "4689000",
+        "staleV1": "3468000",
+        "score": 0,
+        "category": "stale-v1"
+      },
+      "searchMs": 335,
+      "answerMs": 1415
+    },
+    {
+      "questionId": "recon-barton-pfeffer-annual_revenue_usd",
+      "questionClass": "reconciliation_update",
+      "response": "$3,212,000",
+      "score": {
+        "kind": "reconciliation",
+        "extracted": "3212000",
+        "expected": "4147000",
+        "staleV1": "3212000",
+        "score": 0,
+        "category": "stale-v1"
+      },
+      "searchMs": 349,
+      "answerMs": 1049
+    },
+    {
+      "questionId": "recon-triston-swift-industry",
+      "questionClass": "reconciliation_update",
+      "response": "Energy",
+      "score": {
+        "kind": "reconciliation",
+        "extracted": "Energy",
+        "expected": "Energy",
+        "staleV1": "SaaS",
+        "score": 1,
+        "category": "correct"
+      },
+      "searchMs": 331,
+      "answerMs": 1303
+    },
+    {
+      "questionId": "recon-beulah-turcotte-employees",
+      "questionClass": "reconciliation_update",
+      "response": "6,569",
+      "score": {
+        "kind": "reconciliation",
+        "extracted": "6569",
+        "expected": "9812",
+        "staleV1": "6569",
+        "score": 0,
+        "category": "stale-v1"
+      },
+      "searchMs": 275,
+      "answerMs": 1042
+    },
+    {
+      "questionId": "recon-simeon-vandervort-employees",
+      "questionClass": "reconciliation_update",
+      "response": "3953",
+      "score": {
+        "kind": "reconciliation",
+        "extracted": "3953",
+        "expected": "4558",
+        "staleV1": "3953",
+        "score": 0,
+        "category": "stale-v1"
+      },
+      "searchMs": 304,
+      "answerMs": 1145
+    },
+    {
+      "questionId": "recon-remington-von-employees",
+      "questionClass": "reconciliation_update",
+      "response": "6725",
+      "score": {
+        "kind": "reconciliation",
+        "extracted": "6725",
+        "expected": "6725",
+        "staleV1": "4811",
+        "score": 1,
+        "category": "correct"
+      },
+      "searchMs": 374,
+      "answerMs": 2042
+    },
+    {
+      "questionId": "recon-eldon-price-employees",
+      "questionClass": "reconciliation_update",
+      "response": "7,568",
+      "score": {
+        "kind": "reconciliation",
+        "extracted": "7568",
+        "expected": "9272",
+        "staleV1": "7568",
+        "score": 0,
+        "category": "stale-v1"
+      },
+      "searchMs": 333,
+      "answerMs": 1067
+    },
+    {
+      "questionId": "recon-eva-jast-annual_revenue_usd",
+      "questionClass": "reconciliation_update",
+      "response": "$8,563,000",
+      "score": {
+        "kind": "reconciliation",
+        "extracted": "8563000",
+        "expected": "10171000",
+        "staleV1": "8563000",
+        "score": 0,
+        "category": "stale-v1"
+      },
+      "searchMs": 314,
+      "answerMs": 1143
+    },
+    {
+      "questionId": "recon-abelardo-nitzsche-employees",
+      "questionClass": "reconciliation_update",
+      "response": "3706",
+      "score": {
+        "kind": "reconciliation",
+        "extracted": "3706",
+        "expected": "3706",
+        "staleV1": "2686",
+        "score": 1,
+        "category": "correct"
+      },
+      "searchMs": 303,
+      "answerMs": 899
+    },
+    {
+      "questionId": "recon-jed-turcotte-industry",
+      "questionClass": "reconciliation_update",
+      "response": "Logistics",
+      "score": {
+        "kind": "reconciliation",
+        "extracted": "Logistics",
+        "expected": "Logistics",
+        "staleV1": "Manufacturing",
+        "score": 1,
+        "category": "correct"
+      },
+      "searchMs": 278,
+      "answerMs": 1005
+    },
+    {
+      "questionId": "recon-shanelle-pagac-employees",
+      "questionClass": "reconciliation_update",
+      "response": "7580",
+      "score": {
+        "kind": "reconciliation",
+        "extracted": "7580",
+        "expected": "7580",
+        "staleV1": "5910",
+        "score": 1,
+        "category": "correct"
+      },
+      "searchMs": 376,
+      "answerMs": 11321
+    },
+    {
+      "questionId": "recon-ethelyn-berge-industry",
+      "questionClass": "reconciliation_update",
+      "response": "Manufacturing",
+      "score": {
+        "kind": "reconciliation",
+        "extracted": "Manufacturing",
+        "expected": "Manufacturing",
+        "staleV1": "Food & Beverage",
+        "score": 1,
+        "category": "correct"
+      },
+      "searchMs": 263,
+      "answerMs": 1117
+    },
+    {
+      "questionId": "recon-eddie-schmitt-annual_revenue_usd",
+      "questionClass": "reconciliation_update",
+      "response": "$14,891,000",
+      "score": {
+        "kind": "reconciliation",
+        "extracted": "14891000",
+        "expected": "17361000",
+        "staleV1": "14891000",
+        "score": 0,
+        "category": "stale-v1"
+      },
+      "searchMs": 320,
+      "answerMs": 9831
+    },
+    {
+      "questionId": "recon-alysson-jaskolski-strosin-employees",
+      "questionClass": "reconciliation_update",
+      "response": "4290",
+      "score": {
+        "kind": "reconciliation",
+        "extracted": "4290",
+        "expected": "4290",
+        "staleV1": "3236",
+        "score": 1,
+        "category": "correct"
+      },
+      "searchMs": 371,
+      "answerMs": 3238
+    },
+    {
+      "questionId": "recon-sonya-brown-employees",
+      "questionClass": "reconciliation_update",
+      "response": "60",
+      "score": {
+        "kind": "reconciliation",
+        "extracted": null,
+        "expected": "86",
+        "staleV1": "60",
+        "score": 0,
+        "category": "no-answer"
+      },
+      "searchMs": 301,
+      "answerMs": 922
+    },
+    {
+      "questionId": "recon-maudie-keebler-employees",
+      "questionClass": "reconciliation_update",
+      "response": "1216",
+      "score": {
+        "kind": "reconciliation",
+        "extracted": "1216",
+        "expected": "1216",
+        "staleV1": "837",
+        "score": 1,
+        "category": "correct"
+      },
+      "searchMs": 350,
+      "answerMs": 2627
+    },
+    {
+      "questionId": "recon-marc-muller-annual_revenue_usd",
+      "questionClass": "reconciliation_update",
+      "response": "$1,500,000",
+      "score": {
+        "kind": "reconciliation",
+        "extracted": "1500000",
+        "expected": "2068000",
+        "staleV1": "1500000",
+        "score": 0,
+        "category": "stale-v1"
+      },
+      "searchMs": 281,
+      "answerMs": 1430
+    },
+    {
+      "questionId": "mixed-country-top-france",
+      "questionClass": "mixed_conditional",
+      "response": "Ben Nolan",
+      "score": {
+        "kind": "mixed_conditional",
+        "extracted": "Ben Nolan",
+        "expected": "Ben Nolan",
+        "score": 1
+      },
+      "searchMs": 411,
+      "answerMs": 1314
+    },
+    {
+      "questionId": "mixed-country-top-germany",
+      "questionClass": "mixed_conditional",
+      "response": "Martina Kuhic",
+      "score": {
+        "kind": "mixed_conditional",
+        "extracted": null,
+        "expected": "Reanna Wisoky",
+        "score": 0
+      },
+      "searchMs": 292,
+      "answerMs": 1084
+    },
+    {
+      "questionId": "mixed-country-top-united-kingdom",
+      "questionClass": "mixed_conditional",
+      "response": "Lyla Treutel",
+      "score": {
+        "kind": "mixed_conditional",
+        "extracted": null,
+        "expected": "Richie Anderson",
+        "score": 0
+      },
+      "searchMs": 273,
+      "answerMs": 935
+    },
+    {
+      "questionId": "mixed-country-top-italy",
+      "questionClass": "mixed_conditional",
+      "response": "Martina Kuhic",
+      "score": {
+        "kind": "mixed_conditional",
+        "extracted": null,
+        "expected": "Alf Predovic",
+        "score": 0
+      },
+      "searchMs": 269,
+      "answerMs": 1043
+    },
+    {
+      "questionId": "mixed-country-top-spain",
+      "questionClass": "mixed_conditional",
+      "response": "Martina Kuhic",
+      "score": {
+        "kind": "mixed_conditional",
+        "extracted": null,
+        "expected": "Susie Kreiger",
+        "score": 0
+      },
+      "searchMs": 285,
+      "answerMs": 1197
+    },
+    {
+      "questionId": "mixed-country-top-netherlands",
+      "questionClass": "mixed_conditional",
+      "response": "April Schneider",
+      "score": {
+        "kind": "mixed_conditional",
+        "extracted": null,
+        "expected": "Mason O'Conner",
+        "score": 0
+      },
+      "searchMs": 326,
+      "answerMs": 875
+    },
+    {
+      "questionId": "mixed-country-top-switzerland",
+      "questionClass": "mixed_conditional",
+      "response": "Martina Kuhic",
+      "score": {
+        "kind": "mixed_conditional",
+        "extracted": null,
+        "expected": "Dimitri Pagac",
+        "score": 0
+      },
+      "searchMs": 273,
+      "answerMs": 1152
+    },
+    {
+      "questionId": "mixed-country-top-sweden",
+      "questionClass": "mixed_conditional",
+      "response": "Ben Nolan",
+      "score": {
+        "kind": "mixed_conditional",
+        "extracted": null,
+        "expected": "Trycia Ryan",
+        "score": 0
+      },
+      "searchMs": 395,
+      "answerMs": 2821
+    },
+    {
+      "questionId": "mixed-country-top-denmark",
+      "questionClass": "mixed_conditional",
+      "response": "Ben Nolan",
+      "score": {
+        "kind": "mixed_conditional",
+        "extracted": null,
+        "expected": "Audie Lubowitz",
+        "score": 0
+      },
+      "searchMs": 272,
+      "answerMs": 1646
+    },
+    {
+      "questionId": "mixed-country-top-poland",
+      "questionClass": "mixed_conditional",
+      "response": "Corbin Upton",
+      "score": {
+        "kind": "mixed_conditional",
+        "extracted": null,
+        "expected": "Jarrod Huels",
+        "score": 0
+      },
+      "searchMs": 284,
+      "answerMs": 1663
+    },
+    {
+      "questionId": "mixed-industry-top-fintech",
+      "questionClass": "mixed_conditional",
+      "response": "Susie Kreiger",
+      "score": {
+        "kind": "mixed_conditional",
+        "extracted": null,
+        "expected": "Luz Frami",
+        "score": 0
+      },
+      "searchMs": 334,
+      "answerMs": 1086
+    },
+    {
+      "questionId": "mixed-industry-top-saas",
+      "questionClass": "mixed_conditional",
+      "response": "Ben Nolan",
+      "score": {
+        "kind": "mixed_conditional",
+        "extracted": null,
+        "expected": "Mason O'Conner",
+        "score": 0
+      },
+      "searchMs": 328,
+      "answerMs": 1061
+    },
+    {
+      "questionId": "mixed-industry-top-manufacturing",
+      "questionClass": "mixed_conditional",
+      "response": "Susie Kreiger",
+      "score": {
+        "kind": "mixed_conditional",
+        "extracted": null,
+        "expected": "Dawn Kuhn",
+        "score": 0
+      },
+      "searchMs": 335,
+      "answerMs": 904
+    },
+    {
+      "questionId": "mixed-industry-top-food-beverage",
+      "questionClass": "mixed_conditional",
+      "response": "Martina Kuhic",
+      "score": {
+        "kind": "mixed_conditional",
+        "extracted": null,
+        "expected": "Ben Nolan",
+        "score": 0
+      },
+      "searchMs": 272,
+      "answerMs": 1252
+    },
+    {
+      "questionId": "mixed-industry-top-healthcare",
+      "questionClass": "mixed_conditional",
+      "response": "None",
+      "score": {
+        "kind": "mixed_conditional",
+        "extracted": null,
+        "expected": "Helene Schaden",
+        "score": 0
+      },
+      "searchMs": 294,
+      "answerMs": 1024
+    },
+    {
+      "questionId": "mixed-industry-top-retail",
+      "questionClass": "mixed_conditional",
+      "response": "Michale Becker",
+      "score": {
+        "kind": "mixed_conditional",
+        "extracted": null,
+        "expected": "Martina Kuhic",
+        "score": 0
+      },
+      "searchMs": 275,
+      "answerMs": 6598
+    },
+    {
+      "questionId": "mixed-industry-top-energy",
+      "questionClass": "mixed_conditional",
+      "response": "Ben Nolan",
+      "score": {
+        "kind": "mixed_conditional",
+        "extracted": null,
+        "expected": "Susie Kreiger",
+        "score": 0
+      },
+      "searchMs": 292,
+      "answerMs": 1162
+    },
+    {
+      "questionId": "mixed-industry-top-media",
+      "questionClass": "mixed_conditional",
+      "response": "Martina Kuhic",
+      "score": {
+        "kind": "mixed_conditional",
+        "extracted": null,
+        "expected": "Jarrod Huels",
+        "score": 0
+      },
+      "searchMs": 312,
+      "answerMs": 2809
+    },
+    {
+      "questionId": "mixed-industry-top-education",
+      "questionClass": "mixed_conditional",
+      "response": "Luz Frami",
+      "score": {
+        "kind": "mixed_conditional",
+        "extracted": null,
+        "expected": "Orin Haley",
+        "score": 0
+      },
+      "searchMs": 330,
+      "answerMs": 1076
+    },
+    {
+      "questionId": "mixed-industry-top-logistics",
+      "questionClass": "mixed_conditional",
+      "response": "Luz Frami",
+      "score": {
+        "kind": "mixed_conditional",
+        "extracted": null,
+        "expected": "Kirk Kassulke",
+        "score": 0
+      },
+      "searchMs": 282,
+      "answerMs": 1129
+    }
+  ]
+}

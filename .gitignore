@@ -10,3 +10,4 @@ results/*.tmp.json
 results/scratch/
 .tsbuildinfo
 coverage/
+.env.bak
