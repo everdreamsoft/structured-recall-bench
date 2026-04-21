@@ -104,20 +104,29 @@ Composite = mean of per-class means. The reconciliation breakdown (`correct` / `
 
 ## Supported providers
 
-| Provider            | Available | Source                                                 |
-| ------------------- | --------- | ------------------------------------------------------ |
-| `full-context`      | Built in  | `src/providers/full-context.ts`                        |
-| `sandra-structured` | Built in  | `src/providers/sandra-structured.ts` (graph + planner) |
-| `mempalace-mcp`     | Built in  | `src/providers/mempalace-mcp.ts`                       |
-| `mem0`, `zep`, `supermemory`, `sandra`, `mempalace`, `filesystem`, `rag` | When memorybench is cloned as a sibling directory | `github.com/supermemoryai/memorybench` |
+**Built-in** (no external dependency — cloning SRB is enough):
 
-To enable the external providers routed through memorybench:
+| Provider            | Source                                                 |
+| ------------------- | ------------------------------------------------------ |
+| `full-context`      | `src/providers/full-context.ts`                        |
+| `sandra-structured` | `src/providers/sandra-structured.ts` (graph + planner) |
+| `mempalace`         | `src/providers/mempalace.ts`                           |
+| `mempalace-mcp`     | `src/providers/mempalace-mcp.ts`                       |
+| `mem0-planned`      | `src/providers/mem0-planned.ts`                        |
+
+**Via memorybench** (requires cloning `github.com/supermemoryai/memorybench` as a sibling directory):
+
+| Provider                                         | Notes                                      |
+| ------------------------------------------------ | ------------------------------------------ |
+| `mem0`, `zep`, `supermemory`, `filesystem`, `rag` | Hosted/managed retrievers — each needs its own API key (see `.env.example`) |
 
 ```bash
 # From one directory above structured-recall-bench:
 git clone https://github.com/supermemoryai/memorybench
 cd memorybench && bun install
 ```
+
+Reproducing *only* the built-in providers (`sandra-structured`, `full-context`, `mempalace-mcp`, `mempalace`) does not require memorybench. The archived JSON in `results/` lets you inspect the full leaderboard without running the top-K providers yourself.
 
 ## Methodology notes
 
