@@ -40,6 +40,16 @@ Benchmarks like LongMemEval, LoCoMo, and ConvoMem measure *"can the system retri
 
 SRB measures what those benchmarks do not: **enumerate every entity matching a structured criterion, aggregate across them, reconcile contradictory versions**. A top-K index is architecturally incapable of returning "all N that match" — it returns the K most similar to the query.
 
+## Is this fair to top-K retrievers?
+
+The most legitimate objection to SRB is: *"top-K retrievers aren't designed for exhaustive enumeration — you're benchmarking them on a task they weren't built for."* That's true, and it deserves a direct answer.
+
+- **The category has moved.** `mem0`, `zep`, `supermemory`, `letta`, `mempalace` no longer market themselves as "chat-preferences memory." Their landing pages advertise ingesting CSVs, transcripts, documents, knowledge bases. If a system accepts that ingestion surface, it implicitly accepts the query surface — *"list all customers in France"* is a question a user of the marketed product will ask.
+- **"Use a real database alongside" breaks the pitch.** The value proposition of modern agent memory is a single substrate. If the answer to structured recall is "bolt Postgres next to it," the unified-memory claim is false. SRB makes that trade-off measurable rather than rhetorical.
+- **The benchmark is not rigged to make top-K fail everywhere.** `reconciliation_update` is a task similarity retrieval can do well, and several top-K systems score 0.65–0.90 on it. The gap appears where the architecture is genuinely blind (enumeration, aggregation, mixed conditionals), not as an artifact of the scoring.
+- **Heterogeneous agents need heterogeneous-safe memory.** A real agent receives *"what did Alice say about pricing last call?"* AND *"how many active French customers do we have?"* in the same session. A memory layer that silently fails on one half of that traffic is a landmine — the agent has no way to know which queries are safe.
+- **SRB is a positioning benchmark, not a replacement for LongMemEval.** Run both. LongMemEval measures "retrieve one relevant fact." SRB measures "retrieve all matching facts and reason across them." A production choice needs both signals.
+
 ## Results (seed 42, 130 questions, `gpt-4.1-mini`)
 
 | Provider            | Composite | Enum CSV | Enum Chat | Agg  | Reconcile | Mixed | Multi-Enum | Multi-Agg | Bootstrap |
