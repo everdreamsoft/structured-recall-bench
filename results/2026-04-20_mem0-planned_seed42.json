@@ -27,6 +27,18 @@
       "mixed_conditional": {
         "count": 1,
         "mean": 0
+      },
+      "multi_condition_enum": {
+        "count": 0,
+        "mean": 0
+      },
+      "multi_condition_agg": {
+        "count": 0,
+        "mean": 0
+      },
+      "bootstrap_multihop": {
+        "count": 0,
+        "mean": 0
       }
     },
     "reconciliationBreakdown": {

@@ -24,6 +24,7 @@ import { FullContextProvider } from "./providers/full-context"
 import { SandraStructuredProvider } from "./providers/sandra-structured"
 import { Mem0PlannedProvider } from "./providers/mem0-planned"
 import { MemPalaceProvider } from "./providers/mempalace"
+import { MemPalaceMCPProvider } from "./providers/mempalace-mcp"
 import { scoreResponse, composeSummary } from "./scorer"
 import { generateAnswer } from "./utils/llm"
 import type { Provider } from "./types/memorybench"
@@ -57,6 +58,7 @@ async function loadProvider(name: string): Promise<Provider> {
   if (name === "sandra-structured") return new SandraStructuredProvider()
   if (name === "mem0-planned") return new Mem0PlannedProvider()
   if (name === "mempalace") return new MemPalaceProvider()
+  if (name === "mempalace-mcp") return new MemPalaceMCPProvider()
 
   // Try loading from sibling memorybench clone
   const mbRoot = resolve(REPO_ROOT, "..", "memorybench")
