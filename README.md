@@ -4,6 +4,8 @@
 
 **→ [Interactive dashboard](https://raw.githack.com/everdreamsoft/structured-recall-bench/main/results/dashboard.html)** (per-class breakdown, recon diagnostics, latency, provider toggles).
 
+> **Disclosure up front.** SRB is authored by [EverdreamSoft](https://github.com/everdreamsoft), the team behind [Sandra](https://github.com/everdreamsoft/sandra). Sandra is one of the providers benchmarked here, and `sandra-structured` currently tops the leaderboard. We designed this benchmark around a capability gap we believe the top-K memory category has; if that framing is wrong, the archived JSON in `results/` — deterministic seed, no LLM-judge scorer, raw responses for every question — will say so first. See [Disclosure & reproducibility](#disclosure) for the full note.
+
 > Leading agent-memory systems score **0.00–0.05** on mixed-conditional queries like *"who is our top-spending customer in France in 2025?"*. Even full-context with `gpt-4.1-mini` (haystack pasted into the prompt) scores **0.20**. A structured graph with a query planner scores **1.00**. This repository measures that gap with 130 deterministic questions, a no-LLM-judge scorer, and archived JSON for every run.
 
 ## One concrete example
@@ -167,7 +169,7 @@ MIT — see `LICENSE`.
 
 ## Disclosure
 
-This benchmark is maintained by **EverdreamSoft**, authors of [Sandra](https://github.com/everdreamsoft/sandra), one of the providers benchmarked here. The `sandra-structured` provider uses Sandra with a query planner and currently tops the leaderboard.
+This benchmark is authored by **EverdreamSoft**, the team behind [Sandra](https://github.com/everdreamsoft/sandra) — one of the providers benchmarked here. The `sandra-structured` provider uses Sandra with a query planner and currently tops the leaderboard. That outcome is the reason we built SRB. It is also the reason we took the steps below *before* running any competitor; a benchmark authored by an interested party is worth exactly as much as it is checkable.
 
 We made the benchmark verifiable by construction:
 
