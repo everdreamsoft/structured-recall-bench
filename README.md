@@ -51,7 +51,6 @@ SRB measures what those benchmarks do not: **enumerate every entity matching a s
 | `zep`               |      0.33 |     0.49 |      0.77 | 0.22 |      0.45 |  0.05 |       0.51 |      0.10 |      0.07 |
 | `supermemory`       |      0.29 |     0.05 |      0.73 | 0.21 |      0.85 |  0.00 |       0.40 |      0.00 |      0.04 |
 | `mem0`              |      0.25 |     0.04 |      0.49 | 0.18 |      0.65 |  0.00 |       0.50 |      0.00 |      0.15 |
-| `mempalace`         |      0.19 |     0.04 |      0.78 | 0.05 |      0.40 |  0.00 |       0.10 |      0.00 |      0.11 |
 
 What the numbers say:
 
@@ -146,7 +145,6 @@ CI can verify reproducibility with `git diff --exit-code datasets/` after `bun r
 | ------------------- | ------------------------------------------------------ |
 | `full-context`      | `src/providers/full-context.ts`                        |
 | `sandra-structured` | `src/providers/sandra-structured.ts` (graph + planner) |
-| `mempalace`         | `src/providers/mempalace.ts`                           |
 | `mempalace-mcp`     | `src/providers/mempalace-mcp.ts`                       |
 | `mem0-planned`      | `src/providers/mem0-planned.ts`                        |
 

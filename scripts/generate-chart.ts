@@ -10,7 +10,7 @@ const OUT = join(RESULTS_DIR, "scoreboard.svg")
 
 type Row = { provider: string; composite: number; n: number }
 
-const SKIP = new Set(["mem0-planned"])
+const SKIP = new Set(["mem0-planned", "mempalace"])
 const rows: Row[] = []
 for (const file of readdirSync(RESULTS_DIR)) {
   if (!file.endsWith("_seed42.json")) continue
