@@ -1,5 +1,9 @@
 # Structured Recall Bench (SRB)
 
+![SRB scoreboard](results/scoreboard.svg)
+
+**→ [Interactive dashboard](https://raw.githack.com/everdreamsoft/structured-recall-bench/main/results/dashboard.html)** (per-class breakdown, recon diagnostics, latency, provider toggles).
+
 A benchmark exposing **exhaustive recall** and **knowledge reconciliation** gaps in agent memory systems. Every run is archived in `results/` with the exact prompt, seed, and model used, so the numbers below can be independently reproduced or contested.
 
 ## Question classes

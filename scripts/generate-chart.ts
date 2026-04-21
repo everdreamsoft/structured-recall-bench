@@ -28,17 +28,18 @@ const COLORS: Record<string, string> = {
 
 type Row = { provider: string; scores: Record<string, number> }
 
+const SKIP = new Set(["mem0-planned"])
 const rows: Row[] = []
 for (const file of readdirSync(RESULTS_DIR)) {
   if (!file.endsWith("_seed42.json")) continue
   const data = JSON.parse(readFileSync(join(RESULTS_DIR, file), "utf8"))
+  if (SKIP.has(data.provider)) continue
+  if ((data.results?.length ?? 0) < 20) continue
   const scores: Record<string, number> = { composite: data.summary.composite }
   for (const [k, v] of Object.entries<any>(data.summary.perClass)) scores[k] = v.mean
   rows.push({ provider: data.provider, scores })
 }
-
-const order = ["sandra-structured", "full-context", "sandra", "zep", "supermemory", "mem0"]
-rows.sort((a, b) => order.indexOf(a.provider) - order.indexOf(b.provider))
+rows.sort((a, b) => b.scores.composite - a.scores.composite)
 
 const W = 1200
 const H = 640
@@ -52,7 +53,8 @@ const y = (v: number) => PAD.top + plotH - v * plotH
 
 let svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" font-family="system-ui,Helvetica,Arial,sans-serif">`
 svg += `<rect width="${W}" height="${H}" fill="#fff"/>`
-svg += `<text x="${W / 2}" y="30" text-anchor="middle" font-size="20" font-weight="600">Structured Recall Bench — scores by provider (seed=42, 2026-04-20)</text>`
+const TODAY = new Date().toISOString().slice(0, 10)
+svg += `<text x="${W / 2}" y="30" text-anchor="middle" font-size="20" font-weight="600">Structured Recall Bench — scores by provider (seed=42, ${TODAY})</text>`
 svg += `<text x="${W / 2}" y="52" text-anchor="middle" font-size="12" fill="#666">Per-class means + composite (mean of class means). Higher is better.</text>`
 
 // y-axis grid + labels
